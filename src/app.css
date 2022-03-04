@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	font-family: 'Noto Sans KR', sans-serif;
+	color: white;
+}
+
+body {
+	background: url(/static/gradientbg.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1 {
+	background: linear-gradient(45deg, #ff19d9 0%, #ff006a 20%, #1b3aec 60%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+h2 {
+	font-family: 'Noto Sans KR', sans-serif;
+	text-shadow: 0 0 22px #fffa;
+}
