@@ -1,12 +1,13 @@
 <script>
 	import ActivityCard from '../Cards/ActivityCard.svelte';
 	import Container from '../Container.svelte';
+	import PartHeading from '../PartHeading.svelte';
 
 	const activities = [
 		{
 			title: 'Goat5',
 			subtitle: 'GoatGoatGoatGoatGoat',
-			content: '질량을 조작하여 풀어나가는 1인칭 퍼즐 게임.',
+			content: '자신과 사물의 질량을 조작하여 풀어나가는 1인칭 퍼즐 게임.',
 			stacks: ['unity', 'cs'],
 			imgName: 'goat',
 			role: '개인 개발',
@@ -15,7 +16,7 @@
 		{
 			title: 'Cube5',
 			subtitle: 'CubeCubeCubeCubeCube',
-			content: '총의 반동, 시간 조작을 이용한 무한 러너-슈터 게임.',
+			content: '총의 반동, 시간 조작을 이용한 캐주얼+하드코어 무한 러너-슈터 게임.',
 			stacks: ['unity', 'cs'],
 			imgName: 'cube',
 			role: '개인 개발',
@@ -64,8 +65,7 @@
 </script>
 
 <Container>
-	<h2 class="text-3xl text-center font-bold mb-2">Activities</h2>
-	<h2 class="opacity-50 text-center mb-8 ">수상경력, 대외활동 등의 활동</h2>
+	<PartHeading title="Activities" subtitle="수상경력, 대외활동 등 여러 활동" />
 	<div class="flex gap-9 flex-wrap justify-center">
 		{#each activities as { title, subtitle, content, stacks, imgName, awards, role }, i (i)}
 			<ActivityCard {title} {subtitle} {content} {stacks} {imgName} {awards} {role} />
