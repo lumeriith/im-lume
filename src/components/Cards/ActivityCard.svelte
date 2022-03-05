@@ -24,7 +24,7 @@
 					<LinkItem {type} {url} />
 				{/each}
 			</div>
-			<img class="object-cover aspect-square" src={`/static/screenshots/${imgName}.png`} alt="" />
+			<img class="object-cover aspect-square" src={`screenshots/${imgName}.png`} alt="" />
 		</div>
 
 		<div class="p-4 text-sm">

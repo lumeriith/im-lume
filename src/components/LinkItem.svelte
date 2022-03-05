@@ -4,7 +4,7 @@
 
 	let iconUrl, iconName;
 	if (type === 'youtube') {
-		iconUrl = '/static/youtube.svg';
+		iconUrl = 'youtube.svg';
 	} else if (type === 'github') {
 		iconName = 'devicon-github-original';
 	} else if (type === 'binary') {

@@ -24,7 +24,7 @@
 		class="absolute inset-0 transition-opacity -z-10 hidden lg:block big-screen-background"
 		style={`opacity: ${showBackground ? 1 : 0}`}
 	/>
-	<a class="font-extrabold select-none" href="/">imlu.me</a>
+	<div class="font-extrabold select-none">imlu.me</div>
 	<div class="ml-auto flex items-center">
 		<IconButton
 			href="https://github.com/lumeriith"
@@ -48,11 +48,6 @@
 </div>
 
 <style>
-	a {
-		color: white;
-		text-decoration: none;
-	}
-
 	.navbar-background {
 		background: linear-gradient(90deg, #16030a, #490b20, #120329, #130325);
 		box-shadow: 0 4px 16px #1502358f;

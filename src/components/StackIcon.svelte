@@ -15,10 +15,5 @@
 </script>
 
 <div class="w-5 h-5 flex justify-center items-center">
-	<img
-		class="object-contain w-full h-full"
-		src={customUrl || `/static/stacks/${type}.png`}
-		alt=""
-	/>
-	<icon />
+	<img class="object-contain w-full h-full" src={customUrl || `stacks/${type}.png`} alt="" />
 </div>
