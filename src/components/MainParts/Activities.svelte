@@ -37,7 +37,9 @@
 			imgName: 'report',
 			role: '소시 팀, 개발/기획 총괄',
 			awards: ['경희대학교 2018 Khuthon 최우수상'],
-			links: [{ type: 'binary', url: 'https://github.com/lumeriith/Thrown-my-report-by-me' }]
+			links: [
+				{ type: 'binary', url: 'https://github.com/lumeriith/Thrown-my-report-by-me/releases' }
+			]
 		},
 		{
 			title: 'Cardkin',
@@ -47,7 +49,7 @@
 			role: 'Indian 팀, 개발/기획 총괄',
 			awards: ['경희대학교 2018 SW페스티벌 주니어상'],
 			links: [
-				{ type: 'binary', url: 'https://github.com/lumeriith/Cardkin' },
+				{ type: 'binary', url: 'https://github.com/lumeriith/Cardkin/releases' },
 				{ type: 'youtube', url: 'https://www.youtube.com/watch?v=qyttLOaEWxc' },
 				{ type: 'youtube', url: 'https://www.youtube.com/watch?v=MyQEFMC94Ok' }
 			]
@@ -66,8 +68,7 @@
 			stacks: ['unity', 'cs'],
 			role: 'Lizard_0209 팀, 개발 총괄',
 			imgName: 'magical',
-			awards: ['경희대학교 2019 IT 동아리 쿠러그 KHUTHON 대상'],
-			links: []
+			awards: ['경희대학교 2019 IT 동아리 쿠러그 KHUTHON 대상']
 		},
 		{
 			title: 'Dew',
@@ -75,8 +76,7 @@
 			stacks: ['unity', 'cs', 'pun2'],
 			role: 'Lizard_0209 팀, 개발 총괄',
 			imgName: 'dew',
-			awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상'],
-			links: []
+			awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상']
 		}
 	];
 </script>
