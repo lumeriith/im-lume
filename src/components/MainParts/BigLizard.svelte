@@ -3,7 +3,7 @@
 >
 	<div class="aspect-square self-center" style="width: clamp(600px, 90%, 1200px)">
 		<img
-			src="lizard_twemoji.svg"
+			src="/static/lizard_twemoji.svg"
 			alt=""
 			class="rotate-12"
 			style="filter: hue-rotate(250deg); opacity: 0.13"
@@ -13,7 +13,7 @@
 	</div>
 	<div class="aspect-square self-end" style="width: clamp(400px, 90%, 1000px)">
 		<img
-			src="lizard_twemoji.svg"
+			src="/static/lizard_twemoji.svg"
 			alt=""
 			class="rotate-180"
 			style="filter: hue-rotate(250deg); opacity: 0.15"
