@@ -1,4 +1,4 @@
-import adapter from 'svelte-adapter-github';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
 const dev = process.env.NODE_ENV === 'development';
@@ -13,14 +13,8 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			domain: null,
-			jekyll: false,
-			fallback: null,
-			precompress: false
-		}),
-		paths: {
-			base: dev ? '' : '/im-lume'
-		}
+			fallback: null
+		})
 	}
 };
 

@@ -1,5 +1,5 @@
 <div
-	class="absolute inset-0 pointer-events-none flex flex-col items-start p-8 justify-between overflow-hidden"
+	class="absolute inset-0 pointer-events-none flex flex-col items-start p-8 justify-between overflow-hidden select-none"
 >
 	<div class="aspect-square self-center" style="width: clamp(600px, 90%, 1200px)">
 		<img

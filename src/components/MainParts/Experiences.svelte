@@ -53,7 +53,7 @@
 	const experiences = [
 		{
 			type: 'work',
-			time: '2019.6 ~ 2020.9',
+			time: '2019.6 ~ 2019.9',
 			content: '청청당당 초등학생~고등학생 대상 파이썬 코딩교육 강사'
 		},
 		{
@@ -82,7 +82,7 @@
 
 <Container>
 	<PartHeading title="Experiences" subtitle="경험, 경력 및 운용 가능한 기술 스택" />
-	<div class="flex flex-col gap-10 justify-center items-center">
+	<div class="flex flex-col gap-10 justify-center items-center mb-32">
 		<div
 			class="flex flex-wrap flex-col gap-2 md:gap-5 items-stretch"
 			style="width: min(600px, 100%)"

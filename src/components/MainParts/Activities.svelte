@@ -83,7 +83,7 @@
 
 <Container>
 	<PartHeading title="Activities" subtitle="수상경력, 대외활동 등 여러 활동" />
-	<div class="flex gap-3 md:gap-10 flex-wrap justify-center">
+	<div class="flex gap-3 md:gap-10 flex-wrap justify-center mb-20">
 		{#each activities as { title, subtitle, content, stacks, imgName, awards, role, links }, i (i)}
 			<ActivityCard {title} {subtitle} {content} {stacks} {imgName} {awards} {role} {links} />
 		{/each}
