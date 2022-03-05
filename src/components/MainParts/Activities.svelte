@@ -11,7 +11,11 @@
 			stacks: ['unity', 'cs'],
 			imgName: 'goat',
 			role: '개인 개발',
-			awards: ['경희대학교 2018 SW페스티벌 대상']
+			awards: ['경희대학교 2018 SW페스티벌 대상'],
+			links: [
+				{ type: 'github', url: 'https://github.com/lumeriith/GoatGoatGoatGoatGoat' },
+				{ type: 'youtube', url: 'https://www.youtube.com/watch?v=A7RkZRJcMso' }
+			]
 		},
 		{
 			title: 'Cube5',
@@ -20,7 +24,11 @@
 			stacks: ['unity', 'cs'],
 			imgName: 'cube',
 			role: '개인 개발',
-			awards: ['경희대 소프트웨어융합학과 X retr0 해커톤 금상']
+			awards: ['경희대 소프트웨어융합학과 X retr0 해커톤 금상'],
+			links: [
+				{ type: 'github', url: 'https://github.com/lumeriith/CubeCubeCubeCubeCube' },
+				{ type: 'youtube', url: 'https://www.youtube.com/watch?v=S-dYejGxnO0' }
+			]
 		},
 		{
 			title: '나는 레포트를 날렸다',
@@ -28,7 +36,8 @@
 			stacks: ['unity', 'cs'],
 			imgName: 'report',
 			role: '소시 팀, 개발/기획 총괄',
-			awards: ['경희대학교 2018 Khuthon 최우수상']
+			awards: ['경희대학교 2018 Khuthon 최우수상'],
+			links: [{ type: 'binary', url: 'https://github.com/lumeriith/Thrown-my-report-by-me' }]
 		},
 		{
 			title: 'Cardkin',
@@ -36,14 +45,20 @@
 			stacks: ['unity', 'cs', 'unet'],
 			imgName: 'cardkin',
 			role: 'Indian 팀, 개발/기획 총괄',
-			awards: ['경희대학교 2018 SW페스티벌 주니어상']
+			awards: ['경희대학교 2018 SW페스티벌 주니어상'],
+			links: [
+				{ type: 'binary', url: 'https://github.com/lumeriith/Cardkin' },
+				{ type: 'youtube', url: 'https://www.youtube.com/watch?v=qyttLOaEWxc' },
+				{ type: 'youtube', url: 'https://www.youtube.com/watch?v=MyQEFMC94Ok' }
+			]
 		},
 		{
 			title: '파이썬과 친해지기',
 			content: '청청당당 화성시 리더 연합 진행 초등학생~고등학생 대상 파이썬 코딩교육 수업.',
 			stacks: ['python'],
 			role: '수업 자료제작/진행',
-			imgName: 'python'
+			imgName: 'python',
+			links: [{ type: 'github', url: 'https://github.com/lumeriith/GetAlongWithPython' }]
 		},
 		{
 			title: '하울의 움직이는 대학',
@@ -51,7 +66,8 @@
 			stacks: ['unity', 'cs'],
 			role: 'Lizard_0209 팀, 개발 총괄',
 			imgName: 'magical',
-			awards: ['경희대학교 2019 IT 동아리 쿠러그 KHUTHON 대상']
+			awards: ['경희대학교 2019 IT 동아리 쿠러그 KHUTHON 대상'],
+			links: []
 		},
 		{
 			title: 'Dew',
@@ -59,16 +75,17 @@
 			stacks: ['unity', 'cs', 'pun2'],
 			role: 'Lizard_0209 팀, 개발 총괄',
 			imgName: 'dew',
-			awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상']
+			awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상'],
+			links: []
 		}
 	];
 </script>
 
 <Container>
 	<PartHeading title="Activities" subtitle="수상경력, 대외활동 등 여러 활동" />
-	<div class="flex gap-9 flex-wrap justify-center">
-		{#each activities as { title, subtitle, content, stacks, imgName, awards, role }, i (i)}
-			<ActivityCard {title} {subtitle} {content} {stacks} {imgName} {awards} {role} />
+	<div class="flex gap-3 md:gap-10 flex-wrap justify-center">
+		{#each activities as { title, subtitle, content, stacks, imgName, awards, role, links }, i (i)}
+			<ActivityCard {title} {subtitle} {content} {stacks} {imgName} {awards} {role} {links} />
 		{/each}
 	</div>
 </Container>

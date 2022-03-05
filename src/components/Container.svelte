@@ -1,3 +1,3 @@
-<div class="ml-auto mr-auto max-w-7xl p-9 relative">
+<div class="ml-auto mr-auto p-3 md:p-9 relative" style="max-width: 1400px">
 	<slot />
 </div>
