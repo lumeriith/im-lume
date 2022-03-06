@@ -1,10 +1,10 @@
 <script>
 	import Container from '../Container.svelte';
 	import IconButton from '@smui/icon-button';
-	import Space from '../Space.svelte';
+	import FullWidthSpace from '../FullWidthSpace.svelte';
 </script>
 
-<Space class="pt-3 pb-5 text-center">
+<FullWidthSpace class="pt-3 pb-5 text-center">
 	<Container>
 		<h2 class="font-bold text-lg opacity-90">Contact</h2>
 		<a class="text-xs opacity-50 mb-6 inline-block" href="mailto:lumeriith@gmail.com"
@@ -34,7 +34,7 @@
 			<div>Powered by Svelte</div>
 		</div>
 	</Container>
-</Space>
+</FullWidthSpace>
 
 <style>
 	:global(.white-icon-button) {

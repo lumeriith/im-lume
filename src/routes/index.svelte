@@ -1,6 +1,6 @@
 <script>
 	import About from '../components/MainParts/About.svelte';
-	import Activities from '../components/MainParts/Activities.svelte';
+	import Projects from '../components/MainParts/Projects.svelte';
 	import Background from '../components/MainParts/Background.svelte';
 	import BigLizard from '../components/MainParts/BigLizard.svelte';
 	import Experiences from '../components/MainParts/Experiences.svelte';
@@ -12,7 +12,7 @@
 
 <div class="z-10">
 	<MainHead />
-	<Activities />
+	<Projects />
 	<Experiences />
 	<About />
 </div>

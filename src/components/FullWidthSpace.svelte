@@ -11,8 +11,8 @@
 
 <style>
 	.space-wrapper {
-		border-radius: 3px;
-		border: 1px solid rgba(90, 67, 74, 0.459);
-		background-color: #0003;
+		border-top: 1px solid rgba(90, 67, 74, 0.459);
+		border-bottom: 1px solid rgba(90, 67, 74, 0.459);
+		background-color: #0005;
 	}
 </style>

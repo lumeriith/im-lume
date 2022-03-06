@@ -1,11 +1,11 @@
 <script>
 	import { each } from 'svelte/internal';
 	import StackCard from '../Cards/StackCard.svelte';
-	import ExperienceCard from '../Cards/ExperienceCard.svelte';
+	import ExperienceCard from '../Cards/LineCard.svelte';
 
 	import Container from '../Container.svelte';
 	import PartHeading from '../PartHeading.svelte';
-	import Space from '../Space.svelte';
+	import FullWidthSpace from '../FullWidthSpace.svelte';
 
 	const stacks = [
 		{
@@ -81,9 +81,9 @@
 	];
 </script>
 
-<Space class="mb-40">
+<PartHeading title="Experience" subtitle="경험, 경력 및 운용 가능한 기술 스택" />
+<FullWidthSpace class="mb-40">
 	<Container>
-		<PartHeading title="Experiences" subtitle="경험, 경력 및 운용 가능한 기술 스택" />
 		<div class="flex flex-col gap-10 justify-center items-center">
 			<div
 				class="flex flex-wrap flex-col gap-2 md:gap-5 items-stretch"
@@ -103,4 +103,4 @@
 			</div>
 		</div>
 	</Container>
-</Space>
+</FullWidthSpace>

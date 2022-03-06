@@ -1,11 +1,16 @@
 <script>
 	import Card from '@smui/card/src/Card.svelte';
+	import { onMount } from 'svelte';
+	let card;
+	export function getElement() {
+		return card.getElement();
+	}
 
 	let _class = '';
 	export { _class as class };
 </script>
 
-<Card {...$$props} class={`colorful-card overflow-hidden ${_class}`}>
+<Card {...$$props} class={`colorful-card overflow-hidden ${_class}`} bind:this={card} on:mousedown>
 	<slot />
 </Card>
 
@@ -13,13 +18,7 @@
 	:global(.colorful-card) {
 		background-color: #111;
 		box-shadow: 0 0 36px #ff6e992a;
-		transform: scale(0.975);
-		transition: transform 0.1s;
-	}
-
-	:global(.colorful-card):hover {
 		transform: scale(1);
-		filter: brightness(1);
 	}
 
 	:global(.colorful-card)::before {
