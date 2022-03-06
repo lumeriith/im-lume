@@ -10,7 +10,7 @@
 	let currentTopTitleLength = 1;
 </script>
 
-<div class="pl-4 pr-4 mt-16 mb-20">
+<div class="pl-4 pr-4 mt-32 mb-32">
 	<div class="flex flex-col items-center">
 		<div class="z-10">
 			<h1 class="text-3xl font-extrabold mt-2 text-center typewriter">

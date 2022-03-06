@@ -5,6 +5,7 @@
 
 	import Container from '../Container.svelte';
 	import PartHeading from '../PartHeading.svelte';
+	import Space from '../Space.svelte';
 
 	const stacks = [
 		{
@@ -80,24 +81,26 @@
 	];
 </script>
 
-<Container>
-	<PartHeading title="Experiences" subtitle="경험, 경력 및 운용 가능한 기술 스택" />
-	<div class="flex flex-col gap-10 justify-center items-center mb-32">
-		<div
-			class="flex flex-wrap flex-col gap-2 md:gap-5 items-stretch"
-			style="width: min(600px, 100%)"
-		>
-			{#each stacks as { title, subtitle, details, imgUrl, background, color }}
-				<StackCard {title} {subtitle} {details} {imgUrl} {background} {color} />
-			{/each}
+<Space class="mb-40">
+	<Container>
+		<PartHeading title="Experiences" subtitle="경험, 경력 및 운용 가능한 기술 스택" />
+		<div class="flex flex-col gap-10 justify-center items-center">
+			<div
+				class="flex flex-wrap flex-col gap-2 md:gap-5 items-stretch"
+				style="width: min(600px, 100%)"
+			>
+				{#each stacks as { title, subtitle, details, imgUrl, background, color }}
+					<StackCard {title} {subtitle} {details} {imgUrl} {background} {color} />
+				{/each}
+			</div>
+			<div
+				class="flex flex-wrap flex-col gap-1 md:gap-4 items-stretch"
+				style="width: min(700px, 100%)"
+			>
+				{#each experiences as { content, time, type }}
+					<ExperienceCard {content} {time} {type} />
+				{/each}
+			</div>
 		</div>
-		<div
-			class="flex flex-wrap flex-col gap-1 md:gap-4 items-stretch"
-			style="width: min(700px, 100%)"
-		>
-			{#each experiences as { content, time, type }}
-				<ExperienceCard {content} {time} {type} />
-			{/each}
-		</div>
-	</div>
-</Container>
+	</Container>
+</Space>

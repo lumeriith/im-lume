@@ -2,6 +2,7 @@
 	import ActivityCard from '../Cards/ActivityCard.svelte';
 	import Container from '../Container.svelte';
 	import PartHeading from '../PartHeading.svelte';
+	import Space from '../Space.svelte';
 
 	const activities = [
 		{
@@ -81,11 +82,13 @@
 	];
 </script>
 
-<Container>
-	<PartHeading title="Activities" subtitle="수상경력, 대외활동 등 여러 활동" />
-	<div class="flex gap-3 md:gap-10 flex-wrap justify-center mb-20">
-		{#each activities as { title, subtitle, content, stacks, imgName, awards, role, links }, i (i)}
-			<ActivityCard {title} {subtitle} {content} {stacks} {imgName} {awards} {role} {links} />
-		{/each}
-	</div>
-</Container>
+<Space class="mb-40">
+	<Container>
+		<PartHeading title="Activities" subtitle="수상경력, 대외활동 등 여러 활동" />
+		<div class="flex gap-3 md:gap-10 flex-wrap justify-center">
+			{#each activities as { title, subtitle, content, stacks, imgName, awards, role, links }, i (i)}
+				<ActivityCard {title} {subtitle} {content} {stacks} {imgName} {awards} {role} {links} />
+			{/each}
+		</div>
+	</Container>
+</Space>

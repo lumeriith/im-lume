@@ -1,9 +1,10 @@
 <script>
 	import Container from '../Container.svelte';
 	import IconButton from '@smui/icon-button';
+	import Space from '../Space.svelte';
 </script>
 
-<div class="about-wrapper pt-3 pb-9 text-center">
+<Space class="pt-3 pb-5 text-center">
 	<Container>
 		<h2 class="font-bold text-lg opacity-90">Contact</h2>
 		<a class="text-xs opacity-50 mb-6 inline-block" href="mailto:lumeriith@gmail.com"
@@ -33,15 +34,9 @@
 			<div>Powered by Svelte</div>
 		</div>
 	</Container>
-</div>
+</Space>
 
 <style>
-	.about-wrapper {
-		border-top: 1px solid rgba(90, 67, 74, 0.459);
-		background-color: #0003;
-		position: relative;
-	}
-
 	:global(.white-icon-button) {
 		background-color: #fffe;
 		border-radius: 50%;
