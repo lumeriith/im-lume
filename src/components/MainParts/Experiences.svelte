@@ -1,7 +1,7 @@
 <script>
 	import { each } from 'svelte/internal';
 	import StackCard from '../Cards/StackCard.svelte';
-	import ExperienceCard from '../Cards/LineCard.svelte';
+	import LineCard from '../Cards/LineCard.svelte';
 
 	import Container from '../Container.svelte';
 	import PartHeading from '../PartHeading.svelte';
@@ -97,8 +97,15 @@
 				class="flex flex-wrap flex-col gap-1 md:gap-4 items-stretch"
 				style="width: min(700px, 100%)"
 			>
-				{#each experiences as { content, time, type }}
-					<ExperienceCard {content} {time} {type} />
+				{#each experiences as { content, time, type }, i}
+					<LineCard {time} {type}>{@html content}</LineCard>
+					{#if i !== experiences.length - 1}
+						<div
+							class="ml-auto mr-auto h-5 -m-2"
+							style="border-left: 4px dotted hsl(325, 50%, 20%, 100%)"
+							data-aos="fade"
+						/>
+					{/if}
 				{/each}
 			</div>
 		</div>

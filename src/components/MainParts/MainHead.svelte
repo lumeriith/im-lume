@@ -1,27 +1,37 @@
 <script>
+	import { scale } from 'svelte/transition';
+
 	const handle = setInterval(() => {
 		currentTopTitleLength++;
 		if (currentTopTitleLength > topTitleText.length) {
 			clearInterval(handle);
 		}
-	}, 100);
+	}, 60);
 
-	const topTitleText = '이야~ 스벨트 편하다~';
+	const topTitleText = '#EunseopShim #lumeriith #imlu.me';
 	let currentTopTitleLength = 1;
 </script>
 
-<div class="pl-4 pr-4 mt-32 mb-32">
+<div
+	class="pl-4 pr-4 mt-32 mb-32"
+	data-aos="fade-down"
+	data-aos-duration="800"
+	data-aos-once="true"
+>
 	<div class="flex flex-col items-center">
 		<div class="z-10">
-			<h1 class="text-3xl font-extrabold mt-2 text-center typewriter">
+			<h1
+				class="text-3xl font-extrabold mt-2 text-center typewriter pl-1 pr-1"
+				style="font-size: clamp(0.1rem, 4vw, 2rem); line-height: 1"
+			>
 				{topTitleText.substring(0, currentTopTitleLength)}
 			</h1>
 		</div>
 		<h1
-			class="font-extrabold mt-2 pb-1 text-center z-10"
-			style="font-size: clamp(3rem, 8vw, 4.4rem)"
+			class="font-extrabold mt-2 pb-1 text-center z-10 mb-5"
+			style="font-size: clamp(3rem, 7vw, 4.4rem); line-height: 1.2"
 		>
-			A Really Cool Portfolio
+			Hand-made Portfolio
 		</h1>
 		<h2
 			class="mb-7 text-2xl font-bold text-center opacity-90"

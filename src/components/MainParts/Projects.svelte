@@ -24,7 +24,7 @@
 	}
 </script>
 
-<PartHeading title="Projects" subtitle="수상경력, 대외활동 등 여러 활동" />
+<PartHeading title="Projects" subtitle="대외활동 및 프로젝트" />
 
 <FullWidthSpace class="mb-24">
 	<Container>
