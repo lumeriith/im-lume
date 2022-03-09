@@ -14,7 +14,7 @@
 
 <div data-aos="zoom-in">
 	<ColorfulCard
-		class="w-72 overflow-hidden relative lg:brightness-90 h-full project-card"
+		class="w-64 overflow-hidden relative lg:brightness-90 h-full project-card"
 		on:mousedown
 	>
 		<div class="relative">

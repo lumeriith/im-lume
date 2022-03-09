@@ -25,7 +25,7 @@
 
 <FullWidthSpace class="mb-24">
 	<Container>
-		<div class="flex gap-3 md:gap-10 flex-wrap justify-center items-stretch">
+		<div class="flex gap-3 md:gap-6 flex-wrap justify-center items-stretch">
 			{#each projects as project, i (i)}
 				<ProjectCard {...project} on:mousedown={() => showDetail(project)} />
 			{/each}

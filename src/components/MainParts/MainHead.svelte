@@ -13,33 +13,27 @@
 </script>
 
 <div
-	class="pl-4 pr-4 mt-32 mb-32"
+	class="pl-4 pr-4 h-screen -mt-24 md:h-60 md:mt-0 flex flex-col justify-center items-center"
 	data-aos="fade-down"
 	data-aos-duration="800"
 	data-aos-once="true"
 >
-	<div class="flex flex-col items-center">
-		<div class="z-10">
-			<h1
-				class="text-3xl font-extrabold mt-2 text-center typewriter pl-1 pr-1"
-				style="font-size: clamp(0.1rem, 4vw, 2rem); line-height: 1"
-			>
-				{topTitleText.substring(0, currentTopTitleLength)}
-			</h1>
-		</div>
-		<h1
-			class="font-extrabold mt-2 pb-1 text-center z-10 mb-5"
-			style="font-size: clamp(3rem, 7vw, 4.4rem); line-height: 1.2"
-		>
-			Hand-made Portfolio
-		</h1>
-		<h2
-			class="mb-7 text-2xl font-bold text-center opacity-90"
-			style="font-size: clamp(1rem, 4vw, 2rem)"
-		>
-			경희대학교 소프트웨어융합학과 3학년 심은섭
-		</h2>
-	</div>
+	<h1
+		class="text-3xl font-extrabold text-center typewriter pl-1 pr-1"
+		style="font-size: 1.3rem; line-height: 1"
+	>
+		{topTitleText.substring(0, currentTopTitleLength)}
+	</h1>
+
+	<h1
+		class="font-extrabold mt-1 pb-1 text-center z-10 mb-1"
+		style="font-size: 3.5rem; line-height: 1.2"
+	>
+		Hand-made Portfolio
+	</h1>
+	<h2 class="text-2xl font-bold text-center opacity-90" style="font-size: 1.25rem">
+		경희대학교 소프트웨어융합학과 3학년 심은섭
+	</h2>
 </div>
 
 <style>
