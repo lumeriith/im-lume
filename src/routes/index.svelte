@@ -7,6 +7,10 @@
 	import MainHead from '../components/MainParts/MainHead.svelte';
 </script>
 
+<svelte:head>
+	<title>Portfolio - imlu.me</title>
+</svelte:head>
+
 <Background />
 <BigLizard />
 

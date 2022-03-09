@@ -11,9 +11,6 @@
 	let isDetailShown = false;
 	let selectedProject;
 
-	$: {
-	}
-
 	function showDetail(proj) {
 		isDetailShown = true;
 		selectedProject = proj;

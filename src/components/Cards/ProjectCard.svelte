@@ -5,8 +5,11 @@
 	export let title = 'This is a test title';
 	export let subtitle = '';
 	export let content = 'This is a test content';
-	export let imgName = '';
+	export let mediaName = '';
 	export let stacks = [];
+	export let role = '';
+	export let links = [];
+	export let awards = [];
 </script>
 
 <div data-aos="zoom-in">
@@ -15,7 +18,7 @@
 		on:mousedown
 	>
 		<div class="relative">
-			<img class="object-cover aspect-square" src={`screenshots/${imgName}.png`} alt="" />
+			<img class="object-cover aspect-square" src="projects/{mediaName}/card.png" alt="" />
 		</div>
 
 		<div class="p-4 text-sm">

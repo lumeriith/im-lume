@@ -10,7 +10,7 @@
 	export let title = 'This is a test title';
 	export let subtitle = '';
 	export let content = 'This is a test content';
-	export let imgName = '';
+	export let mediaName = '';
 	export let stacks = [];
 	export let awards = [];
 	export let role = '';
@@ -21,7 +21,7 @@
 
 <ColorfulCard class="h-full sm:h-auto" style="box-shadow: 0 0 32px 16px hsl(329, 80%, 14%, 0.7);">
 	<div class="overflow-auto flex flex-col sm:flex-row w-full h-full">
-		<img class="object-cover aspect-square sm:w-72" src={`screenshots/${imgName}.png`} alt="" />
+		<img class="object-cover aspect-square sm:w-72" src="projects/{mediaName}/card.png" alt="" />
 		<div class="p-4 text-sm flex-1">
 			<div class="relative">
 				<div class="flex gap-1.5 absolute justify-end inset-0 items-center">
@@ -52,7 +52,7 @@
 						<div>{award}</div>
 					</div>
 				{/each}
-				<div class="flex gap-2 mt-2">
+				<div class="flex gap-2 mt-2 flex-wrap">
 					{#each links as { type, url }}
 						<LinkItem {type} {url} />
 					{/each}
