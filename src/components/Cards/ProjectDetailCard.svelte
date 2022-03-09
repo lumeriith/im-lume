@@ -21,7 +21,11 @@
 
 <ColorfulCard class="h-full sm:h-auto" style="box-shadow: 0 0 32px 16px hsl(329, 80%, 14%, 0.7);">
 	<div class="overflow-auto flex flex-col sm:flex-row w-full h-full">
-		<img class="object-cover aspect-square sm:w-72" src="projects/{mediaName}/card.png" alt="" />
+		<img
+			class="object-cover aspect-square sm:w-72"
+			src="projects/{mediaName}/thumbnail.jpg"
+			alt=""
+		/>
 		<div class="p-4 text-sm flex-1">
 			<div class="relative">
 				<div class="flex gap-1.5 absolute justify-end inset-0 items-center">

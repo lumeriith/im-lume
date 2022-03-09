@@ -18,7 +18,7 @@
 		on:mousedown
 	>
 		<div class="relative">
-			<img class="object-cover aspect-square" src="projects/{mediaName}/card.png" alt="" />
+			<img class="object-cover aspect-square" src="projects/{mediaName}/thumbnail.jpg" alt="" />
 		</div>
 
 		<div class="p-4 text-sm">
