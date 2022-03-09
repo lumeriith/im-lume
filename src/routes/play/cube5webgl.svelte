@@ -2,7 +2,9 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
+	// const gameId = $page.params.game;
 	const gameId = 'cube5webgl';
+
 	let gameName;
 	switch (gameId) {
 		case 'cube5webgl':
@@ -17,7 +19,7 @@
 		// @ts-ignore
 		UnityLoader.instantiate(
 			'unityContainer',
-			`http://d2q76w8704miwb.cloudfront.net/${gameId}/Build.json`,
+			`https://d2q76w8704miwb.cloudfront.net/${gameId}/Build.json`,
 			{
 				onProgress: console.log
 			}
@@ -26,7 +28,7 @@
 </script>
 
 <svelte:head>
-	<script src="http://d2q76w8704miwb.cloudfront.net/{gameId}/UnityLoader.js"></script>
+	<script src="https://d2q76w8704miwb.cloudfront.net/{gameId}/UnityLoader.js"></script>
 	<title>Play {gameName} - imlu.me</title>
 </svelte:head>
 
