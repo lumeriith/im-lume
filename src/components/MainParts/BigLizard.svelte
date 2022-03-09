@@ -11,7 +11,7 @@
 			height="100%"
 		/>
 	</div>
-	<div class="aspect-square self-end" style="width: clamp(400px, 90%, 1000px)">
+	<div class="aspect-square self-end" style="width: clamp(500px, 90%, 1000px)">
 		<img
 			src="lizard_twemoji.svg"
 			alt=""
