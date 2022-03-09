@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	const gameId = $page.params.game;
+	const gameId = 'cube5webgl';
 	let gameName;
 	switch (gameId) {
 		case 'cube5webgl':
