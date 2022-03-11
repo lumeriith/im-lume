@@ -12,7 +12,8 @@
 	import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'svelte-feather-icons';
 
 	let isDetailShown = false;
-	let selectedProject;
+
+	let selectedProject = null;
 
 	let projectsPadding = 0;
 	onMount(() => {
@@ -68,7 +69,8 @@
 
 	function onCardMouseUp(e) {
 		if (totalDistance < distanceThreshold && selectedProject) {
-			showDetail();
+			showDetail(selectedProject);
+			selectedProject = null;
 		}
 	}
 
@@ -98,13 +100,10 @@
 		}
 	}
 
-	function showDetail() {
-		// Set a small delay to show :active transition
-		if (window.innerWidth <= 767 && false) {
-			window.location.href = `/project?id=${selectedProject.id}`;
-		} else {
-			setTimeout(() => (isDetailShown = true), 50);
-		}
+	let shownProject;
+	function showDetail(project) {
+		shownProject = project;
+		isDetailShown = true;
 		const top = document.body.getBoundingClientRect().top;
 		document.body.style.width = document.body.clientWidth + 'px';
 		document.body.style.top = top + 'px';
@@ -114,7 +113,6 @@
 
 	function hideDetail() {
 		isDetailShown = false;
-		selectedProject = null;
 
 		const lastPos = -document.body.style.top.substring(0, document.body.style.top.length - 2);
 		document.body.style.width = '';
@@ -176,13 +174,13 @@
 		: 'opacity-0 pointer-events-none'}"
 >
 	<div class="fixed inset-0 bg-[#0A000788] text-white" on:mousedown={hideDetail}>
-		<XIcon class="w-8 h-8 ml-auto mr-auto m-5" />
+		<XIcon class="w-8 h-8 ml-auto mr-auto m-5 sm:hidden" />
 	</div>
 
 	<ProjectDetailCard
 		class="rounded-b-none sm:rounded-b-lg"
 		style="box-shadow: 0 -18px 16px #0007"
-		project={selectedProject}
+		project={shownProject}
 		on:close={hideDetail}
 	/>
 </div>
