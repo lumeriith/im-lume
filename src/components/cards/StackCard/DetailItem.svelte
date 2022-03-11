@@ -1,5 +1,5 @@
 <script>
-	import { HashIcon, LinkIcon } from 'svelte-feather-icons';
+	import { ExternalLinkIcon, HashIcon } from 'svelte-feather-icons';
 
 	export let detail;
 
@@ -18,8 +18,8 @@
 	<a
 		href={url}
 		target="_blank"
-		class="bg-[#ff69a823] text-[#ff579d] py-1 px-3 rounded-lg flex items-center gap-1"
-		><HashIcon class="w-3.5 h-3.5 -ml-1.5 -mr-0.5 opacity-50" />{text}<LinkIcon
+		class="bg-[#ff7ea938] text-[#ffacba] py-1 px-3 rounded-lg flex items-center gap-1"
+		><HashIcon class="w-3.5 h-3.5 -ml-1.5 -mr-0.5 opacity-50" />{text}<ExternalLinkIcon
 			class="w-3.5 h-3.5 -mr-1"
 		/>
 	</a>
