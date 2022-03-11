@@ -6,41 +6,51 @@
 		}
 	}, 60);
 
-	const topTitleText = '#EunseopShim #lumeriith #imlu.me';
+	const topTitleText = 'KHU Software Conv. Eunseop Shim';
 	let currentTopTitleLength = 1;
 </script>
 
 <div
-	class="pl-4 pr-4 h-screen -mt-24 md:h-60 md:mt-0 flex flex-col justify-center items-center"
+	class="pl-4 pr-4 h-screen -mt-24 md:h-80 md:mt-12 flex flex-col justify-center items-center"
 	data-aos="fade-down"
 	data-aos-duration="800"
 	data-aos-once="true"
 >
 	<h1
-		class="text-3xl font-extrabold text-center typewriter pl-1 pr-1 whitespace-nowrap"
-		style="font-size: 1.25rem; line-height: 1"
+		class="subtitle text-3xl font-bold text-center typewriter p-1 whitespace-nowrap typewriter font-serif"
+		style="font-size: clamp(0.5rem, 4vw, 1.2rem); line-height: 1"
 	>
 		{topTitleText.substring(0, currentTopTitleLength)}
 	</h1>
-
 	<h1
-		class="font-extrabold mt-1 pb-1 text-center z-10 mb-1"
-		style="font-size: 3.5rem; line-height: 1.2"
+		class="title pb-1.5 text-center z-10 mb-5 font-[500] font-cursive"
+		style="font-size: clamp(3rem, 17vw, 5.5rem); line-height: 1.12"
 	>
-		Hand-made Portfolio
+		Home-made<br />Portfolio!
 	</h1>
-	<h2 class="text-2xl font-bold text-center opacity-90" style="font-size: 1.25rem">
-		경희대학교 소프트웨어융합학과 3학년 심은섭
-	</h2>
 </div>
 
 <style>
-	h1 {
-		text-shadow: 0 0 30px rgb(77, 56, 110);
+	.title {
+		text-shadow: 0 0 20px rgba(255, 145, 187, 0.164);
 	}
 
-	h1.typewriter {
-		border-right: 0.1em solid; /* The typwriter cursor */
+	.title {
+		background: linear-gradient(135deg, #ffafd7 0%, #ff2982 40%, #a47dff 70%, #c9d1ff 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.subtitle {
+		background: linear-gradient(135deg, #ff69b4 0%, #f00064 40%, #c64aff 70%, #6b4aff 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.typewriter {
+		border-right: 0.15em solid; /* The typwriter cursor */
 		animation: blink-caret 0.75s step-end infinite;
 	}
 
