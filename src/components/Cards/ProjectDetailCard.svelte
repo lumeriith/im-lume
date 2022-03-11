@@ -39,10 +39,13 @@
 </script>
 
 <ColorfulCard
-	class="flex flex-col sm:flex-row min-h-full sm:min-h-0 {_class}"
+	class="flex flex-col sm:flex-row {_class}"
 	style="box-shadow: 0 0 32px 16px hsl(329, 80%, 14%, 0.7); {style}"
 >
-	<img class="object-cover aspect-square sm:w-72" src="projects/{id}/thumbnail.jpg" alt="" />
+	{#key id}
+		<img class="object-cover aspect-square sm:w-72" src="projects/{id}/thumbnail.jpg" alt="" />
+	{/key}
+
 	<div class="p-4 text-sm flex-1">
 		<div class="relative">
 			<div class="flex gap-1.5 absolute justify-end inset-0 items-center">

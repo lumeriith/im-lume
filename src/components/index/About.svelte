@@ -1,5 +1,5 @@
 <script>
-	import Container from '../general/Container.svelte';
+	import Container from '@components/general/Container.svelte';
 	import IconButton from '@smui/icon-button';
 	import FullWidthSpace from '@components/general/FullWidthSpace.svelte';
 </script>

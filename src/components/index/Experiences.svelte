@@ -1,9 +1,9 @@
 <script>
 	import { each } from 'svelte/internal';
-	import StackCard from '../cards/StackCard.svelte';
-	import LineCard from '../cards/LineCard.svelte';
+	import StackCard from '@components/cards/StackCard.svelte';
+	import LineCard from '@components/cards/LineCard.svelte';
 
-	import Container from '../general/Container.svelte';
+	import Container from '@components/general/Container.svelte';
 	import PartHeading from '@components/general/PartHeading.svelte';
 	import FullWidthSpace from '@components/general/FullWidthSpace.svelte';
 

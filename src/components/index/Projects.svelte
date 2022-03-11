@@ -1,9 +1,12 @@
 <script>
 	import { fade, scale } from 'svelte/transition';
 
-	import ProjectCard from '../cards/ProjectCard.svelte';
-	import ProjectDetailCard from '../cards/ProjectDetailCard.svelte';
-	import Container, { containerPadding, containerMaxWidth } from '../general/Container.svelte';
+	import ProjectCard from '@components/cards/ProjectCard.svelte';
+	import ProjectDetailCard from '@components/cards/ProjectDetailCard.svelte';
+	import Container, {
+		containerPadding,
+		containerMaxWidth
+	} from '@components/general/Container.svelte';
 	import FullWidthSpace from '@components/general/FullWidthSpace.svelte';
 	import PartHeading from '@components/general/PartHeading.svelte';
 	import projectsData from '../../data/projectsData';
@@ -170,17 +173,40 @@
 
 <div
 	class="fixed inset-0 z-40 pt-16 pl-3 pr-3 sm:p-8 sm:flex flex-col sm:items-center sm:justify-center overflow-auto sm:overflow-hidden transition-opacity {isDetailShown
-		? 'opacity-100 pointer-events-auto'
-		: 'opacity-0 pointer-events-none'}"
+		? 'pointer-events-auto'
+		: 'pointer-events-none'}"
 >
-	<div class="fixed inset-0 bg-[#0A000788] text-white" on:mousedown={hideDetail}>
-		<XIcon class="w-8 h-8 ml-auto mr-auto m-5 sm:hidden" />
+	<div
+		class="fixed inset-0 bg-[#0A000788] text-white {isDetailShown
+			? 'opacity-100'
+			: 'opacity-0'} transition-opacity"
+		on:mousedown={hideDetail}
+	>
+		<XIcon class="w-8 h-8 ml-auto mr-auto m-3 sm:hidden" />
 	</div>
 
 	<ProjectDetailCard
-		class="rounded-b-none sm:rounded-b-lg"
-		style="box-shadow: 0 -18px 16px #0007"
+		class="detail-card {isDetailShown ? 'show' : ''} mb-4"
 		project={shownProject}
 		on:close={hideDetail}
 	/>
 </div>
+
+<style>
+	:global(.detail-card) {
+		transform: scale(0.7);
+		opacity: 0;
+		will-change: transform;
+		transition: transform 0.3s, opacity 0.3s;
+	}
+	:global(.detail-card.show) {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	@media (max-width: 640px) {
+		:global(.detail-card) {
+			transition-delay: 0.1s;
+		}
+	}
+</style>
