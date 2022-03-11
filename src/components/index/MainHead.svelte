@@ -11,26 +11,32 @@
 </script>
 
 <div
-	class="pl-4 pr-4 h-screen -mt-24 md:h-80 md:mt-12 flex flex-col justify-center items-center"
+	class="pl-4 pr-4 h-screen -mt-24 md:h-80 md:mt-12 flex flex-row justify-center items-center"
 	data-aos="fade-down"
 	data-aos-duration="800"
 	data-aos-once="true"
 >
-	<h1
-		class="subtitle text-3xl font-bold text-center typewriter p-1 whitespace-nowrap typewriter font-serif"
-		style="font-size: clamp(0.5rem, 4vw, 1.2rem); line-height: 1"
-	>
-		{topTitleText.substring(0, currentTopTitleLength)}
-	</h1>
-	<h1
-		class="title pb-1.5 text-center z-10 mb-5 font-[500] font-cursive"
-		style="font-size: clamp(3rem, 17vw, 5.5rem); line-height: 1.12"
-	>
-		Home-made<br />Portfolio!
-	</h1>
+	<div class="wrapper py-5 flex-1 max-w-xl flex justify-center items-center flex-col">
+		<h1
+			class="subtitle text-3xl font-bold text-center typewriter p-1 whitespace-nowrap typewriter font-serif"
+			style="font-size: clamp(0.5rem, 4vw, 1.2rem); line-height: 1"
+		>
+			{topTitleText.substring(0, currentTopTitleLength)}
+		</h1>
+		<h1
+			class="title pb-1.5 text-center z-10 mb-5 font-[500] font-cursive"
+			style="font-size: clamp(3rem, 17vw, 5.5rem); line-height: 1.12"
+		>
+			Home-made<br />Portfolio!
+		</h1>
+	</div>
 </div>
 
 <style>
+	.wrapper {
+		background: radial-gradient(closest-side, #0004, #0002, #0000);
+	}
+
 	.title {
 		text-shadow: 0 0 20px rgba(255, 145, 187, 0.164);
 	}
