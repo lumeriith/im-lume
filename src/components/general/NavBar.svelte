@@ -15,7 +15,7 @@
 
 <div class="h-12" />
 
-<div class="h-12 fixed top-0 left-0 right-0  z-40 flex items-center pl-4 pr-4 text-xl">
+<div class="h-12 fixed top-0 left-0 right-0  z-30 flex items-center pl-4 pr-4 text-xl">
 	<div
 		class="absolute inset-0 transition-opacity -z-10 block lg:hidden navbar-background"
 		style={`opacity: ${showBackground ? 1 : 0}`}

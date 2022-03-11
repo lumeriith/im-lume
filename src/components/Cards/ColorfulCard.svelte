@@ -10,7 +10,7 @@
 	export { _class as class };
 </script>
 
-<Card {...$$props} class={`colorful-card overflow-hidden ${_class}`} bind:this={card} on:mousedown>
+<Card {...$$props} class={`colorful-card overflow-hidden rounded-lg ${_class}`} bind:this={card}>
 	<slot />
 </Card>
 

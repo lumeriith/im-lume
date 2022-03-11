@@ -12,8 +12,7 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"prepare": "npm run smui-theme-light && npm run smui-theme-dark",
 		"smui-theme-light": "smui-theme compile static/smui.css -i src/theme",
-		"smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark",
-		"deploy": "node ./gh-pages.js"
+		"smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark"
 	},
 	"devDependencies": {
 		"@material/elevation": "^13.0.0",
@@ -37,6 +36,7 @@
 		"svelte": "^3.44.0",
 		"svelte-adapter-github": "^0.0.1-next.0",
 		"svelte-check": "^2.2.6",
+		"svelte-feather-icons": "^3.5.1",
 		"svelte-preprocess": "^4.10.1",
 		"tailwindcss": "^3.0.23",
 		"tslib": "^2.3.1",
@@ -46,6 +46,7 @@
 	"dependencies": {
 		"@icons-pack/svelte-simple-icons": "^2.3.0",
 		"aos": "^2.3.4",
+		"scrollbooster": "^3.0.2",
 		"svelte-icons": "^2.1.0"
 	}
 }

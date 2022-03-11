@@ -1,3 +1,4 @@
+import path from 'path';
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
@@ -12,7 +13,16 @@ const config = {
 			pages: 'build',
 			assets: 'build',
 			fallback: null
-		})
+		}),
+		vite: {
+			resolve: {
+				alias: {
+					'@components': path.resolve('./src/components'),
+					'@data': path.resolve('./src/data'),
+					'@utils': path.resolve('./src/utils')
+				}
+			}
+		}
 	}
 };
 

@@ -4,7 +4,7 @@
 	import '../app.css';
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
-	import NavBar from '../components/NavBar.svelte';
+	import NavBar from '@components/general/NavBar.svelte';
 
 	onMount(() => {
 		AOS.init();

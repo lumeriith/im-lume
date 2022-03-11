@@ -1,7 +1,7 @@
 <script>
-	import Container from '../Container.svelte';
+	import Container from '../general/Container.svelte';
 	import IconButton from '@smui/icon-button';
-	import FullWidthSpace from '../FullWidthSpace.svelte';
+	import FullWidthSpace from '@components/general/FullWidthSpace.svelte';
 </script>
 
 <FullWidthSpace class="pt-3 pb-5 text-center">

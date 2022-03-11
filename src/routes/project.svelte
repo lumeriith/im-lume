@@ -1,48 +1,31 @@
 <script>
+	import { page } from '$app/stores';
+
+	import LinkItem from '@components/general/LinkItem.svelte';
 	import StackIcon from '@components/general/StackIcon.svelte';
+	import projectsData from '@data/projectsData';
+	import Background from '@components/index/Background.svelte';
+
 	import FaAward from 'svelte-icons/fa/FaAward.svelte';
 	import FaUser from 'svelte-icons/fa/FaUser.svelte';
-	import ColorfulCard from './ColorfulCard.svelte';
-	import LinkItem from '@components/general/LinkItem.svelte';
-	import Button from '@smui/button';
-	import { createEventDispatcher } from 'svelte';
 
-	export let project = {};
-	let id = '',
-		title = '',
+	const id = $page.url.searchParams.get('id');
+
+	const {
+		stacks,
+		title,
 		subtitle = '',
-		content = '',
-		stacks = [],
+		content,
+		role,
 		awards = [],
-		role = '',
-		links = [];
-	$: {
-		({
-			id = '',
-			title = '',
-			subtitle = '',
-			content = '',
-			stacks = [],
-			awards = [],
-			role = '',
-			links = []
-		} = project || {});
-	}
-
-	export let style = '';
-	let _class = '';
-	export { _class as class };
-
-	console.log(project);
-
-	const dispatch = createEventDispatcher();
+		links = []
+	} = projectsData.find((proj) => proj.id === id);
 </script>
 
-<ColorfulCard
-	class="flex flex-col sm:flex-row min-h-full sm:min-h-0 {_class}"
-	style="box-shadow: 0 0 32px 16px hsl(329, 80%, 14%, 0.7); {style}"
->
-	<img class="object-cover aspect-square sm:w-72" src="projects/{id}/thumbnail.jpg" alt="" />
+<Background />
+
+<div class="overflow-auto flex flex-col w-full h-full z-10">
+	<img class="object-cover aspect-square" src="projects/{id}/thumbnail.jpg" alt="" />
 	<div class="p-4 text-sm flex-1">
 		<div class="relative">
 			<div class="flex gap-1.5 absolute justify-end inset-0 items-center">
@@ -80,7 +63,7 @@
 			</div>
 		</div>
 	</div>
-</ColorfulCard>
+</div>
 
 <style>
 	.award {

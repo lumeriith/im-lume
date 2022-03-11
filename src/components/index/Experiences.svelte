@@ -1,11 +1,11 @@
 <script>
 	import { each } from 'svelte/internal';
-	import StackCard from '../Cards/StackCard.svelte';
-	import LineCard from '../Cards/LineCard.svelte';
+	import StackCard from '../cards/StackCard.svelte';
+	import LineCard from '../cards/LineCard.svelte';
 
-	import Container from '../Container.svelte';
-	import PartHeading from '../PartHeading.svelte';
-	import FullWidthSpace from '../FullWidthSpace.svelte';
+	import Container from '../general/Container.svelte';
+	import PartHeading from '@components/general/PartHeading.svelte';
+	import FullWidthSpace from '@components/general/FullWidthSpace.svelte';
 
 	const stacks = [
 		{
