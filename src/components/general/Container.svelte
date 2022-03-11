@@ -1,5 +1,5 @@
 <script context="module">
-	export const containerPadding = 36;
+	export const containerPadding = 20;
 	export const containerMaxWidth = 1152;
 </script>
 

@@ -10,7 +10,7 @@
 <PartHeading title="Career" subtitle="경력 및 프리랜서 활동" />
 <FullWidthSpace>
 	<Container>
-		<div class="flex flex-col gap-10 justify-center items-center">
+		<div class="flex justify-center items-center py-5">
 			<div class="flex flex-wrap flex-col gap-4 items-stretch" style="width: min(700px, 100%)">
 				{#each career as { content, time, type }, i}
 					<LineCard {time} {type}>{content}</LineCard>
