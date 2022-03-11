@@ -29,6 +29,7 @@
 			projectsPadding =
 				(window.innerWidth - containerMaxWidth - containerPadding) / 2 + containerPadding;
 		}
+		if (scrollBooster) scrollBooster.updateMetrics();
 	}
 
 	let projectsViewport;
@@ -89,7 +90,7 @@
 			const { position } = scrollBooster.getState();
 			const minX = 0;
 			const maxX = projectsContent.clientWidth - projectsViewport.clientWidth;
-			let newPosX = position.x + window.innerWidth * (left ? -1 : 1);
+			let newPosX = position.x + window.innerWidth * (left ? -1 : 1) * 0.9;
 			if (newPosX < minX) newPosX = minX - 1;
 			if (newPosX > maxX) newPosX = maxX + 1;
 			scrollBooster.scrollTo({
@@ -125,7 +126,6 @@
 
 	function onWindowResize() {
 		updateProjectsPadding();
-		if (scrollBooster) scrollBooster.updateMetrics();
 	}
 </script>
 
@@ -137,13 +137,17 @@
 	{#if scrollBooster}
 		<div class="absolute inset-0 z-10 pointer-events-none flex justify-between">
 			<button
-				class="items-center p-2 pointer-events-auto mr-auto {canScrollLeft ? 'flex' : 'hidden'}"
-				style="background: linear-gradient(90deg, #000a, #0008 30%, #0000)"
+				class="items-center pr-2 mr-auto flex transition-opacity {canScrollLeft
+					? 'opacity-100 pointer-events-auto'
+					: 'opacity-0 pointer-events-none'}"
+				style="background: linear-gradient(90deg, #000b, #000a 80%, #0000)"
 				on:click={() => scroll(true)}><ChevronLeftIcon class="w-10" /></button
 			>
 			<button
-				class="items-center p-2 pointer-events-auto ml-auto {canScrollRight ? 'flex' : 'hidden'}"
-				style="background: linear-gradient(-90deg, #000a, #0008 30%, #0000)"
+				class="items-center pl-2 ml-auto flex transition-opacity {canScrollRight
+					? 'opacity-100 pointer-events-auto'
+					: 'opacity-0 pointer-events-none'}"
+				style="background: linear-gradient(-90deg, #000b, #000a 80%, #0000)"
 				on:click={() => scroll(false)}><ChevronRightIcon class="w-10" /></button
 			>
 		</div>
@@ -174,7 +178,7 @@
 		: 'pointer-events-none'}"
 >
 	<div
-		class="fixed inset-0 bg-[#0A000788] text-white flex flex-col justify-end items-center {isDetailShown
+		class="fixed inset-0 bg-[#0A0007bb] text-white flex flex-col justify-end items-center {isDetailShown
 			? 'opacity-100'
 			: 'opacity-0'} transition-opacity"
 		on:mousedown={hideDetail}
