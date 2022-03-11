@@ -38,10 +38,7 @@
 	const dispatch = createEventDispatcher();
 </script>
 
-<ColorfulCard
-	class="flex flex-col sm:flex-row {_class}"
-	style="box-shadow: 0 0 32px 16px hsl(329, 80%, 7%, 0.7); {style}"
->
+<ColorfulCard class="flex flex-col sm:flex-row {_class}" {style}>
 	{#key id}
 		<img
 			class="object-cover aspect-video w-full sm:aspect-square sm:w-72"
