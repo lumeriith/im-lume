@@ -1,6 +1,4 @@
 <script>
-	import { scale } from 'svelte/transition';
-
 	const handle = setInterval(() => {
 		currentTopTitleLength++;
 		if (currentTopTitleLength > topTitleText.length) {
@@ -19,8 +17,8 @@
 	data-aos-once="true"
 >
 	<h1
-		class="text-3xl font-extrabold text-center typewriter pl-1 pr-1"
-		style="font-size: 1.3rem; line-height: 1"
+		class="text-3xl font-extrabold text-center typewriter pl-1 pr-1 whitespace-nowrap"
+		style="font-size: 1.25rem; line-height: 1"
 	>
 		{topTitleText.substring(0, currentTopTitleLength)}
 	</h1>

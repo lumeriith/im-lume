@@ -1,5 +1,6 @@
 <script>
 	import ColorfulCard from './ColorfulCard.svelte';
+	import DetailItem from './StackCard/DetailItem.svelte';
 
 	export let title = '';
 	export let subtitle = '';
@@ -25,9 +26,9 @@
 				<h2 class="text-sm opacity-50">{subtitle}</h2>
 			</div>
 		</div>
-		<div class="flex flex-row flex-wrap gap-x-3 gap-y-1 text-sm p-4">
-			{#each details as detail, i (i)}
-				<div>#{detail}</div>
+		<div class="flex flex-row flex-wrap gap-x-3 gap-y-1 text-sm p-4 items-start">
+			{#each details as detail, i}
+				<DetailItem {detail} />
 			{/each}
 		</div>
 	</ColorfulCard>

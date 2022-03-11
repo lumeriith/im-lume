@@ -1,11 +1,9 @@
 <script>
-	export let hueRotate = 0;
-
-	let _class;
+	let _class = '';
 	export { _class as class };
 </script>
 
-<div class="space-wrapper {_class}" style="backdrop-filter: hue-rotate({hueRotate}deg);">
+<div class="space-wrapper z-10 {_class}">
 	<slot />
 </div>
 

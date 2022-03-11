@@ -1,18 +1,15 @@
 <script>
-	import { fade, scale } from 'svelte/transition';
+	import { onMount, tick } from 'svelte';
+	import ScrollBooster from 'scrollbooster';
+	import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'svelte-feather-icons';
 
+	import projects from '@data/projects';
+
+	import { containerPadding, containerMaxWidth } from '@components/general/Container.svelte';
 	import ProjectCard from '@components/cards/ProjectCard.svelte';
 	import ProjectDetailCard from '@components/cards/ProjectDetailCard.svelte';
-	import Container, {
-		containerPadding,
-		containerMaxWidth
-	} from '@components/general/Container.svelte';
 	import FullWidthSpace from '@components/general/FullWidthSpace.svelte';
 	import PartHeading from '@components/general/PartHeading.svelte';
-	import projectsData from '../../data/projectsData';
-	import ScrollBooster from 'scrollbooster';
-	import { onMount, tick } from 'svelte';
-	import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'svelte-feather-icons';
 
 	let isDetailShown = false;
 
@@ -136,7 +133,7 @@
 
 <PartHeading title="Projects" subtitle="대외활동 및 프로젝트" />
 
-<FullWidthSpace class="mb-24 relative">
+<FullWidthSpace class="relative">
 	{#if scrollBooster}
 		<div class="absolute inset-0 z-10 pointer-events-none flex justify-between">
 			<button
@@ -157,9 +154,9 @@
 			style="padding-left: {projectsPadding}px; padding-right: {projectsPadding}px"
 			bind:this={projectsContent}
 		>
-			{#each projectsData as project, i (i)}
+			{#each projects as project, i (i)}
 				<div
-					class="shrink-0"
+					class="shrink-0 cursor-pointer"
 					on:mousedown={(e) => onCardMouseDown(e, project)}
 					on:mousemove={onCardMouseMove}
 					on:mouseup={onCardMouseUp}

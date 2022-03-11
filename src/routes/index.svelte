@@ -5,6 +5,7 @@
 	import BigLizard from '@components/index/BigLizard.svelte';
 	import Experiences from '@components/index/Experiences.svelte';
 	import MainHead from '@components/index/MainHead.svelte';
+	import Career from '@components/index/Career.svelte';
 </script>
 
 <svelte:head>
@@ -13,7 +14,12 @@
 
 <Background />
 <BigLizard />
+
 <MainHead />
 <Projects />
+<div class="h-16" />
 <Experiences />
+<div class="h-16" />
+<Career />
+<div class="h-16" />
 <About />
