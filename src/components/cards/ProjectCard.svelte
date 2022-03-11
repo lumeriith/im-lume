@@ -19,7 +19,7 @@
 
 	<div class="p-4 text-sm">
 		<div class="relative">
-			<div class="flex gap-1.5 absolute justify-end inset-0 items-center">
+			<div class="flex gap-1.5 absolute inset-0 justify-end items-center">
 				{#each stacks as stack (stack)}
 					<StackIcon type={stack} />
 				{/each}
@@ -44,7 +44,7 @@
 	}
 
 	:global(.project-card):active {
-		transform: scale(0.97) !important;
+		transform: scale(0.93) !important;
 		filter: brightness(0.8) !important;
 	}
 

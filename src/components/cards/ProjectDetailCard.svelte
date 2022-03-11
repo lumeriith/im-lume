@@ -40,26 +40,28 @@
 
 <ColorfulCard
 	class="flex flex-col sm:flex-row {_class}"
-	style="box-shadow: 0 0 32px 16px hsl(329, 80%, 14%, 0.7); {style}"
+	style="box-shadow: 0 0 32px 16px hsl(329, 80%, 7%, 0.7); {style}"
 >
 	{#key id}
-		<img class="object-cover aspect-square sm:w-72" src="projects/{id}/thumbnail.jpg" alt="" />
+		<img
+			class="object-cover aspect-video w-full sm:aspect-square sm:w-72"
+			src="projects/{id}/thumbnail.jpg"
+			alt=""
+		/>
 	{/key}
 
-	<div class="p-4 text-sm flex-1">
-		<div class="relative">
-			<div class="flex gap-1.5 absolute justify-end inset-0 items-center">
-				{#each stacks as stack (stack)}
-					<StackIcon type={stack} />
-				{/each}
-			</div>
-			<h2 class="text-lg font-bold ">
-				{title}
-			</h2>
-		</div>
-		<h3 class="text-xs mb-3">
+	<div class="p-6 pb-8 md:p-6 text-md flex-1">
+		<h2 class="text-2xl font-bold mb-1 ">
+			{title}
+		</h2>
+		<h3 class="text-md mb-2">
 			{subtitle}
 		</h3>
+		<div class="flex gap-3 items-center mb-5">
+			{#each stacks as stack (stack)}
+				<StackIcon type={stack} showName />
+			{/each}
+		</div>
 		<div>
 			{content}
 		</div>
@@ -77,7 +79,7 @@
 				</div>
 			{/each}
 			<div class="flex gap-2 mt-2 flex-wrap">
-				{#each links as { type, url }}
+				{#each links as { type, url } (url)}
 					<LinkItem {type} {url} />
 				{/each}
 			</div>
