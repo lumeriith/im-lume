@@ -8,7 +8,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	export let project = {};
-	let id = '',
+	let id = 'dew',
 		title = '',
 		subtitle = '',
 		content = '',
@@ -18,7 +18,7 @@
 		links = [];
 	$: {
 		({
-			id = '',
+			id = 'dew',
 			title = '',
 			subtitle = '',
 			content = '',
