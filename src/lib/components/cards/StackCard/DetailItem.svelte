@@ -1,4 +1,5 @@
 <script>
+	import Icon from '@iconify/svelte';
 	export let detail;
 
 	let text = '';
@@ -16,12 +17,15 @@
 	<a
 		href={url}
 		target="_blank"
-		class="bg-[#ff7ea938] text-[#ffacba] py-1 px-3 rounded-lg flex items-center gap-1"
-		>HashIcon{text} ExternalLink
+		class="bg-[#ff7ea938] text-[#ffacba] py-1 px-3 rounded-lg flex items-center"
+		><Icon icon="line-md:hash-small" class="text-lg" />{text}<Icon
+			icon="ci:external-link"
+			class="ml-1"
+		/>
 	</a>
 {:else}
-	<div class="bg-[#fff1] text-[#fffe] py-1 px-3 rounded-lg flex items-center gap-1">
-		HashIcon{text}
+	<div class="bg-[#fff1] text-[#fffe] py-1 px-3 rounded-lg flex items-center">
+		<Icon icon="line-md:hash-small" class="text-lg" />{text}
 	</div>
 {/if}
 

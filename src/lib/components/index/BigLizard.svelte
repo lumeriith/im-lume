@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="absolute inset-0 pointer-events-none flex flex-col items-start p-8 justify-between overflow-hidden select-none"
+	class="absolute inset-0 pointer-events-none flex flex-col items-start p-8 justify-between overflow-hidden select-none -z-10"
 >
 	<div
 		class="aspect-square self-center"
@@ -32,7 +32,7 @@
 		style="width: clamp(500px, 90%, 1000px); transform: translateY({floatY}px) rotate({rotate}deg); transition: transform linear 0.25s"
 	>
 		<img
-			src="lizard_twemoji.svg"
+			src={lizard}
 			alt=""
 			class="rotate-180"
 			style="filter: hue-rotate(260deg); opacity: 0.11"

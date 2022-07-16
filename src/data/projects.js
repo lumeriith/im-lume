@@ -1,3 +1,6 @@
+import cardkinThumb from '$lib/assets/projects/cardkin/thumbnail.jpg';
+import cardkinImg from '$lib/assets/projects/cardkin/card.jpg';
+
 export default [
 	{
 		title: 'Dew',

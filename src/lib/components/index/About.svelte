@@ -1,6 +1,18 @@
 <script>
+	import Icon from '@iconify/svelte';
 	import Container from '$lib/components/general/Container.svelte';
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
+
+	const icons = [
+		{
+			href: 'https://github.com/lumeriith',
+			icon: 'akar-icons:github-fill'
+		},
+		{
+			href: 'https://www.linkedin.com/in/eunseop-shim-5b5098172/',
+			icon: 'akar-icons:linkedin-box-fill'
+		}
+	];
 </script>
 
 <FullWidthSpace class="text-center">
@@ -10,22 +22,15 @@
 			>lumeriith@gmail.com</a
 		>
 		<div class="flex justify-center items-center gap-3 mb-14">
-			<a class="white-icon-button" href="https://github.com/lumeriith" target="_blank">
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-					alt=""
-				/>
-			</a>
-			<a
-				class="white-icon-button"
-				href="https://www.linkedin.com/in/eunseop-shim-5b5098172/"
-				target="_blank"
-			>
-				<img
-					src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-					alt="LinkedIn"
-				/>
-			</a>
+			{#each icons as icon}
+				<a
+					class="bg-white rounded-full h-10 w-10 flex justify-center items-center text-black text-2xl"
+					href={icon.href}
+					target="_blank"
+				>
+					<Icon icon={icon.icon} />
+				</a>
+			{/each}
 		</div>
 		<div class="flex flex-row gap-2 justify-center text-xs opacity-50">
 			<div>Made with ❤️ by Eunseop Shim</div>
@@ -34,10 +39,3 @@
 		</div>
 	</Container>
 </FullWidthSpace>
-
-<style>
-	:global(.white-icon-button) {
-		background-color: #fffe;
-		border-radius: 50%;
-	}
-</style>
