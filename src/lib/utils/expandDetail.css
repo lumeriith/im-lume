@@ -1,0 +1,9 @@
+.expand-detail {
+	height: 0px;
+	overflow: hidden;
+	transition: height 0.1s;
+}
+
+.expand-detail.expanded {
+	height: 40px;
+}
