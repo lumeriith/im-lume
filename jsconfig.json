@@ -4,6 +4,7 @@
 		"$lib": "./src/lib/"
 	},
 	"compilerOptions": {
+		"noImplicitAny": false,
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
