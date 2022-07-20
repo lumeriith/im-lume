@@ -1,3 +1,5 @@
+import ue from '$lib/assets/stacks/ue.png';
+
 export default [
 	{
 		title: 'Unity',
@@ -14,10 +16,11 @@ export default [
 	},
 	{
 		title: 'Unreal Engine 5',
-		subtitle: '물리 엔진 관련 연구 프로젝트',
+		subtitle: 'PhysX 활용 물리 장면 연출 프로젝트 연구',
 		details: ['C++', 'Blueprint', 'PhysX'],
-		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
-		background: 'white'
+		imgUrl: ue,
+		background: 'black',
+		color: 'white'
 	},
 	{
 		title: 'React.js',
@@ -29,7 +32,7 @@ export default [
 	},
 	{
 		title: 'Svelte',
-		subtitle: '교육 회사 홈페이지, 포트폴리오 사이트',
+		subtitle: '교육 회사 홈페이지 프론트 엔드, 포트폴리오 사이트 프론트 엔드 & 자동 배포',
 		details: [
 			['SvelteKit', 'https://svelte.dev/'],
 			['TailwindCSS', 'https://tailwindcss.com/']

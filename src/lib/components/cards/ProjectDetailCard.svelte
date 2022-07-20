@@ -1,85 +1,76 @@
 <script>
-	import StackIcon from '$lib/components/general/StackIcon.svelte';
+	import Icon from '@iconify/svelte';
 	import ColorfulCard from './ColorfulCard.svelte';
 	import LinkItem from '$lib/components/general/LinkItem.svelte';
-	import { createEventDispatcher } from 'svelte';
+	import { scale, fade } from 'svelte/transition';
 
-	export let project = {};
-	let id = 'dew',
-		title = '',
-		subtitle = '',
-		content = '',
-		stacks = [],
-		awards = [],
-		role = '',
-		links = [];
-	$: {
-		({
-			id = 'dew',
-			title = '',
-			subtitle = '',
-			content = '',
-			stacks = [],
-			awards = [],
-			role = '',
-			links = []
-		} = project || {});
-	}
+	export let project = {
+		title: '',
+		icon: '',
+		subtitle: '',
+		content: '',
+		stacks: [''],
+		role: '',
+		awards: [''],
+		links: [{ type: '', url: '' }],
+		thumb: '',
+		photo: ''
+	};
 
 	export let style = '';
 	let _class = '';
 	export { _class as class };
-
-	console.log(project);
-
-	const dispatch = createEventDispatcher();
 </script>
 
-<ColorfulCard class="flex flex-col sm:flex-row {_class}" {style}>
-	{#key id}
-		<img
-			class="object-cover aspect-video w-full sm:aspect-square sm:w-72"
-			src="projects/{id}/thumbnail.jpg"
-			alt=""
-		/>
-	{/key}
+<div
+	transition:scale={{ duration: 150, start: 0.95 }}
+	class="absolute inset-0 flex justify-center items-center flex-col pointer-events-none gap-4"
+>
+	<img class="maw-w-[80%] max-h-[50%] pointer-events-auto rounded-sm" src={project.photo} alt="" />
 
-	<div class="p-6 pb-8 md:p-6 text-md flex-1">
-		<h2 class="text-2xl font-bold mb-1 ">
-			{title}
-		</h2>
-		<h3 class="text-md mb-2">
-			{subtitle}
-		</h3>
-		<div class="flex gap-3 items-center mb-5">
-			{#each stacks as stack (stack)}
-				<StackIcon type={stack} showName />
-			{/each}
-		</div>
-		<div>
-			{content}
-		</div>
-		<div class="flex flex-col gap-2 mt-5 text-sm justify-center">
-			<div class="flex gap-2 items-center text-white opacity-60">
-				<div class="w-5 flex justify-center items-center">
-					<div class="w-4 h-4">User</div>
+	<div class="pointer-events-auto">
+		<ColorfulCard class="flex flex-col px-5 py-3 pb-5" {style} on:click>
+			<header class="flex items-center">
+				{#if project.icon}
+					<Icon icon={project.icon} class="mr-1.5 text-2xl mt-1" />
+				{/if}
+				<div class="text-3xl font-bold">
+					{project.title}
 				</div>
-				<div>{role}</div>
-			</div>
-			{#each awards as award}
-				<div class="flex gap-2 award items-start">
-					<div class="w-5 h-5 mt-0.5">Award</div>
-					<div>{award}</div>
+				<div class="text-sm ml-auto pl-5 opacity-50">
+					{project.subtitle}
 				</div>
-			{/each}
-			<div class="flex gap-2 mt-2 flex-wrap">
-				{#each links as { type, url } (url)}
-					<LinkItem {type} {url} />
-				{/each}
+			</header>
+			<div class="h-3" />
+			<div class="text-sm flex-1">
+				<main>
+					{project.content}
+				</main>
+				<div class="flex flex-col gap-2 mt-5 text-sm justify-center">
+					<div class="flex gap-1 items-center text-white opacity-70">
+						<Icon icon="carbon:user-avatar-filled" />
+						<div>{project.role}</div>
+					</div>
+					{#if project.awards}
+						{#each project.awards as award}
+							<div class="flex gap-1.5 award items-center">
+								<Icon icon="fa-solid:award" />
+								<div>{award}</div>
+							</div>
+						{/each}
+					{/if}
+					{#if project.links}
+						<div class="flex gap-1.5 mt-3 flex-wrap justify-end">
+							{#each project.links as { type, url } (url)}
+								<LinkItem {type} {url} />
+							{/each}
+						</div>
+					{/if}
+				</div>
 			</div>
-		</div>
+		</ColorfulCard>
 	</div>
-</ColorfulCard>
+</div>
 
 <style>
 	.award {

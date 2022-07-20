@@ -3,8 +3,8 @@
 	export let subtitle = '';
 </script>
 
-<h2 class="text-4xl text-center mb-2 mt-7 font-bold" data-aos="fade">{title}</h2>
-<h3 class="text-lg text-center mb-8 font-bold" data-aos="fade">{subtitle}</h3>
+<h2 class="text-5xl text-center font-cursive mb-3 mt-7">{title}</h2>
+<h3 class="text-md text-center mb-8 font-bold">{subtitle}</h3>
 
 <style>
 	h2 {

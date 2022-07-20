@@ -1,25 +1,31 @@
 <script>
-	import About from '$lib/components/index/About.svelte';
-	import Projects from '$lib/components/index/Projects.svelte';
-	import Background from '$lib/components/index/Background.svelte';
-	import BigLizard from '$lib/components/index/BigLizard.svelte';
-	import Experiences from '$lib/components/index/Experiences.svelte';
-	import MainHead from '$lib/components/index/MainHead.svelte';
-	import Career from '$lib/components/index/Career.svelte';
+	import MainTitle from '$lib/components/MainTitle.svelte';
+	import BigLizard from '$lib/components/BigLizard.svelte';
+
+	import AboutSection from '$lib/components/index/AboutSection.svelte';
+	import ProjectsSection from '$lib/components/index/ProjectsSection.svelte';
+	import BackgroundSection from '$lib/components/index/BackgroundSection.svelte';
+	import ExperiencesSection from '$lib/components/index/ExperiencesSection.svelte';
+	import CareerSection from '$lib/components/index/CareerSection.svelte';
 </script>
 
 <svelte:head>
 	<title>Portfolio - imlu.me</title>
 </svelte:head>
 
-<Background />
+<div class="opacity-0 select-none">
+	without this div the background lizard gets cut off for some reason. probably some bug related to
+	border box cutting off margins?
+</div>
+
+<BackgroundSection />
 <BigLizard />
 
-<MainHead />
-<Projects />
+<MainTitle />
+<ProjectsSection />
 <div class="h-16" />
-<Experiences />
+<ExperiencesSection />
 <div class="h-16" />
-<Career />
+<CareerSection />
 <div class="h-16" />
-<About />
+<AboutSection />
