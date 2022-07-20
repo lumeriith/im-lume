@@ -11,7 +11,12 @@ export default [
 	},
 	{
 		type: 'work',
-		time: '2022.2 ~ 현재',
-		content: '글로벌링크 쇼피 관리 솔루션 프론트 엔드 개발자'
+		time: '2022.2 ~ 2022.6',
+		content: '글로벌 쇼핑몰 관리 프론트 엔드 (React.js) 개발자'
+	},
+	{
+		type: 'work',
+		time: '2022.3 ~ 현재',
+		content: '교육 회사 홈페이지 프론트 엔드 (SvelteKit) 개발자'
 	}
 ];

@@ -11,25 +11,23 @@
 </script>
 
 <div data-aos="zoom-in">
-	<ColorfulCard class="flex flex-col flex-1 sm:flex-row">
+	<ColorfulCard class="flex flex-col flex-1">
 		<div
-			class="flex flex-row gap-5 p-4 text-black"
+			class="flex flex-row gap-3.5 p-4 text-black items-center"
 			style={`background: ${background}; color: ${color}`}
 		>
-			<div class="h-full w-12">
-				<img src={imgUrl} alt={title} />
-			</div>
-			<div class="w-36 shrink-0">
-				<h2 class="text-xl font-bold">
-					{title}
-				</h2>
-				<h2 class="text-sm opacity-50">{subtitle}</h2>
+			<img class="h-8" src={imgUrl} alt={title} />
+			<div class="shrink-0 text-xl font-bold">
+				{title}
 			</div>
 		</div>
-		<div class="flex flex-row flex-wrap gap-x-3 gap-y-1 text-sm p-4 items-start">
-			{#each details as detail, i}
-				<DetailItem {detail} />
-			{/each}
+		<div class="p-4">
+			<h2 class="text-sm opacity-60 px-2 pb-3">{subtitle}</h2>
+			<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-start">
+				{#each details as detail, i}
+					<DetailItem {detail} />
+				{/each}
+			</div>
 		</div>
 	</ColorfulCard>
 </div>

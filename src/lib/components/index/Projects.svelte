@@ -1,6 +1,4 @@
 <script>
-	import { onMount, tick } from 'svelte';
-
 	import projects from '$lib/data/projects';
 
 	import ProjectCard from '$lib/components/cards/ProjectCard.svelte';

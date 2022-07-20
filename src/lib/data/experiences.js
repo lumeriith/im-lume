@@ -1,8 +1,11 @@
 export default [
 	{
-		title: 'Unity, C#',
-		subtitle: '3년+',
+		title: 'Unity',
+		subtitle:
+			'모바일 게임 프론트/서버 로직 개발, 온라인/LAN 멀티플레이어 게임 개발, 게임 시스템 설계',
 		details: [
+			'C#',
+			'GameSpark',
 			['PUN', 'https://www.photonengine.com/pun'],
 			['Mirror', 'https://github.com/vis2k/Mirror']
 		],
@@ -10,44 +13,37 @@ export default [
 		background: 'white'
 	},
 	{
-		title: 'JavaScript',
-		subtitle: '6개월',
-		details: ['Node.js', 'React.js', 'Redux'],
-		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-		background: 'hsl(56, 100%, 95%)',
-		color: 'hsl(56, 100%, 10%)'
+		title: 'Unreal Engine 5',
+		subtitle: '물리 엔진 관련 연구 프로젝트',
+		details: ['C++', 'Blueprint', 'PhysX'],
+		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg',
+		background: 'white'
 	},
 	{
 		title: 'React.js',
-		subtitle: '6개월',
-		details: ['Redux', 'Electron', 'react-bootstrap'],
+		subtitle: '쇼핑몰 관리 웹사이트 프론트 엔드',
+		details: ['Redux', 'Electron', 'Bootstrap'],
 		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
 		background: 'hsl(193, 20%, 10%)',
 		color: 'hsl(193, 80%, 80%)'
 	},
-
 	{
-		title: 'HTML5/CSS5',
-		subtitle: '6개월',
-		details: ['Bootstrap', ['TailwindCSS', 'https://tailwindcss.com/']],
-		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
-		background: 'hsl(12, 78%, 65%)',
-		color: 'hsl(12, 100%, 10%)'
+		title: 'Svelte',
+		subtitle: '교육 회사 홈페이지, 포트폴리오 사이트',
+		details: [
+			['SvelteKit', 'https://svelte.dev/'],
+			['TailwindCSS', 'https://tailwindcss.com/']
+		],
+		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
+		background: 'white',
+		color: 'hsl(12, 100%, 50%)'
 	},
 	{
 		title: 'Python',
-		subtitle: '1년',
+		subtitle: '작업 자동화, 이미지 인식',
 		details: ['Selenium', 'pyautogui', 'opencv'],
 		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
 		background: 'hsl(207, 51%, 20%)',
 		color: 'white'
-	},
-	{
-		title: 'Svelte',
-		subtitle: '2개월',
-		details: [['SvelteKit', 'https://svelte.dev/']],
-		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
-		background: 'white',
-		color: 'hsl(12, 100%, 50%)'
 	}
 ];
