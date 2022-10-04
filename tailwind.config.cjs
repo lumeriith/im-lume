@@ -5,7 +5,8 @@ module.exports = {
 		fontFamily: {
 			sans: ['Noto Sans KR', 'sans-serif'],
 			serif: ['Roboto Slab', 'serif'],
-			cursive: ['Lobster', 'cursive']
+			cursive: ['Lobster', 'cursive'],
+			monospace: ['JetBrains Mono', 'monospace', 'Noto Sans KR', 'sans-serif']
 		},
 		extend: {}
 	},

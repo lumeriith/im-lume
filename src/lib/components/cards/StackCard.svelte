@@ -10,22 +10,24 @@
 	export let color = 'black';
 </script>
 
-<ColorfulCard class="flex flex-col flex-1">
-	<div
-		class="flex flex-row gap-3 p-3 text-black items-center"
-		style={`background: ${background}; color: ${color}`}
-	>
-		<img class="h-7" src={imgUrl} alt={title} />
-		<div class="shrink-0 text-xl font-bold">
-			{title}
+<div class="flex flex-col flex-1 font-monospace">
+	<div class="flex flex-row gap-3">
+		<div
+			class="flex flex-row gap-2 px-1.5 text-black items-center text-sm"
+			style={`background: ${background}; color: ${color}`}
+		>
+			<img class="h-4" src={imgUrl} alt={title} />
+			<div class="shrink-0">
+				{title}
+			</div>
 		</div>
-	</div>
-	<div class="p-4 pt-3">
-		<h2 class="text-sm opacity-60 px-2 pb-3">{subtitle}</h2>
 		<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-start">
 			{#each details as detail, i}
 				<HashTagItem {detail} />
 			{/each}
 		</div>
 	</div>
-</ColorfulCard>
+	<div class="pt-2">
+		<div class="text-sm opacity-90">// {subtitle}</div>
+	</div>
+</div>

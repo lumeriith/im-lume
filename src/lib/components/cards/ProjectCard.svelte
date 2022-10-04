@@ -17,7 +17,7 @@
 </script>
 
 <ColorfulCard
-	class="overflow-hidden relative project-card flex flex-col px-4 py-3 w-full md:w-[500px] cursor-pointer"
+	class="overflow-hidden relative project-card flex flex-col px-4 py-3 w-full md:w-[500px] cursor-pointer font-monospace"
 	on:click
 >
 	<div

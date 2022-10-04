@@ -15,16 +15,16 @@
 	];
 </script>
 
-<FullWidthSpace class="text-center">
-	<Container>
+<FullWidthSpace>
+	<Container class="font-monospace">
 		<h2 class="font-bold opacity-90 mb-1 mt-5">Contact</h2>
 		<a class="text-xs opacity-50 mb-6 inline-block underline" href="mailto:lumeriith@gmail.com"
 			>lumeriith@gmail.com</a
 		>
-		<div class="flex justify-center items-center gap-3 mb-7">
+		<div class="flex items-center gap-3 mb-7">
 			{#each icons as icon}
 				<a
-					class="bg-white rounded-full h-10 w-10 flex justify-center items-center text-black text-2xl icon"
+					class="bg-white h-8 w-8 flex justify-center items-center text-black text-2xl icon"
 					href={icon.href}
 					target="_blank"
 				>
@@ -32,7 +32,7 @@
 				</a>
 			{/each}
 		</div>
-		<div class="flex flex-row gap-2 justify-center text-xs opacity-50 mb-8">
+		<div class="flex flex-row gap-2 text-xs opacity-50 mb-8">
 			<div>Made with ❤️ by Eunseop Shim</div>
 			<div>·</div>
 			<div>Powered by SvelteKit</div>

@@ -1,41 +1,49 @@
 <script>
+	import Icon from '@iconify/svelte';
+	import Container from './general/Container.svelte';
+	import bg from '$lib/assets/gradientbg.png';
+
 	const handle = setInterval(() => {
-		currentTopTitleLength++;
-		if (currentTopTitleLength > topTitleText.length) {
+		currentTypewriterLength++;
+		if (currentTypewriterLength > typewriterText.length) {
 			clearInterval(handle);
 		}
-	}, 60);
+	}, 120);
 
-	const topTitleText = 'KHU Software Conv. Eunseop Shim';
-	let currentTopTitleLength = 1;
+	const typewriterText = 'Eunseop Shim';
+	let currentTypewriterLength = 1;
 </script>
 
-<div class="pl-4 pr-4 h-screen mt-24 md:h-80 md:mt-12 flex flex-row justify-center items-center">
-	<div class="wrapper py-5 flex-1 max-w-xl flex justify-center items-center flex-col">
-		<h1
-			class="subtitle text-3xl font-bold text-center typewriter p-1 whitespace-nowrap typewriter font-serif"
-			style="font-size: clamp(0.5rem, 4vw, 1.2rem); line-height: 1"
-		>
-			{topTitleText.substring(0, currentTopTitleLength)}
-		</h1>
-		<h1
-			class="title pb-1.5 text-center z-10 mb-5 font-[500] font-cursive"
-			style="font-size: clamp(3rem, 17vw, 5.5rem); line-height: 1.12;"
-		>
-			Home-made<br />Portfolio!
-		</h1>
-	</div>
+<div
+	class="h-64 pt-6"
+	style="background: url({bg}); background-repeat: no-repeat; background-size: 100% 100%"
+>
+	<Container class="font-monospace">
+		<header class="flex gap-2 items-center mb-4">
+			<div class="flex text-3xl">
+				<Icon icon="fluent-emoji-high-contrast:lizard" />
+				<Icon icon="fluent:drink-to-go-20-filled" />
+			</div>
+			<div class="title text-2xl text-center typewriter px-1 whitespace-nowrap typewriter">
+				{typewriterText.substring(0, currentTypewriterLength)}
+			</div>
+		</header>
+
+		<section class="text-md">
+			<div>- Kyunghee University Undergraduate</div>
+			<div>- Wannabe Game Developer</div>
+			<div>- Hobbiest Web Developer</div>
+		</section>
+		<div class="h-4" />
+		<main class="text-md">Personal Portfolio</main>
+	</Container>
 </div>
 
 <style>
-	.wrapper {
-		background: radial-gradient(closest-side, #0004, #0002, #0000);
-	}
-
 	.title {
 		filter: brightness(1.2) saturate(1.2);
 		text-shadow: 0 0 20px rgba(255, 81, 148, 0.4);
-		background: linear-gradient(135deg, #ffafd7 0%, #ff2982 40%, #a47dff 70%, #c9d1ff 100%);
+		background: linear-gradient(135deg, #ff71b8 0%, #ff2982 40%, #a47dff 70%, #6c82ff 100%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -49,7 +57,7 @@
 	}
 
 	.typewriter {
-		border-right: 0.15em solid; /* The typwriter cursor */
+		border-right: 0.12em solid; /* The typwriter cursor */
 		animation: blink-caret 0.75s step-end infinite;
 	}
 
