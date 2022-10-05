@@ -28,6 +28,6 @@
 		</div>
 	</div>
 	<div class="pt-2">
-		<div class="text-sm opacity-90">// {subtitle}</div>
+		<div class="text-sm opacity-90 text-[#666]">// {subtitle}</div>
 	</div>
 </div>

@@ -17,7 +17,7 @@
 </script>
 
 <ColorfulCard
-	class="overflow-hidden relative project-card flex flex-col px-4 py-3 w-full md:w-[500px] cursor-pointer font-monospace"
+	class="overflow-hidden relative project-card flex flex-col px-2 py-1 w-full lg:w-[48%] cursor-pointer font-monospace"
 	on:click
 >
 	<div
@@ -27,17 +27,22 @@
 	<div class="text-desc flex flex-col flex-1 gap-1">
 		<header class="flex items-center gap-1.5">
 			{#if project.icon}
-				<Icon class="text-2xl mt-[1px]" icon={project.icon} />
+				<Icon class="text-xl mt-[1px]" icon={project.icon} />
 			{/if}
-			<div class="text-2xl font-bold" style="text-shadow: 0 0 12px #000a;">
+			<div class="text-xl" style="text-shadow: 0 0 12px #000a;">
 				{project.title}
 			</div>
 			<div class="text-xs opacity-50 ml-auto" style="text-shadow: 0 0 12px #000a;">
 				{project.subtitle || ''}
 			</div>
 		</header>
-		<main class="text-sm opacity-70" style="text-shadow: 0 0 12px #000a;">
-			{project.content}
+		<main class="text-sm opacity-70 flex justify-between" style="text-shadow: 0 0 12px #000a;">
+			<div>{project.content}</div>
+			<div>
+				{#if project.awards}
+					<Icon icon="fa-solid:award" color="rgb(255, 196, 0)" />
+				{/if}
+			</div>
 		</main>
 	</div>
 </ColorfulCard>

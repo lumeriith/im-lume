@@ -14,19 +14,30 @@
 </script>
 
 {#if url}
-	<a href={url} target="_blank" class="bg-[#ff7ea938] text-[#b77882] py-1 px-2 flex items-center"
+	<a
+		href={url}
+		target="_blank"
+		class="bg-[#ff7ea938] text-[#b77882] py-1 px-2 flex items-center hash-tag"
 		><Icon icon="line-md:hash-small" class="text-lg -ml-1" />{text}<Icon
 			icon="ci:external-link"
 			class="ml-1"
 		/>
 	</a>
 {:else}
-	<div class="bg-[#fff1] text-[#fff8] py-1 px-2 flex items-center">
+	<div class="bg-[#fff1] text-[#fff8] py-1 px-2 flex items-center hash-tag">
 		<Icon icon="line-md:hash-small" class="text-lg -ml-1" />{text}
 	</div>
 {/if}
 
 <style>
+	.hash-tag {
+		opacity: 0.5;
+	}
+
+	.hash-tag:hover {
+		opacity: 1;
+	}
+
 	a {
 		transform: translateY(0);
 		filter: brightness(100%);

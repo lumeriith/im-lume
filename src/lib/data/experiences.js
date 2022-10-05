@@ -32,7 +32,7 @@ export default [
 	},
 	{
 		title: 'Svelte',
-		subtitle: '교육 회사 홈페이지 프론트 엔드, 포트폴리오 사이트 프론트 엔드 & 자동 배포',
+		subtitle: '교육 회사 홈페이지 프론트엔드, 포트폴리오 사이트 프론트 엔드 & 자동 배포',
 		details: [
 			['SvelteKit', 'https://svelte.dev/'],
 			['TailwindCSS', 'https://tailwindcss.com/']
@@ -40,6 +40,14 @@ export default [
 		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
 		background: 'white',
 		color: 'hsl(12, 100%, 50%)'
+	},
+	{
+		title: 'Firebase',
+		subtitle: '교육 커뮤니티 백엔드',
+		details: ['Firestore', 'Storage', 'Cloud Functions'],
+		imgUrl: 'https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg',
+		background: '#1A73E8',
+		color: '#FFCB2B'
 	},
 	{
 		title: 'Python',
