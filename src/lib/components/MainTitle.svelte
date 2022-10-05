@@ -12,7 +12,7 @@
 	}, 120);
 
 	const backgroundHandle = setInterval(() => {
-		bgBrightness = Math.random() * 0.5 + 0.75;
+		bgBrightness = Math.random() * 0.4 + 0.9;
 	}, 500);
 
 	onDestroy(() => {
@@ -23,23 +23,32 @@
 	let currentTypewriterLength = 1;
 	let bgBrightness = 1;
 
-	const defocusY = 400;
+	const defocusYSize = 400;
+	const defocusStartYRatio = 1 / 4;
 	let defocusFactor = 0;
+	let titleDiv;
 
 	function updateBlurStrength() {
-		defocusFactor = Math.min(1, window.scrollY / defocusY);
+		console.log(titleDiv);
+		defocusFactor = Math.max(
+			0,
+			Math.min(1, (window.scrollY - defocusStartYRatio * titleDiv.scrollHeight) / defocusYSize)
+		);
 	}
 </script>
 
 <svelte:window on:scroll={updateBlurStrength} />
 
 <div
+	bind:this={titleDiv}
 	class="h-[100vh] pt-6 flex justify-center items-center font-monospace bg-wrapper"
 	style="background: url({bg}); background-repeat: no-repeat; background-size: 100% 100%; filter: brightness({bgBrightness})"
 >
 	<div
-		class="pb-12"
-		style="filter: blur({defocusFactor * 8}px); transform: scale({1 + defocusFactor * 0.1})"
+		class="pb-12 inner-container"
+		style="filter: blur({defocusFactor *
+			8}px) brightness(var(--brightness)); transform: scale(calc({1 +
+			defocusFactor * 0.1} + var(--add-scale)))"
 	>
 		<header class="flex gap-2 items-center mb-1">
 			<div class="flex items-center">
@@ -67,6 +76,17 @@
 </div>
 
 <style>
+	.inner-container {
+		transition: transform 0.5s, filter 0.1s;
+		--brightness: 1;
+		--add-scale: 0;
+	}
+
+	.inner-container:hover {
+		--add-scale: 0;
+		--brightness: 1.2;
+	}
+
 	.bg-wrapper {
 		transition: filter 1s;
 	}

@@ -45,7 +45,7 @@
 <svelte:window on:scroll={onScroll} />
 
 <div
-	class="absolute inset-0 pointer-events-none flex flex-col items-start p-8 justify-between select-none h-full"
+	class="absolute inset-0 pointer-events-none flex flex-col items-start p-8 justify-between select-none h-full overflow-hidden"
 >
 	<div
 		class="aspect-square self-center"

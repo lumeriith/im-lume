@@ -16,7 +16,7 @@
 	};
 </script>
 
-<ColorfulCard
+<div
 	class="overflow-hidden relative project-card flex flex-col px-2 py-1 w-full lg:w-[48%] cursor-pointer font-monospace"
 	on:click
 >
@@ -45,7 +45,7 @@
 			</div>
 		</main>
 	</div>
-</ColorfulCard>
+</div>
 
 <style>
 	:global(.project-card) {
