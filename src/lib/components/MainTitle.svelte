@@ -3,6 +3,7 @@
 	import Container from './general/Container.svelte';
 	import bg from '$lib/assets/gradientbg.png';
 	import { onDestroy } from 'svelte';
+	import LizardSmoothie from './LizardSmoothie.svelte';
 
 	const typewriterHandle = setInterval(() => {
 		currentTypewriterLength++;
@@ -51,16 +52,7 @@
 			defocusFactor * 0.1} + var(--add-scale)))"
 	>
 		<header class="flex gap-2 items-center mb-1">
-			<div class="flex items-center">
-				<Icon
-					icon="fluent-emoji-high-contrast:lizard"
-					class="lizard-icon text-[27px] text-[#87ff1e]"
-				/>
-				<Icon
-					icon="fluent:drink-to-go-20-filled"
-					class="smoothie-icon text-[32px] text-[#ff9db2]"
-				/>
-			</div>
+			<LizardSmoothie />
 			<div class="title text-2xl text-center typewriter px-1 whitespace-nowrap typewriter">
 				{typewriterText.substring(0, currentTypewriterLength)}
 			</div>
@@ -89,16 +81,6 @@
 
 	.bg-wrapper {
 		transition: filter 1s;
-	}
-
-	:global(.lizard-icon) {
-		color: #87ff1e;
-		filter: drop-shadow(0 0 4px #87ff1e);
-	}
-
-	:global(.smoothie-icon) {
-		color: #ff6788;
-		filter: drop-shadow(0 0 4px #ff5a7e);
 	}
 
 	.title {

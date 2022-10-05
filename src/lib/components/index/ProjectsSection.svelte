@@ -27,7 +27,7 @@
 	<Container>
 		<div class="flex flex-wrap gap-3 md:gap-4 items-stretch py-3 w-fit select-none">
 			{#each projects as project, i}
-				<ProjectCard {project} on:click={() => showDetail(i)} />
+				<ProjectCard {project} id={i} />
 			{/each}
 		</div>
 	</Container>

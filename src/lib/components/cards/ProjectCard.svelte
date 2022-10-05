@@ -14,11 +14,13 @@
 		thumb: '',
 		photo: ''
 	};
+	export let id;
 </script>
 
-<div
+<a
 	class="overflow-hidden relative project-card flex flex-col px-2 py-1 w-full lg:w-[48%] cursor-pointer font-monospace"
 	on:click
+	href="/projects/{id}"
 >
 	<div
 		class="absolute inset-0 -z-10 bg-img"
@@ -45,7 +47,7 @@
 			</div>
 		</main>
 	</div>
-</div>
+</a>
 
 <style>
 	:global(.project-card) {
