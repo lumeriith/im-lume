@@ -19,7 +19,9 @@
 </script>
 
 <a
-	class="overflow-hidden relative project-card flex flex-col px-2 py-1 w-full lg:w-[48%] cursor-pointer font-monospace"
+	class="overflow-hidden relative project-card flex flex-col w-full {project.featured
+		? 'h-44 md:h-64'
+		: 'md:col-span-2'} cursor-pointer font-monospace"
 	on:click
 	href="/projects/{id}"
 >
@@ -27,30 +29,45 @@
 		class="absolute inset-0 -z-10 bg-img"
 		style="background: url({project.thumb}); background-size: cover; background-position: center center;"
 	/>
-	<div class="text-desc flex flex-col flex-1 gap-1">
+	<div class="text-desc flex flex-col gap-1 content-container px-2 py-1">
 		<header class="flex items-center gap-1.5">
 			{#if project.icon}
-				<Icon class="text-xl mt-[1px]" icon={project.icon} />
+				<Icon class="text-lg md:text-xl mt-[1px]" icon={project.icon} />
 			{/if}
-			<div class="text-xl" style="text-shadow: 0 0 12px #000a;">
+			<div class="text-lg md:text-xl" style="text-shadow: 0 0 12px #000a;">
 				{project.title}
 			</div>
 			<div class="text-xs opacity-50 ml-auto" style="text-shadow: 0 0 12px #000a;">
 				{project.subtitle || ''}
 			</div>
 		</header>
-		<main class="text-sm opacity-70 flex justify-between" style="text-shadow: 0 0 12px #000a;">
-			<MultiClamp clamp={1}>{project.content}</MultiClamp>
-			<div>
-				{#if project.awards}
-					<Icon icon="fa-solid:award" color="rgb(255, 196, 0)" />
-				{/if}
-			</div>
+		<main class="text-xs md:text-sm opacity-70 flex flex-col" style="text-shadow: 0 0 12px #000a;">
+			<MultiClamp
+				clamp={project.featured ? 3 : 1}
+				class="whitespace-pre-line"
+				style="line-height: 1.5;">{project.content}</MultiClamp
+			>
+			{#if project.awards}
+				<div class="mt-1 hidden md:block">
+					{#each project.awards as award}
+						<div class="flex gap-2 items-center text-[#ffb53e]">
+							<Icon icon="fa-solid:award" class="text-xs" /><span>{award}</span>
+						</div>
+					{/each}
+				</div>
+			{/if}
 		</main>
+		{#if project.featured}
+			<div class="h-0.5" />
+		{/if}
 	</div>
 </a>
 
 <style>
+	.content-container {
+		background-color: #0009;
+	}
+
 	:global(.project-card) {
 		transform: scale(1);
 		transition: transform 0.1s;
@@ -61,17 +78,8 @@
 		filter: brightness(0.8) !important;
 	}
 
-	:global(.project-card) .bg-img {
-		transition: opacity 0.1s;
-		opacity: 0.4;
-	}
-
 	:global(.project-card) .text-desc {
 		transition: opacity 0.1s;
-	}
-
-	:global(.project-card):hover .bg-img {
-		opacity: 0.7;
 	}
 
 	@media (pointer: fine) {

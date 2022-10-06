@@ -1,25 +1,15 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import MultiClamp from './MultiClamp.svelte';
 
 	export let type;
 	export let url;
-	let text;
-
-	if (type === 'youtube') {
-		text = 'Youtube';
-	} else if (type === 'github') {
-		text = 'Github';
-	} else if (type === 'binary') {
-		text = 'Release';
-	} else if (type === 'play') {
-		text = 'Play';
-	}
 </script>
 
 <a class="flex gap-1.5 items-center" href={url}>
 	<Icon icon="akar-icons:link-chain" />
-	<div>{text}</div>
-	<div class="text-xs opacity-50">{url}</div>
+	<div class="shrink-0">{type}</div>
+	<MultiClamp class="text-xs opacity-50">{url}</MultiClamp>
 </a>
 
 <style>

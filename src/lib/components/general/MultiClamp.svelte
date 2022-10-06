@@ -9,6 +9,11 @@
 	export let onClampStart = () => {};
 	export let onClampEnd = () => {};
 
+	export let style = '';
+	let _class = '';
+
+	export { _class as class };
+
 	let instance;
 	$: {
 		if (instance) {
@@ -38,4 +43,4 @@
 	let containerDiv;
 </script>
 
-<div bind:this={containerDiv}><slot /></div>
+<div bind:this={containerDiv} class={_class} {style}><slot /></div>

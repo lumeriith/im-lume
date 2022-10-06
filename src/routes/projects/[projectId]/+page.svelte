@@ -39,7 +39,7 @@
 		</div>
 	</header>
 	<div class="text-sm flex-1">
-		<main>
+		<main class="whitespace-pre-line" style="line-height: 1.8;">
 			{project.content}
 		</main>
 	</div>
@@ -63,10 +63,10 @@
 			{/each}
 		{/if}
 	</section>
-	<div class="grid grid-cols-2 mb-4 gap-2">
+	<div class="grid lg:grid-cols-2 mb-4 gap-2">
 		{#each project.medias as { type, data }}
 			{#if type == 'image'}
-				<img class="w-full shadow-lg" src={data} alt="" />
+				<img class="w-full shadow-lg object-cover aspect-video" src={data} alt="" />
 			{:else if type == 'youtube'}
 				<iframe
 					class="w-full aspect-video"
