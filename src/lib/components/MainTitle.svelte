@@ -30,7 +30,6 @@
 	let titleDiv;
 
 	function updateBlurStrength() {
-		console.log(titleDiv);
 		defocusFactor = Math.max(
 			0,
 			Math.min(1, (window.scrollY - defocusStartYRatio * titleDiv.scrollHeight) / defocusYSize)

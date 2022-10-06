@@ -1,6 +1,7 @@
 <script>
 	import ColorfulCard from '$lib/components/cards/ColorfulCard.svelte';
 	import Icon from '@iconify/svelte';
+	import MultiClamp from '../general/MultiClamp.svelte';
 
 	export let project = {
 		title: '',
@@ -39,7 +40,7 @@
 			</div>
 		</header>
 		<main class="text-sm opacity-70 flex justify-between" style="text-shadow: 0 0 12px #000a;">
-			<div>{project.content}</div>
+			<MultiClamp clamp={1}>{project.content}</MultiClamp>
 			<div>
 				{#if project.awards}
 					<Icon icon="fa-solid:award" color="rgb(255, 196, 0)" />

@@ -15,7 +15,7 @@
 				{#each career as { content, time, at }, i}
 					<LineCard {time}>{content} <span class="opacity-50">@ {at}</span></LineCard>
 					{#if i !== career.length - 1}
-						<div class="ml-10 h-3 -m-2" style="border-left: 2px dotted #666" />
+						<div class="ml-[52px] h-3 -m-2" style="border-left: 2px dotted #666" />
 					{/if}
 				{/each}
 			</div>

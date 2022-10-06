@@ -18,6 +18,17 @@ import report_c from '$lib/assets/projects/report/card.png';
 
 export default [
 	{
+		title: 'RuntimeBakedPhysics',
+		subtitle: '연구, 2022',
+		icon: 'bxs:book-open',
+		content:
+			'Creating Complex & Performant Physics Scene by Runtime Physics Baking, Simuating on Demand, and Physics LOD',
+		stacks: ['unreal', 'cpp', 'physx'],
+		role: '개인 참여',
+		thumb: dew_t,
+		medias: [{ type: 'image', data: dew_c }]
+	},
+	{
 		title: 'Dew',
 		subtitle: '게임, 2019',
 		icon: 'carbon:game-console',
@@ -26,7 +37,7 @@ export default [
 		role: 'Lizard_0209 팀, 개발 총괄',
 		awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상'],
 		thumb: dew_t,
-		photo: dew_c
+		medias: [{ type: 'image', data: dew_c }]
 	},
 	{
 		title: 'Goat5',
@@ -37,11 +48,17 @@ export default [
 		role: '개인 개발',
 		awards: ['경희대학교 2018 SW페스티벌 대상'],
 		links: [
-			{ type: 'github', url: 'https://github.com/lumeriith/GoatGoatGoatGoatGoat' },
-			{ type: 'youtube', url: 'https://www.youtube.com/watch?v=A7RkZRJcMso' }
+			{ type: 'github', data: 'https://github.com/lumeriith/GoatGoatGoatGoatGoat' },
+			{ type: 'youtube', data: 'https://www.youtube.com/watch?v=A7RkZRJcMso' }
 		],
 		thumb: goat_t,
-		photo: goat_c
+		medias: [
+			{
+				type: 'youtube',
+				data: `A7RkZRJcMso`
+			},
+			{ type: 'image', data: goat_c }
+		]
 	},
 	{
 		title: '하울의 움직이는 대학',
@@ -51,8 +68,15 @@ export default [
 		stacks: ['unity', 'cs'],
 		role: 'Lizard_0209 팀, 개발 총괄',
 		awards: ['경희대학교 2019 IT 동아리 쿠러그 KHUTHON 대상'],
+		links: [{ type: 'youtube', data: 'https://youtu.be/RHylp18lxUg' }],
 		thumb: magical_t,
-		photo: magical_c
+		medias: [
+			{
+				type: 'youtube',
+				data: 'RHylp18lxUg'
+			},
+			{ type: 'image', data: magical_c }
+		]
 	},
 	{
 		title: 'Cube5',
@@ -63,12 +87,22 @@ export default [
 		role: '개인 개발',
 		awards: ['경희대 소프트웨어융합학과 X retr0 해커톤 금상'],
 		links: [
-			{ type: 'play', url: '/play/cube5webgl' },
-			{ type: 'github', url: 'https://github.com/lumeriith/CubeCubeCubeCubeCube' },
-			{ type: 'youtube', url: 'https://www.youtube.com/watch?v=S-dYejGxnO0' }
+			{ type: 'play', data: '/play/cube5webgl' },
+			{ type: 'github', data: 'https://github.com/lumeriith/CubeCubeCubeCubeCube' },
+			{ type: 'youtube', data: 'https://www.youtube.com/watch?v=UN0Rky9AqAE' }
 		],
 		thumb: cube_t,
-		photo: cube_c
+		medias: [
+			{
+				type: 'youtube',
+				data: `UN0Rky9AqAE`
+			},
+			{
+				type: 'youtube',
+				data: `S-dYejGxnO0`
+			},
+			{ type: 'image', data: cube_c }
+		]
 	},
 	{
 		title: 'Cardkin',
@@ -79,11 +113,17 @@ export default [
 		role: 'Indian 팀, 개발/기획 총괄',
 		awards: ['경희대학교 2018 SW페스티벌 주니어상'],
 		links: [
-			{ type: 'binary', url: 'https://github.com/lumeriith/Cardkin/releases' },
-			{ type: 'youtube', url: 'https://www.youtube.com/watch?v=MyQEFMC94Ok' }
+			{ type: 'binary', data: 'https://github.com/lumeriith/Cardkin/releases' },
+			{ type: 'youtube', data: 'https://www.youtube.com/watch?v=MyQEFMC94Ok' }
 		],
 		thumb: cardkin_t,
-		photo: cardkin_c
+		medias: [
+			{
+				type: 'youtube',
+				data: `MyQEFMC94Ok`
+			},
+			{ type: 'image', data: cardkin_c }
+		]
 	},
 	{
 		title: '나는 레포트를 날렸다',
@@ -94,9 +134,9 @@ export default [
 		role: '소시 팀, 개발/기획 총괄',
 		awards: ['경희대학교 2018 Khuthon 최우수상'],
 		links: [
-			{ type: 'binary', url: 'https://github.com/lumeriith/Thrown-my-report-by-me/releases' }
+			{ type: 'binary', data: 'https://github.com/lumeriith/Thrown-my-report-by-me/releases' }
 		],
 		thumb: report_t,
-		photo: report_c
+		medias: [{ type: 'image', data: report_c }]
 	}
 ];
