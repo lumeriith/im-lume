@@ -19,7 +19,6 @@ import report_c from '$lib/assets/projects/report/card.png';
 import phys_t from '$lib/assets/projects/runtimephys/thumbnail.jpg';
 import phys_c from '$lib/assets/projects/runtimephys/card.jpg';
 import phys_1 from '$lib/assets/projects/runtimephys/pic1.jpg';
-import phys_2 from '$lib/assets/projects/runtimephys/pic2.jpg';
 
 import tim_t from '$lib/assets/projects/tim/thumbnail.jpg';
 import tim_c from '$lib/assets/projects/tim/card.jpg';
