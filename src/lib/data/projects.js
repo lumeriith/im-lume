@@ -87,7 +87,6 @@ export default [
 		role: '개인 개발',
 		awards: ['경희대 소프트웨어융합학과 X retr0 해커톤 금상'],
 		links: [
-			{ type: 'play', data: '/play/cube5webgl' },
 			{ type: 'github', data: 'https://github.com/lumeriith/CubeCubeCubeCubeCube' },
 			{ type: 'youtube', data: 'https://www.youtube.com/watch?v=UN0Rky9AqAE' }
 		],
