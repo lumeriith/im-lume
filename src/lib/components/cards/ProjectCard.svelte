@@ -20,7 +20,7 @@
 
 <a
 	class="overflow-hidden relative project-card flex flex-col w-full {project.featured
-		? 'h-44 md:h-64'
+		? 'h-52 md:h-80'
 		: 'md:col-span-2'} cursor-pointer font-monospace"
 	on:click
 	href="/projects/{id}"
@@ -37,14 +37,17 @@
 			<div class="text-lg md:text-xl" style="text-shadow: 0 0 12px #000a;">
 				{project.title}
 			</div>
+			{#if project.awards}
+				<Icon icon="fa-solid:award" class="text-xs text-[#ffc04b] md:hidden" />
+			{/if}
 			<div class="text-xs opacity-50 ml-auto" style="text-shadow: 0 0 12px #000a;">
 				{project.subtitle || ''}
 			</div>
 		</header>
-		<main class="text-xs md:text-sm opacity-70 flex flex-col" style="text-shadow: 0 0 12px #000a;">
+		<main class="text-xs md:text-sm flex flex-col" style="text-shadow: 0 0 12px #000a;">
 			<MultiClamp
 				clamp={project.featured ? 3 : 1}
-				class="whitespace-pre-line"
+				class="whitespace-pre-line opacity-70"
 				style="line-height: 1.5;">{project.content}</MultiClamp
 			>
 			{#if project.awards}

@@ -52,21 +52,38 @@
 	>
 		<header class="flex gap-2 items-center mb-1">
 			<LizardSmoothie />
-			<div class="title text-2xl text-center typewriter px-1 whitespace-nowrap typewriter">
+			<div class="glow text-2xl text-center typewriter px-1 whitespace-nowrap typewriter">
 				{typewriterText.substring(0, currentTypewriterLength)}
 			</div>
 		</header>
 		<main class="flex text-sm mb-4">Personal Portfolio</main>
-		<section class="text-md content">
+		<section class="text-md content mb-3">
 			<div>- Kyunghee University Undergraduate</div>
 			<div>- Wannabe Game Developer</div>
 			<div>- Hobbiest Web Developer</div>
 		</section>
+		<div class="flex flex-col items-end gap-1">
+			<a class="glow" href="#projects">>Explore</a>
+			<a class="glow" href="#about">>Contact</a>
+		</div>
 		<div class="h-4" />
 	</div>
 </div>
 
 <style>
+	a {
+		opacity: 0.8;
+	}
+
+	a:hover {
+		text-decoration: underline;
+		opacity: 1;
+	}
+
+	a:active {
+		filter: brightness(0.5);
+	}
+
 	.inner-container {
 		transition: transform 0.5s, filter 0.1s;
 		--brightness: 1;
@@ -82,7 +99,7 @@
 		transition: filter 1s;
 	}
 
-	.title {
+	.glow {
 		text-shadow: 0 0 8px #fff9;
 	}
 

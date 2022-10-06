@@ -7,7 +7,7 @@
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
 </script>
 
-<PartHeading title="Career" subtitle="경력 및 프리랜서 활동" />
+<PartHeading title="Career" subtitle="경력 및 프리랜서 활동" id="career" />
 <FullWidthSpace>
 	<Container>
 		<div class="flex justify-start items-center py-5">

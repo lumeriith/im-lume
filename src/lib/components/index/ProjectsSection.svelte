@@ -6,7 +6,7 @@
 	import Container from '../general/Container.svelte';
 </script>
 
-<PartHeading title="Projects" subtitle="대외활동 및 프로젝트" />
+<PartHeading title="Projects" subtitle="대외활동 및 프로젝트" id="projects" />
 
 <FullWidthSpace class="relative">
 	<Container>

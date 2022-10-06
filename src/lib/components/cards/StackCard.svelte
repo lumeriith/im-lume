@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex flex-col flex-1 font-monospace">
-	<div class="flex flex-row gap-3">
+	<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-stretch">
 		<div
 			class="flex flex-row gap-2 px-1.5 text-black items-center text-sm"
 			style={`background: ${background}; color: ${color}`}
@@ -21,13 +21,11 @@
 				{title}
 			</div>
 		</div>
-		<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-start">
-			{#each details as detail, i}
-				<HashTagItem {detail} />
-			{/each}
-		</div>
+		{#each details as detail, i}
+			<HashTagItem {detail} />
+		{/each}
 	</div>
 	<div class="pt-2">
-		<div class="text-sm opacity-90 text-[#666]">// {subtitle}</div>
+		<div class="text-sm opacity-80 text-[#ffffff]">// {subtitle}</div>
 	</div>
 </div>

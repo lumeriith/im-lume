@@ -17,7 +17,7 @@
 	<a
 		href={url}
 		target="_blank"
-		class="bg-[#ff7ea938] text-[#b77882] py-1 px-2 flex items-center hash-tag"
+		class="bg-[#7effb238] text-[#78b778] py-1 px-2 flex items-center hash-tag"
 		><Icon icon="line-md:hash-small" class="text-lg -ml-1" />{text}<Icon
 			icon="ci:external-link"
 			class="ml-1"
@@ -31,7 +31,7 @@
 
 <style>
 	.hash-tag {
-		opacity: 0.5;
+		opacity: 0.8;
 	}
 
 	.hash-tag:hover {

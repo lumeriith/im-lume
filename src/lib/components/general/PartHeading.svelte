@@ -3,9 +3,10 @@
 
 	export let title = '';
 	export let subtitle = '';
+	export let id = undefined;
 </script>
 
-<Container>
+<Container {id}>
 	<div class="text-lg mb-1 mt-7 font-monospace flex">
 		<span class="text-[#ffcc22]">{title}</span>
 		<span class="opacity-30">(</span>

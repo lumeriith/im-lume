@@ -15,6 +15,7 @@
 	];
 </script>
 
+<div id="about" />
 <FullWidthSpace>
 	<Container class="font-monospace">
 		<h2 class="font-bold opacity-90 mb-1 mt-5">Contact</h2>
