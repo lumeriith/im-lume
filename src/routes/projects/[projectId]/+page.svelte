@@ -174,4 +174,8 @@
 		text-decoration: underline;
 		color: #8eebb8;
 	}
+	.content-markdown :global(p) {
+		text-indent: 0.6em;
+		margin-bottom: 7px;
+	}
 </style>
