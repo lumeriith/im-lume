@@ -1,6 +1,6 @@
 <script>
-	export const containerPadding = 20;
-	export const containerMaxWidth = 1152;
+	export let padding = 20;
+	export let maxWidth = 1152;
 
 	let _class = '';
 	export let style = '';
@@ -11,7 +11,7 @@
 <div
 	{id}
 	class="ml-auto mr-auto {_class}"
-	style="padding: {containerPadding}px; max-width: {containerMaxWidth}px; {style}"
+	style="padding: {padding}px; max-width: {maxWidth}px; {style}"
 >
 	<slot />
 </div>

@@ -36,6 +36,7 @@
 		"@sveltejs/kit": "^1.0.0-next.511",
 		"autoprefixer": "^10.4.12",
 		"cookie": "^0.5.0",
-		"ress": "^5.0.2"
+		"ress": "^5.0.2",
+		"svelte-markdown": "^0.2.3"
 	}
 }

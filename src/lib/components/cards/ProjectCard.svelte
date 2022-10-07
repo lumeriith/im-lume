@@ -41,14 +41,14 @@
 				<Icon icon="fa-solid:award" class="text-xs text-[#ffc04b] md:hidden" />
 			{/if}
 			<div class="text-xs opacity-50 ml-auto" style="text-shadow: 0 0 12px #000a;">
-				{project.subtitle || ''}
+				{project.type || ''}
 			</div>
 		</header>
 		<main class="text-xs md:text-sm flex flex-col" style="text-shadow: 0 0 12px #000a;">
 			<MultiClamp
 				clamp={project.featured ? 3 : 1}
 				class="whitespace-pre-line opacity-70"
-				style="line-height: 1.5;">{project.content}</MultiClamp
+				style="line-height: 1.5;">{project.subtitle}</MultiClamp
 			>
 			{#if project.awards}
 				<div class="mt-1 hidden md:block">
