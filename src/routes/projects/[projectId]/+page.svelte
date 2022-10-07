@@ -33,7 +33,9 @@
 
 <div
 	class="h-[100vh] top-0 w-full pt-6 flex justify-center items-center font-monospace bg-wrapper opacity-50 absolute -z-10"
-	style="background: url({bg}); background-repeat: no-repeat; background-size: 100% 100%;"
+	style="background: url({bg}); background-repeat: no-repeat; background-size: 100% 100%; {project.hueRotate
+		? `filter: hue-rotate(${project.hueRotate});`
+		: ''}"
 />
 
 <Container class="font-monospace">
@@ -93,7 +95,10 @@
 	<div class="h-3" />
 	<Container maxWidth={800}>
 		{#if project.content}
-			<div class="content-markdown">
+			<div
+				class="content-markdown"
+				style={project.hueRotate ? `filter: hue-rotate(${project.hueRotate});` : ''}
+			>
 				<SvelteMarkdown source={trimmedContent} />
 			</div>
 		{/if}
@@ -164,5 +169,9 @@
 		list-style-type: decimal;
 		margin-left: 2em;
 		margin-bottom: 10px;
+	}
+	.content-markdown :global(a) {
+		text-decoration: underline;
+		color: #8eebb8;
 	}
 </style>

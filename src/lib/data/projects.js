@@ -26,6 +26,12 @@ import tim_gif from '$lib/assets/projects/tim/gif.gif';
 import tim_1 from '$lib/assets/projects/tim/pic1.jpg';
 import tim_2 from '$lib/assets/projects/tim/pic2.jpg';
 
+import copycat_t from '$lib/assets/projects/copycat/thumbnail.jpg';
+import copycat_c from '$lib/assets/projects/copycat/card.jpg';
+import copycat_1 from '$lib/assets/projects/copycat/pic1.jpg';
+import copycat_2 from '$lib/assets/projects/copycat/pic2.jpg';
+import copycat_3 from '$lib/assets/projects/copycat/pic3.jpg';
+
 export default [
 	{
 		title: 'RuntimeBakedPhysics',
@@ -64,7 +70,8 @@ export default [
     ### Physics LoD
     멀리 있어 눈에 잘 띄지 않는 장면들에 대해 낮은 정확도와 프레임율의 시뮬레이션으로 성능 향상
 
-    `
+    `,
+		hueRotate: '260deg'
 	},
 	{
 		title: 'TrappedInMetaverse',
@@ -89,8 +96,10 @@ export default [
 		],
 		content: `
     # Trapped In Metaverse, 한 대학생의 메타버스 탈출기
+    '대학생의 메타버스' 주제 경희대학교 2022 KHUTHON 최우수상 수상작
 
-    비대면 실시간 강의를 들으며 게임을 하다 메타버스 세계에 갇혀버린 한 대학생,
+    ## 스토리
+    비대면 실시간 강의를 들으며 게임을 하다 졸아, 메타버스 세계에 갇혀버린 한 대학생,
     강의 세계와 두 게임 세계를 넘나들며 탈출해야한다.
 
     ## 사용 기술 스택
@@ -114,7 +123,8 @@ export default [
 
     WASD 키로 이동하고 마우스를 이용해 시점 이동이 가능하다. Q를 눌러 재시작할 수 있다.
     Enter를 눌러 채팅이 가능하다.
-    `
+    `,
+		hueRotate: '60deg'
 	},
 	{
 		title: 'Dew',
@@ -136,6 +146,7 @@ export default [
 		],
 		content: `
     # Dew
+    경희대학교 2019 소융과 학부생 대회 최우수상, 경희대학교 2019 SW페스티벌 대상 수상작
     PvE & PvP MOBA 온라인 던전 크롤러 게임
     ## PvE와 PvP의 결합
     Dew는 온라인 멀티 플레이어 게임으로 두 명의 플레이어가 각 진영에서 게임을 시작합니다. 초반부는 던전 크롤링 PvE를 통해 장비, 아이템, 돈, 능력치 등을 획득하며 성장하고, 후반에는 서로를 최종 보스로 만나 결투하게 됩니다.
@@ -149,11 +160,72 @@ export default [
 
 
 
-    `
+    `,
+		hueRotate: '60deg'
+	},
+	{
+		title: 'Copycat',
+		featured: true,
+		type: '게임, 2022',
+		icon: 'carbon:game-console',
+		subtitle: '게임 속 게임들에서 자유를 찾아 떠나는 한 핑퐁 공.\nGIGDC 2022 참여 작품',
+		stacks: ['unity', 'cs'],
+		role: 'MadGecko 팀, 개발 보조',
+		links: [{ type: 'Youtube', data: 'https://www.youtube.com/watch?v=zJp9j2eZZD4' }],
+		thumb: copycat_t,
+		medias: [
+			{
+				type: 'youtube',
+				data: 'zJp9j2eZZD4'
+			},
+			{ type: 'image', data: copycat_1 },
+			{ type: 'image', data: copycat_2 },
+			{ type: 'image', data: copycat_3 }
+		],
+		content: `
+    # CopyCat: CubeCube
+    게임 속 게임으로 아케이드, 액션, 퍼즐 등의 장르를 통해 서사를 전달합니다. 플레이어는 매 스테이지 마다 완전히 바뀌는 게임 규칙과 세계에 적응하고 도전하여 스테이지를 넘어가는 것이 목표입니다. 
+    ## 스테이지마다 바뀌는 게임
+    캐주얼한 게임을 하다가도 고민과 순발력이 필요한 퍼즐 게임이 나오는가 하면, 공을 튀기다가 칼을 들고 적들을 처치하는 액션 장르로 게임이 변화합니다. 총 4개의 게임으로 새로운 느낌을 받으며 이어지는 스토리를 즐길 수 있습니다.
+    
+    ## 캐쥬얼하고 때로는 코미컬하지만 많은 생각을 하게 만드는 게임
+    CopyCat: CubeCube는 앞서 말했듯이 매 스테이지마다 다른 게임이 되어 즐길 수 있게 해줍니다. 그리고 각각의 게임들은 CopyCat만의 캐쥬얼함과 코믹함으로 새롭게 표현하여 플레이어가 쉽게 플레이할 수 있게 해줍니다. 그러나 이러한 캐쥬얼함 속에서도 진지한 주제의식을 담았습니다. 현재 많은 학생들은 어린 시절 부터 안정적인 삶을 위해 다른 사람들처럼만 살라고 종용하는 학교, 가정, 사회의 영향으로 자신의 꿈에 대한 탐색이 결여된 채 성장합니다. 도전적인 삶과 자신만의 길을 가려는 사람에 눈치를 주고 불안감을 조성하는 분위기는 눈에 띄지는 않지만 확실하게 우리 주변에 존재합니다. 이러한 주제의식을 게임속에서 자유를 갈망하는 핑퐁 공의 서사를 통해 전달합니다.
+    
+    ## 모방은 창조의 어머니
+    이 게임의 스토리는 의도적으로 모방된 게임 세계를 통해 모방에 대한 새로운 관점을 제시합니다. 게임 내에서 등장하는 핑퐁 공은 남들과 다르기를 원하며 나만의 길을 찾으려 합니다. 하지만 핑퐁 공이 거쳐가는 세계들은 모두 다른 게임의 모방이었습니다. 이는 핑퐁 공이 은연 중에 자신이 자신 만의 길을 걷는 행위조차도 다른 누군가의 발자취를 걷는 것이었다는 사실을 깨닫게 됩니다. 앞서 말한 사회적 분위기에 의해 너도 나도 남들과 다를 것이 없는 서로가 서로의 CopyCat이 되버린 상황에서 과연 모방은 나쁘기만 한 것인가? 에 대한 답으로 아리스토텔레스의 모방과 예술에 대한 견해를 들어 내보이고 싶었습니다. 모방된 게임 세상에서도 새롭고 신선한 진행 방식으로 승화시킬 수 있었고 이를 통해 다른 사람을 따라 하는 것이 무작정 나쁜 것만은 아니라는 얘기를 전달하고 있습니다. 즉, 자신의 길을 포기하지 않으면서도 남들 처럼 살아가며 스스로를 발전 시킬 수 있다는 것입니다. 이를 깨달은 핑퐁 공은 엔딩 씬에서 아랑곳하지 않고 자신만의 길을 걸으며 새로운 창조를 상징하는 “밝은 빛”을 향해 나아갑니다.
+    
+    `,
+		hueRotate: '190deg'
+	},
+	{
+		title: '하울의 움직이는 대학',
+		type: '게임, 2019',
+		icon: 'carbon:game-console',
+		subtitle: '마법대학이 걸어서 직접 유능한 인재를 찾아 나서는 이야기.',
+		stacks: ['unity', 'cs'],
+		role: 'Lizard_0209 팀, 개발 총괄',
+		awards: ['경희대학교 2019 쿠러그 해커톤 KHUTHON 대상'],
+		links: [{ type: 'Youtube', data: 'https://youtu.be/RHylp18lxUg' }],
+		thumb: magical_t,
+		medias: [
+			{
+				type: 'youtube',
+				data: 'RHylp18lxUg'
+			},
+			{ type: 'image', data: magical_c }
+		],
+		content: `
+    # 하울의 움직이는 대학
+    '대학교와 여행' 주제 경희대학교 2019 KHUTHON 대상 수상작
+    ## 스토리
+    마법대한민국의 한 대학, 마법경희대학교. 마법경희대의 신입생 모집 기간이 다가왔다.
+    마법경희대학교의 이름을 빛낼 인재들을 찾기 위해, 배우기 좋고 가르치기 좋은 학교로 거듭나기 위해,
+    마법경희대학교는 긴 여행을 시작한다...
+    `,
+		hueRotate: '60deg'
 	},
 	{
 		title: 'Goat5',
-		featured: true,
 		type: '게임, 2018',
 		icon: 'carbon:game-console',
 		subtitle: '자신과 사물의 질량을 조작하여 풀어나가는 1인칭 퍼즐 게임.',
@@ -174,8 +246,8 @@ export default [
 		],
 		content: `
     # GoatGoatGoatGoatGoat
-    질량을 조작하여 풀어나가는 1인칭 퍼즐 게임
     경희대학교 2018 SW페스티벌 대상 수상작
+    질량을 조작하여 풀어나가는 1인칭 퍼즐 게임
 
     ## 규칙 및 조작법
     - 플레이어는 사람처럼 두발로 걷는 염소이다.
@@ -199,43 +271,45 @@ export default [
     ## Attribution
     BGM: Snow Temple by Juno
 
-    `
+    `,
+		hueRotate: '-40deg'
 	},
 	{
-		title: 'Copycat',
-		type: '게임, 2022',
+		title: '나는 레포트를 날렸다',
+		type: '게임, 2018',
 		icon: 'carbon:game-console',
-		subtitle: '마법대학이 걸어서 직접 유능한 인재를 찾아 나서는 이야기.',
+		subtitle: '정문부터 교수님의 연구실까지 날아가는 레포트의 모험.',
 		stacks: ['unity', 'cs'],
-		role: 'MadGecko 팀, 개발 보조',
-		awards: ['경희대학교 2019 쿠러그 해커톤 KHUTHON 대상'],
-		links: [{ type: 'Youtube', data: 'https://youtu.be/RHylp18lxUg' }],
-		thumb: magical_t,
-		medias: [
-			{
-				type: 'youtube',
-				data: 'RHylp18lxUg'
-			},
-			{ type: 'image', data: magical_c }
-		]
-	},
-	{
-		title: '하울의 움직이는 대학',
-		type: '게임, 2019',
-		icon: 'carbon:game-console',
-		subtitle: '마법대학이 걸어서 직접 유능한 인재를 찾아 나서는 이야기.',
-		stacks: ['unity', 'cs'],
-		role: 'Lizard_0209 팀, 개발 총괄',
-		awards: ['경희대학교 2019 쿠러그 해커톤 KHUTHON 대상'],
-		links: [{ type: 'Youtube', data: 'https://youtu.be/RHylp18lxUg' }],
-		thumb: magical_t,
-		medias: [
-			{
-				type: 'youtube',
-				data: 'RHylp18lxUg'
-			},
-			{ type: 'image', data: magical_c }
-		]
+		role: '소시 팀, 개발/기획 총괄',
+		awards: ['경희대학교 2018 쿠러그 해커톤 KHUTHON 최우수상'],
+		links: [
+			{ type: 'Release', data: 'https://github.com/lumeriith/Thrown-my-report-by-me/releases' }
+		],
+		thumb: report_t,
+		medias: [{ type: 'image', data: report_c }],
+		content: `
+    # 나는 레포트를 날렸다
+    '경희대학교와 주변 상권' 주제 경희대학교 2018 KHUTHON 최우수상 수상작
+    '소시' 팀 (심은섭, 강보석, 백윤휘, 임수빈, 정보광)
+    정문부터 교수님의 연구실까지 날아가는 레포트의 모험.
+    
+    ## 설명
+    과제를 제출해야할 수업에 늦었는데 레포트까지 떨어트려버렸다!
+    이렇게 된 이상 레포트가 직접 교수님의 연구실에 가서 스스로를 제출하도록 돕자.
+    
+    ## 조작법
+    - 레포트는 공중을 날아다니며 교수님의 연구실로 향한다.
+    - 마우스를 왼쪽 클릭하여 클릭한 방향으로 레포트를 밀 수 있다. 단 한번 밀때마다 오른쪽 위의 '바람'을 소모한다.
+    
+    - 날아다니면서 파란색 '바람'을 모으고, 고양이와 비둘기 등의 위험한 적들을 피해야한다.
+    
+    - 레포트는 10장부터 시작, 공격당할 때마다 한장 씩 찢어진다.
+    - 레포트가 적으면 적을 수록 학점이 나빠지고 장학금도 적게 받게 되니 무사히 교수님의 연구실에 도착해보자.
+    
+    - 인트로는 스페이스로 스킵할 수 있다.
+    
+    `,
+		hueRotate: '90deg'
 	},
 	{
 		title: 'Cube5',
@@ -260,7 +334,26 @@ export default [
 				data: `S-dYejGxnO0`
 			},
 			{ type: 'image', data: cube_c }
-		]
+		],
+		content: `
+    # CubeCubeCubeCubeCube (Cube5)
+    경희대 소프트웨어융합학과 X retr0 해커톤 금상작.
+
+    끝없이 달리는 러너 + 슈터 장르를 결합한 게임으로, 총의 반동과 시간 정지 능력을 이용해 최대한 오래 살아남아보자.
+
+    ## 조작
+    - Space를 눌러 점프할 수 있다. 오래 누르면 더 높고 멀게 점프할 수 있다.
+    - 왼쪽 마우스 버튼으로 총을 발사할 수 있다. 떠다니는 적을 쏴 없애거나 빨간 버튼, 벽 등을 쏴 맵과 상호작용할 수 있다.
+    - 총의 초탄은 큰 반동과 높은 피해량을 가진다. 땅에 착지하면 빠른 속도로 탄약이 충전된다.
+    - 점프 후 초탄의 반동을 이용해 멀고 높게 점프할 수 있다. 
+    - 오른쪽 마우스 버튼을 꾹 누르면 시간을 느려지게 할 수 있어 빠른 반응이 필요한 상황을 헤쳐나갈 수 있다.
+    - 바다로 떨어지거나 뒤쳐지면 사망할 수 있으니 조심해야한다.
+    - 난이도는 시간에 따라 5단계까지 점점 상승한다.
+
+    ## Attribution
+    BGM: [Starbox - Digital Dream (Azureflux Remix) from Bit Bops by Azureflux](https://azuresound.bandcamp.com/track/digital-dream-azureflux-remix)
+    `,
+		hueRotate: '180deg'
 	},
 	{
 		title: 'Cardkin',
@@ -281,20 +374,17 @@ export default [
 				data: `MyQEFMC94Ok`
 			},
 			{ type: 'image', data: cardkin_c }
-		]
-	},
-	{
-		title: '나는 레포트를 날렸다',
-		type: '게임, 2018',
-		icon: 'carbon:game-console',
-		subtitle: '정문부터 교수님의 연구실까지 날아가는 레포트의 모험.',
-		stacks: ['unity', 'cs'],
-		role: '소시 팀, 개발/기획 총괄',
-		awards: ['경희대학교 2018 쿠러그 해커톤 KHUTHON 최우수상'],
-		links: [
-			{ type: 'Release', data: 'https://github.com/lumeriith/Thrown-my-report-by-me/releases' }
 		],
-		thumb: report_t,
-		medias: [{ type: 'image', data: report_c }]
+		content: `
+    # Cardkin
+    경희대학교 2018 SW페스티벌 주니어상 수상작, KHUvelopers의 Indian팀(심은섭, 하창범, 안해영) 제작
+    리얼타임 TPS와 카드 배틀, 퍼즐의 결합, 실시간 멀티플레이 PvP
+
+    ## 설명
+    - 덱에서 카드를 항상 일정 수만큼 뽑아 핸드에 쥐고 있습니다.
+    - 대부분의 카드들은 봉인된 채로 핸드에 쥐어지는데, 카드마다 고유한 퍼즐을 풀어 봉인을 해제하고, 그 카드에 담긴 마법을 이용해 상대의 HP를 0으로 만들면 승리합니다.
+    - 카드들이 봉인 해제 될 때에 기본 공격이 충전되어 상대를 공격할 수 있습니다.
+    `,
+		hueRotate: '-60deg'
 	}
 ];

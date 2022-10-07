@@ -69,6 +69,7 @@
 <style>
 	.content-container {
 		background-color: #0009;
+		backdrop-filter: blur(4px);
 	}
 
 	:global(.project-card) {
