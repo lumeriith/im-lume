@@ -11,7 +11,7 @@
 <FullWidthSpace class="relative">
 	<Container>
 		<div
-			class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-stretch py-3 w-fit select-none"
+			class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-stretch py-3 w-full select-none"
 		>
 			{#each projects as project, i}
 				<ProjectCard {project} id={i} />

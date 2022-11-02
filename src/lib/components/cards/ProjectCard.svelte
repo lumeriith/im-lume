@@ -20,11 +20,18 @@
 
 <a
 	class="overflow-hidden relative project-card flex flex-col w-full {project.featured
-		? 'h-52 md:h-80'
+		? 'h-52 sm:h-72 md:h-80'
 		: 'md:col-span-2'} cursor-pointer font-monospace"
 	on:click
 	href="/projects/{id}"
 >
+	<div class="absolute right-0 bottom-0 p-3 z-10 go-icon">
+		<Icon
+			class={project.featured ? 'text-5xl' : 'text-4xl hidden md:block'}
+			icon="akar-icons:circle-chevron-right-fill"
+		/>
+	</div>
+
 	<div
 		class="absolute inset-0 -z-10 bg-img"
 		style="background: url({project.thumb}); background-size: cover; background-position: center center;"
@@ -67,29 +74,43 @@
 </a>
 
 <style>
+	.project-card .go-icon {
+		transition: opacity 0.1s, transform 0.1s;
+		opacity: 0;
+		transform: scale(0.8);
+		fill: none;
+		stroke: #0003;
+		stroke-width: 1px;
+		stroke-linejoin: round;
+	}
+
+	.project-card:hover .go-icon {
+		opacity: 1;
+		transform: scale(1);
+	}
+
 	.content-container {
 		background-color: #0009;
 		backdrop-filter: blur(4px);
 	}
 
-	:global(.project-card) {
+	.project-card {
 		transform: scale(1);
 		transition: transform 0.1s;
 	}
 
-	:global(.project-card):active {
+	.project-card:active {
 		transform: scale(0.97) translateY(3px) !important;
 		filter: brightness(0.8) !important;
 	}
 
-	:global(.project-card) .text-desc {
+	.project-card .text-desc {
 		transition: opacity 0.1s;
 	}
 
 	@media (pointer: fine) {
 		:global(.project-card):hover,
 		:global(.project-card.open) {
-			transform: translateY(-6px);
 			filter: brightness(1.1);
 		}
 	}
