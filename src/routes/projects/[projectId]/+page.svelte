@@ -57,13 +57,13 @@
 	</div>
 
 	<section class="flex flex-col items-start gap-2 mt-5 text-sm justify-center mb-4">
-		<div class="flex gap-1 items-center opacity-50">
+		<div class="flex gap-2 items-center opacity-50">
 			<Icon icon="carbon:user-avatar-filled" />
 			<div>{project.role}</div>
 		</div>
 		{#if project.awards}
 			{#each project.awards as award}
-				<div class="flex gap-1.5 items-center opacity-50">
+				<div class="flex gap-2 items-center opacity-50">
 					<Icon icon="fa-solid:award" />
 					<div>{award}</div>
 				</div>

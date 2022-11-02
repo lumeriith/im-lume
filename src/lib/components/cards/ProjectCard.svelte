@@ -78,7 +78,7 @@
 	}
 
 	:global(.project-card):active {
-		transform: scale(0.97) !important;
+		transform: scale(0.97) translateY(3px) !important;
 		filter: brightness(0.8) !important;
 	}
 
@@ -89,7 +89,7 @@
 	@media (pointer: fine) {
 		:global(.project-card):hover,
 		:global(.project-card.open) {
-			transform: scale(1.02);
+			transform: translateY(-6px);
 			filter: brightness(1.1);
 		}
 	}
