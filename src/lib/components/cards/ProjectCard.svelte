@@ -36,40 +36,45 @@
 		class="absolute inset-0 -z-10 bg-img"
 		style="background: url({project.thumb}); background-size: cover; background-position: center center;"
 	/>
-	<div class="text-desc flex flex-col gap-1 content-container px-2 py-1">
-		<header class="flex items-center gap-1.5">
-			{#if project.icon}
-				<Icon class="text-lg md:text-xl mt-[1px]" icon={project.icon} />
-			{/if}
-			<div class="text-lg md:text-xl" style="text-shadow: 0 0 12px #000a;">
-				{project.title}
-			</div>
-			{#if project.awards}
-				<Icon icon="fa-solid:award" class="text-xs text-[#ffc04b] md:hidden" />
-			{/if}
-			<div class="text-xs opacity-50 ml-auto" style="text-shadow: 0 0 12px #000a;">
-				{project.type || ''}
-			</div>
-		</header>
-		<main class="text-xs md:text-sm flex flex-col" style="text-shadow: 0 0 12px #000a;">
-			<MultiClamp
-				clamp={project.featured ? 3 : 1}
-				class="whitespace-pre-line opacity-70"
-				style="line-height: 1.5;">{project.subtitle}</MultiClamp
-			>
-			{#if project.awards}
-				<div class="mt-1 hidden md:block">
-					{#each project.awards as award}
-						<div class="flex gap-2 items-center text-[#ffb53e]">
-							<Icon icon="fa-solid:award" class="text-xs" /><span>{award}</span>
-						</div>
-					{/each}
-				</div>
-			{/if}
-		</main>
-		{#if project.featured}
-			<div class="h-0.5" />
+	<div class="text-desc flex content-container">
+		{#if !project.featured}
+			<img src={project.thumb} class="w-16 md:w-24 md:mr-1 h-full object-cover" />
 		{/if}
+		<div class="flex flex-1 flex-col gap-1 px-4 py-1 justify-center">
+			<header class="flex items-center gap-1.5">
+				{#if project.icon}
+					<Icon class="text-lg md:text-xl mt-[1px]" icon={project.icon} />
+				{/if}
+				<div class="text-lg md:text-xl" style="text-shadow: 0 0 12px #000a;">
+					{project.title}
+				</div>
+				{#if project.awards}
+					<Icon icon="fa-solid:award" class="text-xs text-[#ffc04b] md:hidden" />
+				{/if}
+				<div class="text-xs opacity-50 ml-auto" style="text-shadow: 0 0 12px #000a;">
+					{project.type || ''}
+				</div>
+			</header>
+			<main class="text-xs md:text-sm flex flex-col" style="text-shadow: 0 0 12px #000a;">
+				<MultiClamp
+					clamp={project.featured ? 3 : 1}
+					class="whitespace-pre-line opacity-70"
+					style="line-height: 1.5;">{project.subtitle}</MultiClamp
+				>
+				{#if project.awards}
+					<div class="mt-1 hidden md:block">
+						{#each project.awards as award}
+							<div class="flex gap-2 items-center text-[#ffb53e]">
+								<Icon icon="fa-solid:award" class="text-xs" /><span>{award}</span>
+							</div>
+						{/each}
+					</div>
+				{/if}
+			</main>
+			{#if project.featured}
+				<div class="h-0.5" />
+			{/if}
+		</div>
 	</div>
 </a>
 

@@ -4,7 +4,7 @@ export default [
 	{
 		title: 'Unity',
 		subtitle: `모바일 게임 프론트/서버 로직 개발, 온라인/LAN 멀티플레이어 게임 개발, 게임 시스템 설계
-      오픈소스 프로젝트 멀티플레이어 라이브러리 vis2k/Mirror Contributior`,
+      오픈소스 프로젝트 멀티플레이어 라이브러리 vis2k/Mirror Contributor`,
 		details: [
 			'C#',
 			'GameSpark',
