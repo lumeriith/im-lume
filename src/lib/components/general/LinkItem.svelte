@@ -6,7 +6,7 @@
 	export let url;
 </script>
 
-<a class="flex gap-2 items-center" href={url}>
+<a class="flex gap-2 items-center" href={url} target="_blank">
 	<Icon icon="akar-icons:link-chain" />
 	<div class="shrink-0">{type}</div>
 	<MultiClamp class="text-xs opacity-50">{url}</MultiClamp>
