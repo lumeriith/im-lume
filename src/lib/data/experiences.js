@@ -3,8 +3,8 @@ import ue from '$lib/assets/stacks/ue.png';
 export default [
 	{
 		title: 'Unity',
-		subtitle:
-			'모바일 게임 프론트/서버 로직 개발, 온라인/LAN 멀티플레이어 게임 개발, 게임 시스템 설계',
+		subtitle: `모바일 게임 프론트/서버 로직 개발, 온라인/LAN 멀티플레이어 게임 개발, 게임 시스템 설계
+      오픈소스 프로젝트 멀티플레이어 라이브러리 vis2k/Mirror Contributior`,
 		details: [
 			'C#',
 			'GameSpark',
@@ -35,7 +35,8 @@ export default [
 		subtitle: '교육 회사 홈페이지 프론트엔드, 포트폴리오 사이트 프론트 엔드 & 자동 배포',
 		details: [
 			['SvelteKit', 'https://svelte.dev/'],
-			['TailwindCSS', 'https://tailwindcss.com/']
+			['TailwindCSS', 'https://tailwindcss.com/'],
+			['Vercel', 'https://vercel.com/']
 		],
 		imgUrl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg',
 		background: 'white',

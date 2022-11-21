@@ -25,7 +25,9 @@
 			<HashTagItem {detail} />
 		{/each}
 	</div>
-	<div class="pt-2">
-		<div class="text-sm opacity-80 text-[#ffffff]">// {subtitle}</div>
+	<div class="pt-2 flex flex-col gap-2">
+		{#each subtitle.split('\n') as s}
+			<div class="text-sm opacity-80 text-[#ffffff]">// {s}</div>
+		{/each}
 	</div>
 </div>
