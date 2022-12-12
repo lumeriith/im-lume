@@ -6,7 +6,10 @@
 	import projects from '$lib/data/projects';
 	import Icon from '@iconify/svelte';
 	import LinkItem from '$lib/components/general/LinkItem.svelte';
+	import NavBar from '$lib/components/general/NavBar.svelte';
+
 	import SvelteMarkdown from 'svelte-markdown';
+	import { onMount } from 'svelte';
 
 	let project = {};
 
@@ -22,48 +25,49 @@
 	}
 </script>
 
-<div class="fixed w-full top-0 z-40 flex bg-black">
-	<a class="flex gap-2 p-2 items-center" href="/">
-		<LizardSmoothie size={20} />
-		<div class="font-monospace text-md">imlu.me</div></a
-	>
-</div>
-
-<div class="h-8" />
+<NavBar />
 
 <div
-	class="h-[100vh] top-0 w-full pt-6 flex justify-center items-center font-monospace bg-wrapper opacity-50 absolute -z-10"
-	style="background: url({bg}); background-repeat: no-repeat; background-size: 100% 100%; {project.hueRotate
-		? `filter: hue-rotate(${project.hueRotate});`
-		: ''}"
-/>
+	class="h-[100vh] top-0 w-full pt-6 flex justify-center items-center font-monospace bg-wrapper opacity-50 fixed -z-10 blur-2xl"
+	style="background-image: url({project.thumb}); background-repeat: no-repeat; background-size: 100% 100%;"
+>
+	<div class="absolute inset-0" style="background: linear-gradient(#0000, #000)" />
+</div>
+
+<div class="pt-36 relative overflow-hidden">
+	<div
+		class="absolute inset-0 bg-cover h-full w-full -z-10 blur-sm brightness-[0.6] scale-110"
+		style="background: url({project.thumb}); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;"
+	/>
+	<Container class="font-monospace z-10 pb-4" style="text-shadow: 0 0 4px #000;">
+		<header class="flex items-center mb-1 flex-wrap">
+			<div class="text-xl sm:text-3xl md:text-5xl font-bold mr-2">
+				{#if project.icon}
+					<Icon icon={project.icon} class="mr-1.5 text-xl mt-1 mb-1" />
+				{/if}
+				{project.title}
+			</div>
+			<div class="text-sm opacity-75 self-end">
+				{project.type}
+			</div>
+		</header>
+		<div class="text-sm flex-1">
+			<main class="whitespace-pre-line" style="line-height: 1.8;">
+				{project.subtitle}
+			</main>
+		</div>
+	</Container>
+</div>
 
 <Container class="font-monospace">
-	<header class="flex items-center mb-1">
-		{#if project.icon}
-			<Icon icon={project.icon} class="mr-1.5 text-2xl mt-1" />
-		{/if}
-		<div class="text-3xl font-bold mr-2">
-			{project.title}
-		</div>
-		<div class="text-sm opacity-50">
-			{project.type}
-		</div>
-	</header>
-	<div class="text-sm flex-1">
-		<main class="whitespace-pre-line" style="line-height: 1.8;">
-			{project.subtitle}
-		</main>
-	</div>
-
-	<section class="flex flex-col items-start gap-2 mt-5 text-sm justify-center mb-4">
-		<div class="flex gap-2 items-center opacity-50">
+	<section class="flex flex-col items-start gap-2 text-sm justify-center mb-4">
+		<div class="flex gap-2 items-center">
 			<Icon icon="carbon:user-avatar-filled" />
 			<div>{project.role}</div>
 		</div>
 		{#if project.awards}
 			{#each project.awards as award}
-				<div class="flex gap-2 items-center opacity-50">
+				<div class="flex gap-2 items-center">
 					<Icon icon="fa-solid:award" />
 					<div>{award}</div>
 				</div>
