@@ -17,20 +17,21 @@
 	<a
 		href={url}
 		target="_blank"
-		class="bg-[#7effb238] text-[#78b778] py-1 px-2 flex items-center hash-tag"
+		class="bg-[#7effb238] text-[#78b778] py-0.5 px-1.5 flex items-center hash-tag"
 		><Icon icon="line-md:hash-small" class="text-lg -ml-1" />{text}<Icon
 			icon="ci:external-link"
 			class="ml-1"
 		/>
 	</a>
 {:else}
-	<div class="bg-[#fff1] text-[#fff8] py-1 px-2 flex items-center hash-tag">
+	<div class="bg-[#ffffff1b] text-[#fff8] py-0.5 px-1.5 flex items-center hash-tag">
 		<Icon icon="line-md:hash-small" class="text-lg -ml-1" />{text}
 	</div>
 {/if}
 
 <style>
 	.hash-tag {
+		font-size: 0.75rem;
 		opacity: 0.8;
 	}
 
@@ -45,7 +46,7 @@
 	}
 
 	a:hover {
-		transform: translateY(-3px);
+		transform: translateY(-1.5px);
 		filter: brightness(150%);
 	}
 

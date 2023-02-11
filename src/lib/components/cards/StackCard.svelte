@@ -11,9 +11,9 @@
 </script>
 
 <div class="flex flex-col flex-1 font-monospace">
-	<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-stretch">
+	<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-center">
 		<div
-			class="flex flex-row gap-2 px-1.5 text-black items-center text-sm"
+			class="flex flex-row gap-2 px-1.5 text-black items-center text-sm h-7"
 			style={`background: ${background}; color: ${color}`}
 		>
 			<img class="h-4" src={imgUrl} alt={title} />
@@ -27,7 +27,7 @@
 	</div>
 	<div class="pt-2 flex flex-col gap-2">
 		{#each subtitle.split('\n') as s}
-			<div class="text-sm opacity-80 text-[#ffffff]">// {s}</div>
+			<div class="text-sm opacity-80 text-[#ffffff]"><span class="opacity-50">//</span> {s}</div>
 		{/each}
 	</div>
 </div>

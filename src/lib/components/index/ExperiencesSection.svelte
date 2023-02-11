@@ -10,7 +10,7 @@
 <PartHeading title="Experiences" subtitle="경험 및 운용 가능한 기술 스택" id="experiences" />
 <FullWidthSpace>
 	<Container>
-		<div class="flex flex-wrap flex-col gap-8 items-stretch">
+		<div class="flex flex-wrap flex-col gap-12 items-stretch">
 			{#each experiences as { title, subtitle, details, imgUrl, background, color }}
 				<StackCard {title} {subtitle} {details} {imgUrl} {background} {color} />
 			{/each}
