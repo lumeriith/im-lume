@@ -51,7 +51,7 @@ export default [
 		stacks: ['unity', 'cs'],
 		role: '개발 총괄 (TINADS조 - 심은섭, 주민하)',
 		links: [
-			{ type: 'Github', data: 'https://github.com/lumeriith/ImmoralFencing' },
+			{ type: 'Github', data: 'https://github.com/lumeriith/TINADS' },
 			{ type: 'Youtube', data: 'https://youtu.be/2kYBURTw8f4' }
 		],
 		awards: ['2022 실감미디어 경진대회 최우수상'],
@@ -70,7 +70,7 @@ export default [
 		### 사용자 의도 파악
 		사용자가 어떤 악기를 어떻게 연주하려고 하는가?
 		- Unity XR SDK를 이용하여 드럼 메타포와 인터랙션 구현
-		- 컨트롤러 속도 => 악기 연주 세기 반영
+		- 컨트롤러 속도 => 필터링하여 실제 속도 추정 => 악기 연주 세기 반영
 		- 타격 위치 => Snare/Side Stick, Ride Bell/Cymbal 등 위치 따른 다른 샘플 연주
 		### 녹음한 샘플 내보내기
 		- 외부 작곡 SW에서 편집이 가능하도록 General MIDI 포맷으로 녹음/내보내기 기능 구현
@@ -122,7 +122,7 @@ export default [
 	},
 	{
 		title: 'RuntimeBakedPhysics',
-		tags: ['UE5', 'PhysX', '펄어비스인재양성'],
+		tags: ['UE5', 'PhysX', '펄어비스인재양성', '테스트자동화'],
 		featured: true,
 		type: '연구, 2022-1',
 		icon: 'bxs:book-open',
@@ -161,6 +161,8 @@ export default [
 		- AABB Collision Check
     ### Physics LoD
     멀리 있어 눈에 잘 띄지 않는 장면들에 대해 Physics Scene을 분리하고 정확도와 프레임레이트를 낮추고 계산하여 성능을 향상합니다.
+		### Automated Tests & Metrics
+    테스트를 자동으로 수행하고 평균 프레임, 소요시간 등의 성능 지표를 수집하는 도구를 구현하여 개발과 테스트에 소요되는 시간을 단축하였습니다.
 
     `,
 		colors: ['#ffc667', '#ff9255']
@@ -261,7 +263,7 @@ export default [
 	},
 	{
 		title: 'Copycat',
-		tags: ['Unity', '스토리', 'GIGDC2022'],
+		tags: ['Unity', '스토리', 'GIGDC', '2022'],
 		featured: false,
 		type: '게임, 2022',
 		icon: 'carbon:game-console',
