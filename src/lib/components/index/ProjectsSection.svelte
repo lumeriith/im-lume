@@ -23,7 +23,7 @@
 		<div class="flex justify-end">
 			<a class="show-more" href="/projects">
 				프로젝트 더보기
-				<Icon class="text-3xl" icon="material-symbols:chevron-right" />
+				<Icon class="text-2xl" icon="material-symbols:chevron-right" />
 			</a>
 		</div>
 	</Container>
@@ -31,7 +31,7 @@
 
 <style>
 	.show-more {
-		@apply text-xl flex items-center underline text-[#58ee65];
+		@apply text-lg flex items-center underline text-[#58ee65];
 	}
 
 	.show-more:hover {

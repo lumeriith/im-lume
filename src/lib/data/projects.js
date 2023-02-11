@@ -47,7 +47,7 @@ export default [
 		featured: true,
 		type: 'VR 컨텐츠, 2022-2',
 		icon: 'fa6-solid:vr-cardboard',
-		subtitle: `홈레코딩 뮤지션들을 위한 실용적인 가상현실 드럼 어플리케이션`,
+		subtitle: `홈레코딩 뮤지션들을 위한 실용적인 VR 드럼 어플리케이션`,
 		stacks: ['unity', 'cs'],
 		role: '개발 총괄 (TINADS조 - 심은섭, 주민하)',
 		links: [
@@ -87,7 +87,7 @@ export default [
 		featured: true,
 		type: '게임, 캡스톤프로젝트, 2022-2',
 		icon: 'charm:graduate-cap',
-		subtitle: `FSM, 2D Motion Blending, Teacher-Student Framework을 통한 자연스러운 애니메이션 합성`,
+		subtitle: `ML, FSM을 이용한 자연스러운 캐릭터 애니메이션 구현`,
 		stacks: ['unity', 'cs'],
 		role: '기획/개발 총괄, 프론트 개발 (점심나가서먹을거같은조 - 박승준, 심은섭, 강수한)',
 		links: [
@@ -170,7 +170,6 @@ export default [
 	{
 		title: 'Trapped In Metaverse',
 		tags: ['Unity', 'SvelteKit', 'Firebase', '메타버스', '해커톤'],
-		featured: true,
 		type: '게임, 2022-1',
 		icon: 'carbon:game-console',
 		subtitle: '온라인 강의 세계와 두 게임 세계를 오가는 한 대학생의 메타버스 탈출기',
@@ -224,6 +223,7 @@ export default [
 	},
 	{
 		title: 'Dew',
+		featured: true,
 		tags: ['Unity', '멀티플레이어', 'Photon', 'SW페스티벌'],
 		type: '게임, 2019',
 		icon: 'carbon:game-console',

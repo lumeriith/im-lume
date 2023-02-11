@@ -17,8 +17,8 @@
 <PartHeading title="Awards" subtitle="수상경력" id="awards" />
 <FullWidthSpace>
 	<Container>
-		<div class="flex justify-start items-center py-5">
-			<div class="flex flex-wrap flex-col gap-4 items-stretch" style="width: min(700px, 100%)">
+		<div class="flex justify-start items-center py-8">
+			<div class="flex flex-wrap flex-col gap-6 items-stretch" style="width: min(700px, 100%)">
 				{#each awards as { date, issuer, name, project }, i}
 					<div class="flex items-center ">
 						<div class="text-sm opacity-60 whitespace-nowrap w-16">{date}</div>

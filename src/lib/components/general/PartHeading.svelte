@@ -7,7 +7,7 @@
 </script>
 
 <Container {id}>
-	<div class="text-lg mb-1 mt-7 font-monospace flex">
+	<div class="text-xl mb-1 mt-7 font-monospace flex">
 		<span class="text-[#ffcc22]">{title}</span>
 		<span class="opacity-30">(</span>
 		<span class="text-[#72da4c] font-sans">"{subtitle}"</span>

@@ -18,7 +18,7 @@
 	</div>
 </Container>
 <Container>
-	<div class="flex flex-col gap-1 md:gap-2 items-stretch py-3 w-full select-none">
+	<div class="flex flex-col gap-2 md:gap-4 items-stretch py-3 w-full select-none">
 		{#each projects as project, i}
 			<ProjectCard {project} id={i} />
 		{/each}

@@ -50,21 +50,21 @@
 			8}px) brightness(var(--brightness)); transform: scale(calc({1 +
 			defocusFactor * 0.1} + var(--add-scale)))"
 	>
-		<header class="flex gap-2 items-center mb-1">
+		<header class="flex gap-2 items-center mb-2">
 			<LizardSmoothie />
 			<div class="glow text-2xl text-center typewriter px-1 whitespace-nowrap typewriter">
 				{typewriterText.substring(0, currentTypewriterLength)}
 			</div>
 		</header>
-		<main class="flex text-sm mb-4">Personal Portfolio</main>
-		<section class="text-md content mb-3">
+		<main class="flex text-sm mb-8">Personal Portfolio</main>
+		<section class="text-md content mb-5">
 			<div>- Kyunghee University Undergraduate</div>
 			<div>- Wannabe Game Developer</div>
 			<div>- Hobbiest Web Developer</div>
 		</section>
 		<div class="flex flex-col items-end gap-1">
-			<a class="glow" href="#projects">>Explore</a>
-			<a class="glow" href="#about">>Contact</a>
+			<a class="glow" href="#projects">> Explore</a>
+			<a class="glow" href="#about">> Contact</a>
 		</div>
 		<div class="h-4" />
 	</div>
