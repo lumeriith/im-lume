@@ -6,23 +6,28 @@
 	export let url;
 </script>
 
-<a class="flex gap-2 items-center" href={url} target="_blank">
-	<Icon icon="akar-icons:link-chain" />
+<div class="flex gap-2 items-center" href={url} target="_blank">
+	<Icon class="opacity-50 w-4" icon="akar-icons:link-chain" />
 	<div class="shrink-0">{type}</div>
-	<MultiClamp class="text-xs opacity-50">{url}</MultiClamp>
-</a>
+	<a href={url}>
+		<MultiClamp class="text-xs">{url}</MultiClamp>
+	</a>
+</div>
 
 <style>
 	a {
-		filter: brightness(100%);
 		transition: transform 0.1s;
+		opacity: 0.5;
 	}
 
 	a:hover {
 		filter: brightness(150%);
+		text-decoration: underline;
+		opacity: 0.8;
 	}
 
 	a:active {
 		filter: brightness(70%);
+		opacity: 0.5;
 	}
 </style>

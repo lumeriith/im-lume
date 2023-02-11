@@ -5,6 +5,7 @@
 	import ExperiencesSection from '$lib/components/index/ExperiencesSection.svelte';
 	import CareerSection from '$lib/components/index/CareerSection.svelte';
 	import BigLizard from '$lib/components/BigLizard.svelte';
+	import AwardsSection from '$lib/components/index/AwardsSection.svelte';
 </script>
 
 <svelte:head>
@@ -16,6 +17,8 @@
 <div class="w-full">
 	<MainTitle />
 	<ProjectsSection />
+	<div class="h-16" />
+	<AwardsSection />
 	<div class="h-16" />
 	<ExperiencesSection />
 	<div class="h-16" />

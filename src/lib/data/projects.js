@@ -32,13 +32,101 @@ import copycat_1 from '$lib/assets/projects/copycat/pic1.jpg';
 import copycat_2 from '$lib/assets/projects/copycat/pic2.jpg';
 import copycat_3 from '$lib/assets/projects/copycat/pic3.jpg';
 
+import immoral_0 from '$lib/assets/projects/immoral/immoral0.jpg';
+import immoral_1 from '$lib/assets/projects/immoral/immoral1.jpg';
+import immoral_2 from '$lib/assets/projects/immoral/immoral2.jpg';
+
+import tinads_cover from '$lib/assets/projects/tinads/tinads_cover.jpg';
+import tinads_0 from '$lib/assets/projects/tinads/tinads0.jpg';
+import tinads_1 from '$lib/assets/projects/tinads/tinads1.jpg';
+
 export default [
 	{
-		title: 'RuntimeBakedPhysics',
+		title: 'This Is Not A Drum Set',
+		tags: ['Unity', 'VR', 'MIDI', '드럼'],
 		featured: true,
-		type: '연구, 2022',
+		type: 'VR 컨텐츠, 2022-2',
+		icon: 'fa6-solid:vr-cardboard',
+		subtitle: `홈레코딩 뮤지션들을 위한 실용적인 가상현실 드럼 어플리케이션`,
+		stacks: ['unity', 'cs'],
+		role: '개발 총괄 (TINADS조 - 심은섭, 주민하)',
+		links: [
+			{ type: 'Github', data: 'https://github.com/lumeriith/ImmoralFencing' },
+			{ type: 'Youtube', data: 'https://youtu.be/2kYBURTw8f4' }
+		],
+		awards: ['2022 실감미디어 경진대회 최우수상'],
+		thumb: tinads_cover,
+		medias: [
+			{ type: 'youtube', data: '2kYBURTw8f4' },
+			{ type: 'image', data: tinads_0 },
+			{ type: 'image', data: tinads_1 }
+		],
+		content: `
+    # This Is Not A Drum Set
+		## 홈레코딩 뮤지션들을 위한 가상현실 드럼 어플리케이션
+		드럼의 경우 가격대가 아주 비싸고 공간적인 문제로 집에 소장하기도 어려우며 소음 때문에 일반 주택/아파트에서 사용하기가 어렵다는 문제가 있다. TINADS는 드럼셋을 VR 가상 환경에 구현하여 연주 및 녹음이 가능한 실용적인 어플리케이션으로, 일반적인 드럼 세트의 경제적인 문제와 공간적인 문제를 동시에 해결할 수 있도록 기획되었다.
+
+		## 주요 기획
+		### 사용자 의도 파악
+		사용자가 어떤 악기를 어떻게 연주하려고 하는가?
+		- Unity XR SDK를 이용하여 드럼 메타포와 인터랙션 구현
+		- 컨트롤러 속도 => 악기 연주 세기 반영
+		- 타격 위치 => Snare/Side Stick, Ride Bell/Cymbal 등 위치 따른 다른 샘플 연주
+		### 녹음한 샘플 내보내기
+		- 외부 작곡 SW에서 편집이 가능하도록 General MIDI 포맷으로 녹음/내보내기 기능 구현
+		### 사용자화 & 보정
+		- 사용자의 편의에 맞게 드럼 세트의 위치 조절
+		- 메트로놈 + 자동 박자 측정 기능
+		- 연주 딜레이 보정 기능
+    `,
+		colors: ['#ffd73a', '#c6a771']
+	},
+	{
+		title: 'Immoral Fencing',
+		tags: ['Unity', '애니메이션', 'AI', '소켓통신', '캡스톤'],
+		featured: true,
+		type: '게임, 캡스톤프로젝트, 2022-2',
+		icon: 'charm:graduate-cap',
+		subtitle: `FSM, 2D Motion Blending, Teacher-Student Framework을 통한 자연스러운 애니메이션 합성`,
+		stacks: ['unity', 'cs'],
+		role: '기획/개발 총괄, 프론트 개발 (점심나가서먹을거같은조 - 박승준, 심은섭, 강수한)',
+		links: [
+			{ type: 'Github', data: 'https://github.com/lumeriith/ImmoralFencing' },
+			{ type: 'Youtube', data: 'https://youtu.be/jGwU6ciRnxM' }
+		],
+		thumb: immoral_1,
+		medias: [
+			{ type: 'youtube', data: 'jGwU6ciRnxM' },
+			{ type: 'image', data: immoral_0 },
+			{ type: 'image', data: immoral_1 }
+		],
+		content: `
+    # Immoral Fencing
+		## Development of fighting game using agile and interactive character animation
+		심판에게 걸리지 않는 한 부정행위가 허용되는 펜싱 게임
+
+		2022-2 게임콘텐츠캡스톤디자인 프로젝트 [최종발표 ppt 다운로드](https://github.com/lumeriith/ImmoralFencing/raw/main/Immoral%20Fencing%20-%20%EC%B5%9C%EC%A2%85%EB%B0%9C%ED%91%9C.pptx)
+    ## 사용 기술
+    ### FSM & 2D Cartesian Motion Blended Locomotion
+    자연스러운 캐릭터 애니메이션 구현을 위한 전통적인 유한 상태 머신 애니메이션 및 8개의 이동 모션을 2D 파라메터에 따른 블렌딩
+    ### Rule-based Organic Enemy AI using Gradient-Noise
+		OpenSimplex 노이즈를 이용한 변칙적인 Rule-based AI 개발
+		### Realtime Motion Generation using Teacher-Student Framework
+		Teacher-Student Framework Analogy를 이용해 강화학습 모델을 RNN으로 경량화하여 실시간 애니메이션 생성 (Pruning을 통한 Constraint Optimization)
+		### Game-Model Integration using Socket Communication & Animation Retargeting
+		Message Framing,  백엔드 모델과 유니티를 소켓 통신을 이용해 연결 및 애니메이션 리타게팅
+		### Pseudo Soft-Body Fencing Sword using Joint & Rigged Model
+		펜싱 칼 모델을 리깅하고 칼에 관절을 부여하여 구부러지는 칼날 구현  
+    `,
+		colors: ['#508cdd', '#63ceec']
+	},
+	{
+		title: 'RuntimeBakedPhysics',
+		tags: ['UE5', 'PhysX', '펄어비스인재양성'],
+		featured: true,
+		type: '연구, 2022-1',
 		icon: 'bxs:book-open',
-		subtitle: `펄어비스x경희대 소프트웨어융합학과 인재양성 프로그램 2차`,
+		subtitle: `복잡한 물리 장면의 성능 향상을 위한 방법 탐구`,
 		stacks: ['unreal', 'cpp', 'physx'],
 		role: '개인 참여',
 		links: [
@@ -55,6 +143,7 @@ export default [
 		],
 		content: `
     # Creating Complex & Performant Physics Scene by Runtime Physics Baking, Simuating on Demand, and Physics LOD
+		펄어비스x경희대 소프트웨어융합학과 인재양성 프로그램 2차
     ## 프로젝트 동기
     - 게임 속 물리 연산은 비용이 크다.
     - 물리 연산을 한정적으로 사용하거나 Baked Physics Animation 등을 이용한다.
@@ -62,21 +151,25 @@ export default [
     - 이러한 제한 사항을 극복하고 물리 장면의 부담을 줄여 복잡하고 화려한 연출의 Artistic Freedom을 주고자 하였다.
     ## 사용 기술
     ### Runtime Physics Baking
-    게임 진행 중에 복잡한 물리 장면을 미리 연산하여 저장/재생
-    => PhysX 3.4 연동 및 Collision Aggregate/Mesh Generation, Physics Event System, Scene Controller
+    게임 진행 중에 복잡한 물리 장면을 미리 연산하여 저장/재생하여 폭발 장면에서의 성능을 향상합니다.
+    - Unreal Engine 5에 PhysX 3.4 연동
+		- Collision Aggregate/Mesh Generation
+		- Physics Event System, Scene Controller
     ### Simulate on Demand
-    재생 중인 물체들 중 플레이어 등의 동적 물체들과 충돌할 가능성이 있는 것들을 선택적으로 실시간 시뮬레이션으로 대치
-    => Spatial Hashing, AABB Collision Check
+    재생 중인 물체들 중 플레이어 등의 동적 물체들과 충돌할 가능성이 있는 것들을 선택적으로 실시간 시뮬레이션으로 대치하여 부자연스럽지 않게 처리합니다.
+    - Spatial Hashing
+		- AABB Collision Check
     ### Physics LoD
-    멀리 있어 눈에 잘 띄지 않는 장면들에 대해 낮은 정확도와 프레임율의 시뮬레이션으로 성능 향상
+    멀리 있어 눈에 잘 띄지 않는 장면들에 대해 Physics Scene을 분리하고 정확도와 프레임레이트를 낮추고 계산하여 성능을 향상합니다.
 
     `,
-		hueRotate: '260deg'
+		colors: ['#ffc667', '#ff9255']
 	},
 	{
-		title: 'TrappedInMetaverse',
+		title: 'Trapped In Metaverse',
+		tags: ['Unity', 'SvelteKit', 'Firebase', '메타버스', '해커톤'],
 		featured: true,
-		type: '게임, 2022',
+		type: '게임, 2022-1',
 		icon: 'carbon:game-console',
 		subtitle: '온라인 강의 세계와 두 게임 세계를 오가는 한 대학생의 메타버스 탈출기',
 		stacks: ['unity', 'svelte', 'firebase'],
@@ -125,14 +218,14 @@ export default [
     WASD 키로 이동하고 마우스를 이용해 시점 이동이 가능하다. Q를 눌러 재시작할 수 있다.
     Enter를 눌러 채팅이 가능하다.
     `,
-		hueRotate: '60deg'
+		colors: ['#1ca3e3', '#30ff11']
 	},
 	{
 		title: 'Dew',
-		featured: true,
+		tags: ['Unity', '멀티플레이어', 'Photon', 'SW페스티벌'],
 		type: '게임, 2019',
 		icon: 'carbon:game-console',
-		subtitle: '서로가 최종 보스가 되어 싸우는 2인용 던전 크롤러.',
+		subtitle: '서로가 최종 보스가 되어 싸우는 멀티플레이 2인용 던전 크롤러',
 		stacks: ['unity', 'cs', 'pun2'],
 		role: 'Lizard_0209 팀, 개발 총괄, 시스템 개발',
 		awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상'],
@@ -164,14 +257,15 @@ export default [
 
 
     `,
-		hueRotate: '60deg'
+		colors: ['#aad9ff', '#70bfff']
 	},
 	{
 		title: 'Copycat',
-		featured: true,
+		tags: ['Unity', '스토리', 'GIGDC2022'],
+		featured: false,
 		type: '게임, 2022',
 		icon: 'carbon:game-console',
-		subtitle: '게임 속 게임들에서 자유를 찾아 떠나는 한 핑퐁 공.\nGIGDC 2022 참여 작품',
+		subtitle: 'GIGDC 2022 참여작 - 게임 속 게임들에서 자유를 찾아 떠나는 한 핑퐁 공',
 		stacks: ['unity', 'cs'],
 		role: 'MadGecko 팀, 개발 보조',
 		links: [{ type: 'Youtube', data: 'https://www.youtube.com/watch?v=zJp9j2eZZD4' }],
@@ -202,13 +296,14 @@ export default [
     이 게임은 모방된 게임 세상들에서 게임을 진행하는 새로운 방식을 통해, 다른 사람을 따라 하는 것이 무작정 나쁜 것만은 아니라는 얘기를 전달하고 있습니다. 즉, 자신의 길을 포기하지 않으면서도 남들처럼 살아가도 스스로 발전할 수 있다는 것입니다. 이를 깨달은 핑퐁 공은 엔딩 씬에서 아랑곳하지 않고 자신만의 길을 걸으며 새로운 창조를 상징하는 “밝은 빛”을 향해 나아갑니다.
     
     `,
-		hueRotate: '190deg'
+		colors: ['#c59f18', '#8f7b33']
 	},
 	{
 		title: '하울의 움직이는 대학',
+		tags: ['Unity', '해커톤', '모험'],
 		type: '게임, 2019',
 		icon: 'carbon:game-console',
-		subtitle: '마법대학이 걸어서 직접 유능한 인재를 찾아 나서는 이야기.',
+		subtitle: '마법대학이 걸어서 직접 유능한 인재를 찾아 나서는 이야기',
 		stacks: ['unity', 'cs'],
 		role: 'Lizard_0209 팀, 개발 총괄',
 		awards: ['경희대학교 2019 쿠러그 해커톤 KHUTHON 대상'],
@@ -239,13 +334,14 @@ export default [
     - 각 단과대별로 경희대학교에게 스킬이나 특수 효과를 부여합니다.
     예) 예술대학은 모나리자 그림을 날리는 스킬을 부여하고, 체육대학은 주기적으로 야구공을 발사합니다.
     `,
-		hueRotate: '60deg'
+		colors: ['#2dd151', '#ffd980']
 	},
 	{
 		title: 'Goat5',
+		tags: ['Unity', '퍼즐', 'SW페스티벌'],
 		type: '게임, 2018',
 		icon: 'carbon:game-console',
-		subtitle: '자신과 사물의 질량을 조작하여 풀어나가는 1인칭 퍼즐 게임.',
+		subtitle: '자신과 사물의 질량을 조작하여 풀어나가는 1인칭 퍼즐 게임',
 		stacks: ['unity', 'cs'],
 		role: '개인 개발',
 		awards: ['경희대학교 2018 SW페스티벌 대상'],
@@ -290,13 +386,14 @@ export default [
     배경 음악: Snow Temple by Juno
 
     `,
-		hueRotate: '-40deg'
+		colors: ['#9efa9f', '#5f8dcd']
 	},
 	{
 		title: '나는 레포트를 날렸다',
+		tags: ['Unity', '해커톤'],
 		type: '게임, 2018',
 		icon: 'carbon:game-console',
-		subtitle: '정문부터 교수님의 연구실까지 날아가는 레포트의 모험.',
+		subtitle: '정문부터 교수님의 연구실까지 날아가는 레포트의 모험',
 		stacks: ['unity', 'cs'],
 		role: '소시 팀, 개발/기획 총괄',
 		awards: ['경희대학교 2018 쿠러그 해커톤 KHUTHON 최우수상'],
@@ -330,13 +427,14 @@ export default [
     - 인트로는 스페이스로 스킵할 수 있다.
     
     `,
-		hueRotate: '90deg'
+		colors: ['#d2f5ff', '#528aff']
 	},
 	{
 		title: 'Cube5',
+		tags: ['Unity', '하이퍼캐주얼', 'SW페스티벌'],
 		type: '게임, 2018',
 		icon: 'carbon:game-console',
-		subtitle: '총의 반동, 시간 조작을 이용한 캐주얼+하드코어 무한 러너-슈터 게임.',
+		subtitle: '총의 반동, 시간 조작을 이용한 캐주얼+하드코어 무한 러너-슈터 게임',
 		stacks: ['unity', 'cs'],
 		role: '개인 개발',
 		awards: ['경희대 소프트웨어융합학과 X retr0 해커톤 금상'],
@@ -372,13 +470,14 @@ export default [
     ## Attribution
     BGM: [Starbox - Digital Dream (Azureflux Remix) from Bit Bops by Azureflux](https://azuresound.bandcamp.com/track/digital-dream-azureflux-remix)
     `,
-		hueRotate: '180deg'
+		colors: ['#fea2df', '#e3518a']
 	},
 	{
 		title: 'Cardkin',
+		tags: ['Unity', '멀티플레이어', 'UNET', 'SW페스티벌'],
 		type: '게임, 2018',
 		icon: 'carbon:game-console',
-		subtitle: '실시간 멀티플레이 PvP 3인칭 슈터 카드 배틀 게임.',
+		subtitle: '실시간 멀티플레이 PvP 3인칭 슈터 카드 배틀 게임',
 		stacks: ['unity', 'cs', 'unet'],
 		role: 'Indian 팀, 개발/기획 총괄',
 		awards: ['경희대학교 2018 SW페스티벌 주니어상'],
@@ -400,11 +499,13 @@ export default [
     
     리얼타임 TPS와 카드 배틀, 퍼즐의 결합, 실시간 멀티플레이 PvP
 
-    ## 설명
+    ## 게임 기획
     - 덱에서 카드를 항상 일정 수만큼 뽑아 핸드에 쥐고 있습니다.
     - 대부분의 카드들은 봉인된 채로 핸드에 쥐어지는데, 카드마다 고유한 퍼즐을 풀어 봉인을 해제하고, 그 카드에 담긴 마법을 이용해 상대의 HP를 0으로 만들면 승리합니다.
     - 카드들이 봉인 해제 될 때에 기본 공격이 충전되어 상대를 공격할 수 있습니다.
-    `,
-		hueRotate: '-60deg'
+    ## 사용 기술
+		- Unity, UNET (Server Authoritative Architecture)
+		`,
+		colors: ['#97d55e', '#fefe00']
 	}
 ];
