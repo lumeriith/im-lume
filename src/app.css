@@ -29,12 +29,12 @@ body {
 
 ::-moz-selection {
 	/* Code for Firefox */
-	background: rgb(255, 0, 76);
-	color: white;
+	background: white;
+	color: black;
 }
 
 ::selection {
-	background: rgb(255, 0, 76);
-	color: white;
-	-webkit-text-fill-color: white;
+	background: white;
+	color: black;
+	-webkit-text-fill-color: black;
 }

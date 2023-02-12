@@ -14,27 +14,29 @@
 	}
 </script>
 
-<PartHeading title="Awards" subtitle="수상경력" id="awards" />
-<FullWidthSpace>
-	<Container>
-		<div class="flex justify-start items-center py-8">
-			<div class="flex flex-wrap flex-col gap-6 items-stretch" style="width: min(700px, 100%)">
-				{#each awards as { date, issuer, name, project }, i}
-					<div class="flex items-center ">
-						<div class="text-sm opacity-60 whitespace-nowrap w-16">{date}</div>
-						<a href="/projects/{getId(project)}">
-							<span class="text-[#ffde82]" style="text-shadow: 0 0 5px #ffd151;">{name}</span>
-							{#if project}
-								<Icon class="inline-block mb-0.5 text-md text-[#ffde82]" icon="ci:external-link" />
-							{/if}
-						</a>
-						<div class="text-sm opacity-60 ml-4 sm:block hidden">{issuer}</div>
-					</div>
-				{/each}
+<div style="--main-color: #ffc934">
+	<PartHeading title="Awards" subtitle="수상경력" id="awards" />
+	<FullWidthSpace>
+		<Container>
+			<div class="flex justify-center items-center py-8">
+				<div class="flex flex-wrap flex-col gap-10 items-stretch" style="width: min(700px, 100%)">
+					{#each awards as { date, issuer, name, project }, i}
+						<div class="flex items-center ">
+							<div class="text-xl font-bold whitespace-nowrap w-20">{date}</div>
+							<a href="/projects/{getId(project)}" class="text-[var(--main-color)]">
+								<span class="text-xl font-bold">{name}</span>
+								{#if project}
+									<Icon class="inline-block mb-0.5 text-md" icon="ci:external-link" />
+								{/if}
+							</a>
+							<div class="text-sm opacity-60 ml-4 sm:block hidden">{issuer}</div>
+						</div>
+					{/each}
+				</div>
 			</div>
-		</div>
-	</Container>
-</FullWidthSpace>
+		</Container>
+	</FullWidthSpace>
+</div>
 
 <style>
 	a:hover {

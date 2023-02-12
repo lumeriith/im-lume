@@ -41,12 +41,23 @@
 				</a>
 			{/each}
 		</div>
-		<div class="flex flex-row gap-2 text-xs opacity-50 mb-8">
+		<div class="flex flex-row gap-2 text-xs opacity-50 mb-2">
 			<div>Made with ❤️ by Eunseop Shim</div>
 			<div>·</div>
 			<div>Hosted on Vercel</div>
 			<div>·</div>
 			<div>Powered by SvelteKit</div>
+		</div>
+		<div class="mb-8 text-xs opacity-50">
+			Photo by <a
+				href="https://unsplash.com/@sweetmangostudios?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Ricky Kharawala</a
+			>
+			on
+			<a
+				href="https://unsplash.com/photos/6s8GtWMjT3I?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+				>Unsplash</a
+			>
 		</div>
 	</Container>
 </FullWidthSpace>

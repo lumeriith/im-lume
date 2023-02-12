@@ -7,10 +7,8 @@
 </script>
 
 <Container {id}>
-	<div class="text-xl mb-1 mt-7 font-monospace flex">
-		<span class="text-[#ffcc22]">{title}</span>
-		<span class="opacity-30">(</span>
-		<span class="text-[#72da4c] font-sans">"{subtitle}"</span>
-		<span class="opacity-30">);</span>
+	<div class="text-xl mb-1 mt-7 font-monospace text-center flex flex-col select-none">
+		<span class="text-6xl font-bold -ml-12 text-[var(--main-color)]">{title}.</span>
+		<span class="text-3xl font-bold -mt-3 ml-16">{subtitle}</span>
 	</div>
 </Container>

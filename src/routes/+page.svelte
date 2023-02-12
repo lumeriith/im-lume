@@ -6,23 +6,24 @@
 	import CareerSection from '$lib/components/index/CareerSection.svelte';
 	import BigLizard from '$lib/components/BigLizard.svelte';
 	import AwardsSection from '$lib/components/index/AwardsSection.svelte';
+	import Background from '$lib/components/Background.svelte';
 </script>
 
 <svelte:head>
 	<title>Eunseop Shim's Portfolio</title>
 </svelte:head>
 
-<BigLizard />
-
+<Background />
 <div class="w-full">
 	<MainTitle />
+	<div class="h-32" />
 	<ProjectsSection />
-	<div class="h-16" />
+	<div class="h-32" />
 	<AwardsSection />
-	<div class="h-16" />
+	<div class="h-32" />
 	<ExperiencesSection />
-	<div class="h-16" />
+	<div class="h-32" />
 	<CareerSection />
-	<div class="h-16" />
+	<div class="h-32" />
 	<AboutSection />
 </div>

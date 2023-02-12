@@ -28,30 +28,26 @@
 <NavBar />
 
 <div
-	class="h-[100vh] top-0 w-full pt-6 flex justify-center items-center font-monospace bg-wrapper opacity-40 fixed -z-10 blur-2xl"
-	style="background-image: url({project.thumb}); background-repeat: no-repeat; background-size: 100% 100%;"
+	class="h-[100vh] top-0 w-full pt-6 flex justify-center items-center font-monospace bg-wrapper opacity-20 fixed -z-10"
+	style="background-image: url({project.thumb}); background-repeat: no-repeat; background-size: 100% 100%; filter: blur(20px) brightness(1.5) contrast(0.7);"
 >
 	<div class="absolute inset-0" style="background: linear-gradient(#0000, #000)" />
 </div>
 
 <div class="pt-36 relative overflow-hidden">
-	<div
-		class="absolute inset-0 bg-cover h-full w-full -z-10 blur-sm brightness-[0.6] scale-110"
-		style="background: url({project.thumb}); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; background-position: center;"
-	/>
-	<Container class="font-monospace z-10 pb-4" style="text-shadow: 0 0 4px #000;">
+	<Container class="font-monospace z-10 pb-4">
 		<header class="flex items-center mb-1 flex-wrap">
-			<div class="text-xl sm:text-3xl md:text-5xl font-bold mr-2">
-				{#if project.icon}
-					<Icon icon={project.icon} class="opacity-50 mr-1.5 text-xl mt-1 mb-1" />
-				{/if}
+			<div
+				class="text-xl sm:text-4xl md:text-6xl font-bold mr-2"
+				style="color: {project.colors[0]};"
+			>
 				{project.title}
 			</div>
-			<div class="text-sm opacity-75 self-end">
+			<div class="text-md font-bold self-end">
 				{project.type}
 			</div>
 		</header>
-		<div class="text-sm flex-1">
+		<div class="text-2xl font-bold flex-1">
 			<main class="whitespace-pre-line" style="line-height: 1.8;">
 				{project.subtitle}
 			</main>
@@ -103,7 +99,7 @@
 	</div>
 
 	<div class="h-3" />
-	<Container maxWidth={800}>
+	<Container maxWidth={1000}>
 		{#if project.content}
 			<div
 				class="content-markdown"
@@ -139,32 +135,20 @@
 		font-size: 1.7em;
 		margin-top: 14px;
 		margin-bottom: 2px;
-		filter: brightness(1.5);
-		text-shadow: 0 0 8px var(--color-0);
-		background: linear-gradient(135deg, var(--color-0) 0%, var(--color-1) 100%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		filter: brightness(1.2);
+		color: var(--color-0);
 	}
 	.content-markdown :global(h2) {
 		font-size: 1.3em;
 		margin-top: 14px;
 		margin-bottom: 2px;
-		filter: brightness(1.2);
-		text-shadow: 0 0 4px var(--color-0);
-		background: linear-gradient(135deg, var(--color-0) 0%, var(--color-1) 60%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		filter: brightness(1.1);
+		color: var(--color-0);
 	}
 	.content-markdown :global(h3) {
 		font-size: 1.2em;
 		margin-top: 14px;
-		text-shadow: 0 0 4px var(--color-1);
-		background: linear-gradient(135deg, var(--color-1) 0%, var(--color-1) 0%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		color: var(--color-0);
 	}
 	.content-markdown :global(h4) {
 		font-size: 1.1em;

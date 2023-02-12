@@ -7,18 +7,20 @@
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
 </script>
 
-<PartHeading title="Career" subtitle="경력 및 프리랜서 활동" id="career" />
-<FullWidthSpace>
-	<Container>
-		<div class="flex justify-start items-center py-5">
-			<div class="flex flex-wrap flex-col gap-4 items-stretch" style="width: min(700px, 100%)">
+<div style="--main-color: #ff7b43">
+	<PartHeading title="Career" subtitle="경력 및 프리랜서 활동" id="career" />
+	<FullWidthSpace>
+		<Container class="mt-16">
+			<div class="flex flex-wrap flex-col gap-6 items-center">
 				{#each career as { content, time, at }, i}
-					<LineCard {time}>{content} <span class="opacity-50">@ {at}</span></LineCard>
+					<LineCard {time} {at}>
+						{content}
+					</LineCard>
 					{#if i !== career.length - 1}
-						<div class="ml-[52px] h-3 -m-1" style="border-left: 2px dotted #666" />
+						<div class="h-5 -m-1" style="border-left: 4px dotted #666" />
 					{/if}
 				{/each}
 			</div>
-		</div>
-	</Container>
-</FullWidthSpace>
+		</Container>
+	</FullWidthSpace>
+</div>

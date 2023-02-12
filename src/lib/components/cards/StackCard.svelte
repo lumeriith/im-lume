@@ -8,26 +8,34 @@
 	export let imgUrl = '';
 	export let background = 'white';
 	export let color = 'black';
+	export let forceWhite = false;
 </script>
 
-<div class="flex flex-col flex-1 font-monospace">
-	<div class="flex flex-row flex-wrap gap-x-2 gap-y-2 text-sm items-center">
-		<div
-			class="flex flex-row gap-2 px-1.5 text-black items-center text-sm h-7"
-			style={`background: ${background}; color: ${color}`}
-		>
-			<img class="h-4" src={imgUrl} alt={title} />
+<div
+	class="flex flex-col flex-1 font-monospace text-center justify-center"
+	style="--main-color: {color};"
+>
+	<div class="flex flex-col flex-wrap gap-x-2 gap-y-2 items-center">
+		<div class="flex flex-row gap-2 px-1.5 items-center text-4xl font-bold" style="color: {color};">
+			<img
+				class="h-7 mt-1.5"
+				style={forceWhite ? 'filter: brightness(100)' : ''}
+				src={imgUrl}
+				alt={title}
+			/>
 			<div class="shrink-0">
 				{title}
 			</div>
 		</div>
-		{#each details as detail, i}
-			<HashTagItem {detail} />
-		{/each}
+		<div class="flex gap-2 mb-3">
+			{#each details as detail, i}
+				<HashTagItem {detail} />
+			{/each}
+		</div>
 	</div>
-	<div class="pt-2 flex flex-col gap-2">
+	<div class="pt-2 flex flex-col gap-3 items-center">
 		{#each subtitle.split('\n') as s}
-			<div class="text-sm opacity-80 text-[#ffffff]"><span class="opacity-50">//</span> {s}</div>
+			<div class="text-sm opacity-80 text-[#ffffff]">{s}</div>
 		{/each}
 	</div>
 </div>

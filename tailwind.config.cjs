@@ -6,7 +6,7 @@ module.exports = {
 			sans: ['Noto Sans KR', 'sans-serif'],
 			serif: ['Roboto Slab', 'serif'],
 			cursive: ['Lobster', 'cursive'],
-			monospace: ['JetBrains Mono', 'Noto Sans KR', 'monospace', 'sans-serif']
+			monospace: ['Noto Sans KR', 'Noto Sans KR', 'monospace', 'sans-serif']
 		},
 		extend: {}
 	},

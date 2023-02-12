@@ -2,10 +2,12 @@
 	import ColorfulCard from './ColorfulCard.svelte';
 
 	export let time = '';
+	export let at = '';
 </script>
 
-<div class="gap-2 flex-1 flex items-center flex-row font-monospace">
-	<div class="opacity-50 text-xs w-32 shrink-0">{time}</div>
+<div class="gap-2 flex-1 flex flex-col items-center font-monospace font-bold text-center">
+	<div class="text-xl">{time}</div>
 
-	<div class="text-left text-sm"><slot /></div>
+	<div class="text-left text-xl"><slot /></div>
+	<div class="text-[var(--main-color)]">@ {at}</div>
 </div>

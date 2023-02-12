@@ -2,13 +2,13 @@ export default [
 	{
 		type: 'work',
 		time: '2019.6 ~ 2019.9',
-		content: '초등학생~고등학생 대상 파이썬 코딩교육 강사',
+		content: '청소년 파이썬 코딩교육 단기 강사',
 		at: '청청당당'
 	},
 	{
 		type: 'work',
 		time: '2020.2 ~ 2020.6',
-		content: 'Unity 기반 서버/클라이언트 개발자',
+		content: '모바일 게임 (Unity, GameSpark) 개발자',
 		at: 'NurhymeGames'
 	},
 	{
@@ -21,6 +21,6 @@ export default [
 		type: 'work',
 		time: '2022.3 ~ 현재',
 		content: '풀스택 SvelteKit/Firebase 개발자',
-		at: 'VERADI'
+		at: '(주)VERADI'
 	}
 ];

@@ -83,7 +83,7 @@ export default [
 	},
 	{
 		title: 'Immoral Fencing',
-		tags: ['Unity', '애니메이션', 'AI', '소켓통신', '캡스톤'],
+		tags: ['Unity', '애니메이션', 'AI', '소켓통신'],
 		featured: true,
 		type: '게임, 캡스톤프로젝트, 2022-2',
 		icon: 'charm:graduate-cap',
@@ -118,11 +118,11 @@ export default [
 		### Pseudo Soft-Body Fencing Sword using Joint & Rigged Model
 		펜싱 칼 모델을 리깅하고 칼에 관절을 부여하여 구부러지는 칼날 구현  
     `,
-		colors: ['#508cdd', '#63ceec']
+		colors: ['#5c8fd8', '#63ceec']
 	},
 	{
 		title: 'RuntimeBakedPhysics',
-		tags: ['UE5', 'PhysX', '펄어비스인재양성', '테스트자동화'],
+		tags: ['UE5', 'PhysX', '테스트자동화'],
 		featured: true,
 		type: '연구, 2022-1',
 		icon: 'bxs:book-open',
@@ -165,7 +165,7 @@ export default [
     테스트를 자동으로 수행하고 평균 프레임, 소요시간 등의 성능 지표를 수집하는 도구를 구현하여 개발과 테스트에 소요되는 시간을 단축하였습니다.
 
     `,
-		colors: ['#ffc667', '#ff9255']
+		colors: ['#ff8d0e', '#ff9255']
 	},
 	{
 		title: 'Trapped In Metaverse',
@@ -230,7 +230,7 @@ export default [
 		subtitle: '서로가 최종 보스가 되어 싸우는 멀티플레이 2인용 던전 크롤러',
 		stacks: ['unity', 'cs', 'pun2'],
 		role: 'Lizard_0209 팀, 개발 총괄, 시스템 개발',
-		awards: ['경희대학교 2019 소융과 학부생 대회 최우수상', '경희대학교 2019 SW페스티벌 대상'],
+		awards: ['경희대학교 2019 SW페스티벌 대상', '경희대학교 2019 소융과 학부생 대회 최우수상'],
 		links: [
 			{ type: 'Youtube', data: 'https://www.youtube.com/watch?v=pfnvd6xF_iA' },
 			{ type: 'Youtube (초기 버전)', data: 'https://www.youtube.com/watch?v=KcsNJQg7pr8' }
@@ -259,7 +259,7 @@ export default [
 
 
     `,
-		colors: ['#aad9ff', '#70bfff']
+		colors: ['#89d8ff', '#70bfff']
 	},
 	{
 		title: 'Copycat',
