@@ -13,7 +13,7 @@
 	<title>Eunseop Shim's Portfolio</title>
 </svelte:head>
 
-<Background />
+<Background class="top-[100vh]" />
 <div class="w-full">
 	<MainTitle />
 	<div class="h-32" />

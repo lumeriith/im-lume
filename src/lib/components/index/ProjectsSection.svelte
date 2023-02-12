@@ -15,20 +15,47 @@
 
 	let hoverIndex = 0;
 	let centerIndex = -1;
+	let isHovering = false;
 	$: selectedIndex = hoverIndex != -1 ? hoverIndex : centerIndex;
+
+	function onScroll(e) {
+		if (!isHovering || matchMedia('(pointer:coarse)').matches) hoverIndex = -1;
+		const centerOfScreen = window.scrollY + window.innerHeight / 2;
+		let closestDistance = 999999;
+		let bestIndex = 0;
+		for (let i = 0; i < divs.length; i++) {
+			let rect = divs[i].getBoundingClientRect();
+			let centerOfElement =
+				rect.top + document.documentElement.scrollTop + divs[i].clientHeight / 2;
+			const distance = Math.abs(centerOfElement - centerOfScreen);
+
+			if (closestDistance > distance) {
+				bestIndex = i;
+				closestDistance = distance;
+			}
+		}
+		centerIndex = bestIndex;
+	}
 </script>
+
+<svelte:window on:scroll={onScroll} />
 
 <div style="--main-color: #ff3832;">
 	<PartHeading title="Projects" subtitle="대외활동 및 프로젝트" id="projects" />
 
 	<FullWidthSpace class="relative">
 		<Container class="mt-24">
-			<div class="flex flex-col gap-3 md:gap-4 xl:gap-16 items-stretch py-3 w-full select-none">
+			<div
+				class="flex flex-col gap-8 sm:gap-2 md:gap-8 xl:gap-16 items-stretch py-3 w-full select-none"
+			>
 				{#each featured as project, i}
 					<div
 						bind:this={divs[i]}
-						on:mouseenter={() => (hoverIndex = i)}
-						on:mouseleave={() => (hoverIndex = i)}
+						on:mouseenter={() => {
+							hoverIndex = i;
+							isHovering = true;
+						}}
+						on:mouseleave={() => (isHovering = false)}
 					>
 						<BigProjectCard {project} id={project.id} large selected={selectedIndex == i} />
 					</div>
@@ -43,7 +70,7 @@
 
 <style>
 	.show-more {
-		@apply text-4xl font-bold flex items-center underline;
+		@apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold flex items-center underline;
 	}
 
 	.show-more:hover {

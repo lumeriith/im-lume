@@ -8,11 +8,11 @@
 </script>
 
 <div style="--main-color: #ff5c17">
-	<PartHeading title="Experiences" subtitle="경험 및 운용 가능한 기술 스택" id="experiences" />
+	<PartHeading title="Experiences" subtitle="경험 및 기술 스택" id="experiences" />
 	<FullWidthSpace>
 		<Container>
 			<div
-				class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-8 py-8 flex-wrap flex-col gap-x-24 gap-y-32 items-stretch"
+				class="grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-8 py-8 flex-wrap flex-col gap-x-24 gap-y-24 sm:gap-y-32 items-stretch"
 			>
 				{#each experiences as { title, subtitle, details, imgUrl, background, color, forceWhite }}
 					<StackCard {title} {subtitle} {details} {imgUrl} {background} {color} {forceWhite} />

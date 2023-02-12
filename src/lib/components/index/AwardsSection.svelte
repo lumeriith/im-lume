@@ -21,15 +21,22 @@
 			<div class="flex justify-center items-center py-8">
 				<div class="flex flex-wrap flex-col gap-6 items-stretch" style="width: min(700px, 100%)">
 					{#each awards as { date, issuer, name, project }, i}
-						<div class="flex items-center ">
-							<div class="text-xl font-bold whitespace-nowrap w-20">{date}</div>
-							<a href="/projects/{getId(project)}" class="text-[var(--main-color)] py-2">
-								<span class="text-xl font-bold">{name}</span>
+						<div class="text-base sm:text-lg lg:text-xl flex items-center flex-wrap">
+							<div class="font-bold whitespace-nowrap w-full sm:w-20 text-center sm:text-left">
+								{date}
+							</div>
+							<a
+								href="/projects/{getId(project)}"
+								class="text-[var(--main-color)] py-2 w-full ml-4 sm:ml-0 sm:w-auto text-center"
+							>
+								<span class="font-bold">{name}</span>
 								{#if project}
-									<Icon class="inline-block mb-0.5 text-md" icon="ci:external-link" />
+									<Icon class="inline-block mb-0.5 text-base" icon="ci:external-link" />
 								{/if}
 							</a>
-							<div class="text-sm opacity-60 ml-4 sm:block hidden">{issuer}</div>
+							<div class="text-xs md:text-sm opacity-60 sm:ml-4 w-full sm:w-auto text-center">
+								{issuer}
+							</div>
 						</div>
 					{/each}
 				</div>

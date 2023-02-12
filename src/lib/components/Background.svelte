@@ -12,12 +12,15 @@
 		clearInterval(backgroundHandle);
 	});
 
+	let _class = '';
+	export { _class as class };
+
 	let bgBrightness = 1;
 </script>
 
 <div
-	class="font-monospace bg-wrapper select-none absolute inset-0 top-[100vh] -z-20"
-	style="background: url({bg}) no-repeat center/cover;"
+	class="font-monospace bg-wrapper select-none absolute inset-0 -z-20 {_class}"
+	style="background: url({bg}) no-repeat center/cover; filter: contrast(0.9) brightness(0.7)"
 />
 
 <div

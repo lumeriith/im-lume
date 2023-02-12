@@ -5,14 +5,14 @@
 	import Container from './general/Container.svelte';
 
 	const backgroundHandle = setInterval(() => {
-		bgBrightness = Math.random() * 0.4 + 0.8;
+		bgBrightness = Math.random() * 0.4 + 0.4;
 	}, 500);
 
 	onDestroy(() => {
 		clearInterval(backgroundHandle);
 	});
 
-	let bgBrightness = 1;
+	let bgBrightness = 0.6;
 </script>
 
 <div
@@ -33,29 +33,33 @@
 />
 
 <div
-	class="absolute top-[100vh] w-full h-[600px] pointer-events-none -z-20"
-	style="background: linear-gradient(#111 0%, #0000 100%);"
+	class="absolute top-[100vh] w-full h-[20vw] pointer-events-none -z-20"
+	style="background: linear-gradient(#111 0%, #1110 100%);"
 />
 
 <Container
 	class="flex flex-col h-[100vh] justify-center select-none overflow-hidden relative"
 	style="--main-color: #ff009a;"
 >
-	<div class="text-7xl font-bold text-center px-1 whitespace-nowrap self-end mb-3">
+	<div
+		class="text-4xl sm:text-6xl md:text-7xl font-bold text-center px-1 whitespace-nowrap self-end mb-3"
+	>
 		Eunseop Shim.
 	</div>
 	<main
-		class="flex text-4xl font-bold mb-8 self-end -mt-2 mr-6 text-[var(--main-color)] -z-10"
+		class="flex text-2xl sm:text-3xl md:text-4xl font-bold mb-8 self-end -mt-2 mr-1 sm:mr-6 text-[var(--main-color)] -z-10"
 		style="text-shadow: 0 0 24px #aaa1;"
 	>
 		Developer Portfolio
 	</main>
-	<section class="font-bold text-md content mb-5 flex flex-col items-end gap-2 mr-9">
+	<section
+		class="font-bold text-sm sm:text-base content mb-5 flex flex-col items-end gap-2 mr-1 sm:mr-9"
+	>
 		<div>Kyunghee University Undergraduate</div>
 		<div>Enthusiastic Game Developer</div>
 		<div>Hobbyist Web Developer</div>
 	</section>
-	<div class="flex flex-col gap-4 text-4xl font-bold items-start">
+	<div class="flex flex-col gap-4 text-2xl sm:text-4xl font-bold items-start mt-8 sm:mt-0">
 		<a href="#projects">Explore</a>
 		<a href="#about">Contacts</a>
 	</div>

@@ -298,7 +298,7 @@ export default [
     이 게임은 모방된 게임 세상들에서 게임을 진행하는 새로운 방식을 통해, 다른 사람을 따라 하는 것이 무작정 나쁜 것만은 아니라는 얘기를 전달하고 있습니다. 즉, 자신의 길을 포기하지 않으면서도 남들처럼 살아가도 스스로 발전할 수 있다는 것입니다. 이를 깨달은 핑퐁 공은 엔딩 씬에서 아랑곳하지 않고 자신만의 길을 걸으며 새로운 창조를 상징하는 “밝은 빛”을 향해 나아갑니다.
     
     `,
-		colors: ['#c59f18', '#8f7b33']
+		colors: ['#ffcd1f', '#8f7b33']
 	},
 	{
 		title: '하울의 움직이는 대학',
@@ -472,7 +472,7 @@ export default [
     ## Attribution
     BGM: [Starbox - Digital Dream (Azureflux Remix) from Bit Bops by Azureflux](https://azuresound.bandcamp.com/track/digital-dream-azureflux-remix)
     `,
-		colors: ['#fea2df', '#e3518a']
+		colors: ['#fe5ac7', '#e3518a']
 	},
 	{
 		title: 'Cardkin',

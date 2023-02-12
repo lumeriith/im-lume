@@ -1,4 +1,5 @@
 <script>
+	import Background from '$lib/components/Background.svelte';
 	import ProjectCard from '$lib/components/cards/ProjectCard.svelte';
 	import Container from '$lib/components/general/Container.svelte';
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
@@ -8,7 +9,7 @@
 </script>
 
 <NavBar />
-
+<Background />
 <div style="--main-color: #ff3832">
 	<div class="h-32" />
 	<Container>
