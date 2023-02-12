@@ -14,16 +14,16 @@
 	}
 </script>
 
-<div style="--main-color: #ffc934">
+<div style="--main-color: #ffc100">
 	<PartHeading title="Awards" subtitle="수상경력" id="awards" />
 	<FullWidthSpace>
 		<Container>
 			<div class="flex justify-center items-center py-8">
-				<div class="flex flex-wrap flex-col gap-10 items-stretch" style="width: min(700px, 100%)">
+				<div class="flex flex-wrap flex-col gap-6 items-stretch" style="width: min(700px, 100%)">
 					{#each awards as { date, issuer, name, project }, i}
 						<div class="flex items-center ">
 							<div class="text-xl font-bold whitespace-nowrap w-20">{date}</div>
-							<a href="/projects/{getId(project)}" class="text-[var(--main-color)]">
+							<a href="/projects/{getId(project)}" class="text-[var(--main-color)] py-2">
 								<span class="text-xl font-bold">{name}</span>
 								{#if project}
 									<Icon class="inline-block mb-0.5 text-md" icon="ci:external-link" />
@@ -41,11 +41,6 @@
 <style>
 	a:hover {
 		text-decoration: underline;
-		text-decoration-color: #ffde82;
-		filter: brightness(1.5);
-	}
-
-	a:active {
-		filter: brightness(0.7);
+		text-decoration-color: var(--main-color);
 	}
 </style>

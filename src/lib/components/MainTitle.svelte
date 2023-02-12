@@ -39,13 +39,13 @@
 
 <Container
 	class="flex flex-col h-[100vh] justify-center select-none overflow-hidden relative"
-	style="--main-color: #9d03ff;"
+	style="--main-color: #111;"
 >
 	<div class="text-7xl font-bold text-center px-1 whitespace-nowrap self-end mb-3">
 		Eunseop Shim.
 	</div>
-	<main class="flex text-5xl font-bold mb-8 self-end -mt-6 mr-4 text-[var(--main-color)]">
-		Personal Portfolio
+	<main class="flex text-5xl font-bold mb-8 self-end -mt-3 mr-4 text-[var(--main-color)]">
+		Developer Portfolio
 	</main>
 	<section class="font-bold text-md content mb-5 flex flex-col items-end gap-2 mr-9">
 		<div>Kyunghee University Undergraduate</div>

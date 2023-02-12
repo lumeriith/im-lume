@@ -7,7 +7,7 @@
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
 </script>
 
-<div style="--main-color: #6c8b8b">
+<div style="--main-color: #ff5c17">
 	<PartHeading title="Experiences" subtitle="경험 및 운용 가능한 기술 스택" id="experiences" />
 	<FullWidthSpace>
 		<Container>

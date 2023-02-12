@@ -7,7 +7,7 @@
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
 </script>
 
-<div style="--main-color: #ff7b43">
+<div style="--main-color: #ccff36">
 	<PartHeading title="Career" subtitle="경력 및 프리랜서 활동" id="career" />
 	<FullWidthSpace>
 		<Container class="mt-16">
