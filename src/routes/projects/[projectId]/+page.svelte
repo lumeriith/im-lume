@@ -38,7 +38,7 @@
 	<Container class="font-monospace z-10 pb-4">
 		<header class="flex items-center mb-1 flex-wrap">
 			<div
-				class="text-xl sm:text-4xl md:text-6xl font-bold mr-2"
+				class="text-2xl sm:text-4xl md:text-6xl font-bold mr-2"
 				style="color: {project.colors[0]};"
 			>
 				{project.title}
@@ -47,7 +47,7 @@
 				{project.type}
 			</div>
 		</header>
-		<div class="text-2xl font-bold flex-1">
+		<div class="text-base sm:text-xl md:text-2xl font-bold flex-1">
 			<main class="whitespace-pre-line" style="line-height: 1.8;">
 				{project.subtitle}
 			</main>
@@ -56,19 +56,21 @@
 </div>
 
 <Container class="font-monospace">
-	<section class="flex flex-col items-start gap-2 text-sm justify-center mb-4">
-		<div class="flex gap-2 items-center">
-			<Icon class="opacity-50 w-4" icon="carbon:user-avatar-filled" />
-			<div>{project.role}</div>
-		</div>
+	<section
+		class="flex flex-col items-start gap-2 sm:gap-3 font-bold text-sm sm:text-base justify-center mb-10"
+	>
 		{#if project.awards}
 			{#each project.awards as award}
-				<div class="flex gap-2 items-center">
-					<Icon class="opacity-50 w-4" icon="fa-solid:award" />
+				<div class="flex gap-2 items-center" style="color: {project.colors[0]};">
+					<Icon class="w-4" icon="fa-solid:award" />
 					<div>{award}</div>
 				</div>
 			{/each}
 		{/if}
+		<div class="flex gap-2 items-center">
+			<Icon class="w-4" icon="carbon:user-avatar-filled" />
+			<div>{project.role}</div>
+		</div>
 		{#if project.links}
 			{#each project.links as { type, data }}
 				<LinkItem {type} url={data} />
@@ -170,8 +172,8 @@
 	}
 	.content-markdown :global(a) {
 		text-decoration: underline;
-		color: var(--color-1);
-		filter: brightness(1.15);
+		color: var(--color-0);
+		filter: brightness(1.3);
 	}
 	.content-markdown :global(a:hover) {
 		filter: brightness(1.45);

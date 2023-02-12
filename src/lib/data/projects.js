@@ -219,7 +219,7 @@ export default [
     WASD 키로 이동하고 마우스를 이용해 시점 이동이 가능하다. Q를 눌러 재시작할 수 있다.
     Enter를 눌러 채팅이 가능하다.
     `,
-		colors: ['#1ca3e3', '#30ff11']
+		colors: ['#00a4f2', '#30ff11']
 	},
 	{
 		title: 'Dew',

@@ -7,10 +7,12 @@
 </script>
 
 <Container {id}>
-	<div class="mb-1 mt-7 font-monospace text-center flex flex-col select-none">
-		<span class="text-5xl sm:text-5xl md:text-6xl font-bold -ml-6 text-[var(--main-color)]"
-			>{title}.</span
-		>
-		<span class="text-2xl sm:text-2xl md:text-3xl font-bold -mt-3 ml-16">{subtitle}</span>
+	<div class="mb-1 mt-14 font-monospace text-center flex justify-center select-none">
+		<div>
+			<div class="text-5xl sm:text-5xl md:text-6xl font-bold text-[var(--main-color)] w-auto">
+				{title}.
+			</div>
+			<div class="text-2xl sm:text-2xl md:text-3xl font-bold -mt-3.5 ml-12 w-auto">{subtitle}</div>
+		</div>
 	</div>
 </Container>

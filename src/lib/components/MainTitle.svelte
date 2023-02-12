@@ -1,5 +1,7 @@
 <script>
+	import { goto } from '$app/navigation';
 	import bg from '$lib/assets/gradientbg.png';
+	import Icon from '@iconify/svelte';
 	import { onDestroy } from 'svelte';
 	import BigLizard from './BigLizard.svelte';
 	import Container from './general/Container.svelte';
@@ -13,7 +15,22 @@
 	});
 
 	let bgBrightness = 0.6;
+
+	function onScroll(e) {
+		const projects = document.getElementById('projects');
+		const rect = projects?.getBoundingClientRect();
+		console.log(rect.top);
+		if (e.deltaY > 0 && rect.top > 0) {
+			e.preventDefault();
+			projects.scrollIntoView({ behavior: 'smooth' });
+		} else if (e.deltaY < 0 && rect.top - e.deltaY > 0) {
+			window.scrollTo({ behavior: 'smooth', top: 0 });
+			e.preventDefault();
+		}
+	}
 </script>
+
+<svelte:window on:wheel|nonpassive={onScroll} />
 
 <div
 	class="absolute w-full h-[100vh] bg-wrapper pointer-events-none"
@@ -59,11 +76,27 @@
 		<div>Enthusiastic Game Developer</div>
 		<div>Hobbyist Web Developer</div>
 	</section>
-	<div class="flex flex-col gap-4 text-2xl sm:text-4xl font-bold items-start mt-8 sm:mt-0">
-		<a href="#projects">Explore</a>
+	<div
+		class="flex flex-col gap-2 sm:gap-6 text-base sm:text-xl font-bold items-start mt-8 sm:mt-0"
+		style="letter-spacing: 4px;"
+	>
+		<a href="#projects">Projects</a>
+		<a href="#awards">Awards</a>
+		<a href="#experiences">Experiences</a>
+		<a href="#career">Career</a>
 		<a href="#about">Contacts</a>
 	</div>
-	<div class="h-4" />
+	<div class="absolute inset-0 pointer-events-none flex justify-center items-end">
+		<div
+			class="mb-8 md:mb-12 text-xl font-bold flex flex-col items-center"
+			style="letter-spacing: 6px"
+		>
+			<span class="mb-1.5 md:mb-3 arrow">Explore</span>
+			<div class="arrow" style="animation-delay: 250ms;">
+				<Icon icon="mdi:chevron-down" class="text-2xl" />
+			</div>
+		</div>
+	</div>
 </Container>
 
 <style>
@@ -77,5 +110,19 @@
 
 	.bg-wrapper {
 		transition: filter 1s;
+	}
+
+	.arrow {
+		animation: MoveUpDown 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+	}
+
+	@keyframes MoveUpDown {
+		0%,
+		100% {
+			transform: translateY(8px);
+		}
+		50% {
+			transform: translateY(-8px);
+		}
 	}
 </style>

@@ -12,8 +12,8 @@
 	<FullWidthSpace>
 		<Container class="mt-16">
 			<div class="flex flex-wrap flex-col gap-6 items-center">
-				{#each career as { content, time, at }, i}
-					<LineCard {time} {at}>
+				{#each career as { content, time, at, atUrl }, i}
+					<LineCard {time} {at} {atUrl}>
 						{content}
 					</LineCard>
 					{#if i !== career.length - 1}

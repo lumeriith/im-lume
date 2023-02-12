@@ -18,7 +18,7 @@
 </script>
 
 <div id="about" />
-<FullWidthSpace class="mb-8">
+<FullWidthSpace class="pb-8">
 	<Container class="font-monospace">
 		<h2 class="text-2xl font-bold mb-4 mt-5">Contact</h2>
 		<div class="mb-1 text-lg font-bold">심은섭 · Eunseop Shim</div>
@@ -41,7 +41,7 @@
 				</a>
 			{/each}
 		</div>
-		<div class="text-xs opacity-50 mb-2">
+		<div class="text-xs opacity-50 mb-2" style="line-height: 180%;">
 			<span>Made with ❤️ by Eunseop Shim</span>
 			<span>·</span>
 			<span>Hosted on Vercel</span>

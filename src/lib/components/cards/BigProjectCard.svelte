@@ -81,13 +81,12 @@
 	}
 
 	a .project-img {
-		transition: filter 0.2s, outline 0.2s, box-shadow 0.2s;
+		transition: filter 0.2s, transform 0.2s;
 		filter: brightness(1.2) contrast(0.8);
-		box-shadow: 0px 0px 0 #000 !important;
 	}
 
 	a.selected .project-img {
 		filter: brightness(1);
-		box-shadow: 0 0 0 6px var(--main-color) !important;
+		transform: scale(1.05);
 	}
 </style>

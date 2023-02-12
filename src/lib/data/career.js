@@ -3,13 +3,15 @@ export default [
 		type: 'work',
 		time: '2019.6 ~ 2019.9',
 		content: '청소년 파이썬 코딩교육 단기 강사',
-		at: '청청당당'
+		at: '청청당당',
+		atUrl: 'https://helloccdd.modoo.at/'
 	},
 	{
 		type: 'work',
 		time: '2020.2 ~ 2020.6',
 		content: '모바일 게임 (Unity, GameSpark) 개발자',
-		at: 'NurhymeGames'
+		at: 'NurhymeGames',
+		atUrl: 'http://nurhyme.com/'
 	},
 	{
 		type: 'work',
@@ -21,6 +23,7 @@ export default [
 		type: 'work',
 		time: '2022.3 ~ 현재',
 		content: '풀스택 SvelteKit/Firebase 개발자',
-		at: '(주)VERADI'
+		at: '(주)VERADI',
+		atUrl: 'http://veradi.co.kr/'
 	}
 ];

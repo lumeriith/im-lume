@@ -24,7 +24,7 @@ export default [
 		subtitle: `복잡한 물리 장면 성능 향상 프로젝트 연구
 		PhysX 3.4 연동
 		테스트/성능 지표 수집 자동화`,
-		details: ['C++', 'Blueprint', 'PhysX'],
+		details: ['C++', 'Blueprint', ['PhysX', 'https://developer.nvidia.com/physx-sdk']],
 		imgUrl: ue,
 		background: 'black',
 		color: 'white'
@@ -46,7 +46,7 @@ export default [
 	{
 		title: 'Firebase',
 		subtitle: '교육회사 웹사이트 커뮤니티 백엔드 개발',
-		details: ['Firestore', 'Storage', 'Edge Functions'],
+		details: ['Firestore', 'Edge Functions'],
 		imgUrl: 'https://firebase.google.com/static/downloads/brand-guidelines/SVG/logo-logomark.svg',
 		background: '#1A73E8',
 		color: '#FFCB2B'

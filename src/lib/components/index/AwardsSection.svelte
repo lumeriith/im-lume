@@ -19,7 +19,7 @@
 	<FullWidthSpace>
 		<Container>
 			<div class="flex justify-center items-center py-8">
-				<div class="flex flex-wrap flex-col gap-6 items-stretch" style="width: min(700px, 100%)">
+				<div class="flex flex-wrap flex-col gap-6 items-stretch">
 					{#each awards as { date, issuer, name, project }, i}
 						<div class="text-base sm:text-lg lg:text-xl flex items-center flex-wrap">
 							<div class="font-bold whitespace-nowrap w-full sm:w-20 text-center sm:text-left">
@@ -27,7 +27,7 @@
 							</div>
 							<a
 								href="/projects/{getId(project)}"
-								class="text-[var(--main-color)] py-2 w-full ml-4 sm:ml-0 sm:w-auto text-center"
+								class="text-[var(--main-color)] py-2 w-full sm:ml-0 sm:w-auto text-center"
 							>
 								<span class="font-bold">{name}</span>
 								{#if project}
