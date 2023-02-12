@@ -39,12 +39,15 @@
 
 <Container
 	class="flex flex-col h-[100vh] justify-center select-none overflow-hidden relative"
-	style="--main-color: #111;"
+	style="--main-color: #ff009a;"
 >
 	<div class="text-7xl font-bold text-center px-1 whitespace-nowrap self-end mb-3">
 		Eunseop Shim.
 	</div>
-	<main class="flex text-5xl font-bold mb-8 self-end -mt-3 mr-4 text-[var(--main-color)]">
+	<main
+		class="flex text-4xl font-bold mb-8 self-end -mt-2 mr-6 text-[var(--main-color)] -z-10"
+		style="text-shadow: 0 0 24px #aaa1;"
+	>
 		Developer Portfolio
 	</main>
 	<section class="font-bold text-md content mb-5 flex flex-col items-end gap-2 mr-9">
@@ -53,13 +56,17 @@
 		<div>Hobbyist Web Developer</div>
 	</section>
 	<div class="flex flex-col gap-4 text-4xl font-bold items-start">
-		<a href="#projects">Explore.</a>
-		<a href="#about">Contacts.</a>
+		<a href="#projects">Explore</a>
+		<a href="#about">Contacts</a>
 	</div>
 	<div class="h-4" />
 </Container>
 
 <style>
+	a {
+		text-decoration: underline;
+	}
+
 	a:hover {
 		text-decoration: underline;
 	}

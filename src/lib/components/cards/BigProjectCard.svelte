@@ -67,15 +67,11 @@
 <style>
 	a {
 		transition: filter 0.2s, --main-color 0.2s;
-		filter: grayscale(1);
+		filter: grayscale(1) brightness(0.7);
 	}
 
 	a.selected {
 		filter: grayscale(0);
-	}
-
-	a {
-		filter: grayscale(1);
 	}
 
 	a .project-img {

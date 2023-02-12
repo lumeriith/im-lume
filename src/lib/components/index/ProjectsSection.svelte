@@ -43,7 +43,7 @@
 
 <style>
 	.show-more {
-		@apply text-4xl font-bold flex items-center;
+		@apply text-4xl font-bold flex items-center underline;
 	}
 
 	.show-more:hover {
