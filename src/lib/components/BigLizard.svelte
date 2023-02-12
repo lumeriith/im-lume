@@ -37,7 +37,7 @@
 			src={lizard}
 			alt=""
 			class="rotate-12"
-			style="filter: grayscale(1); opacity: 0.10"
+			style="filter: grayscale(1); opacity: 0.175"
 			width="100%"
 			height="100%"
 		/>
