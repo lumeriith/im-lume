@@ -23,9 +23,9 @@
 		if (e.deltaY > 0 && rect.top > 0) {
 			e.preventDefault();
 			projects.scrollIntoView({ behavior: 'smooth' });
-		} else if (e.deltaY < 0 && rect.top - e.deltaY > 0) {
-			window.scrollTo({ behavior: 'smooth', top: 0 });
+		} else if (e.deltaY < 0 && rect.top - e.deltaY > window.innerHeight / 2) {
 			e.preventDefault();
+			window.scrollTo({ behavior: 'smooth', top: 0 });
 		}
 	}
 </script>
