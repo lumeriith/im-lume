@@ -237,6 +237,10 @@ export default [
 		role: 'Lizard_0209 팀, 개발 총괄, 시스템 개발',
 		awards: ['경희대학교 2019 SW페스티벌 대상', '경희대학교 2019 소융과 학부생 대회 최우수상'],
 		links: [
+			{
+				type: 'Github',
+				data: 'https://github.com/lumeriith/RakShir/tree/b6373b92e3080d028f1c2a09d1123bb8c8ad2e8f'
+			},
 			{ type: 'Youtube', data: 'https://www.youtube.com/watch?v=pfnvd6xF_iA' },
 			{ type: 'Youtube (초기 버전)', data: 'https://www.youtube.com/watch?v=KcsNJQg7pr8' }
 		],

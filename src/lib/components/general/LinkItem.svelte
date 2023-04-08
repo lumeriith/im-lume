@@ -9,7 +9,7 @@
 <div class="flex gap-2 items-center" href={url} target="_blank">
 	<Icon class="w-4" icon="akar-icons:link-chain" />
 	<div class="shrink-0">{type}</div>
-	<a href={url}>
+	<a href={url} target="_blank">
 		<MultiClamp class="text-xs">{url}</MultiClamp>
 	</a>
 </div>

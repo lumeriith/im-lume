@@ -8,10 +8,6 @@
 	import awards from '$lib/data/awards';
 	import Icon from '@iconify/svelte';
 	import projects from '$lib/data/projects';
-
-	function getId(project) {
-		return projects.findIndex((p) => p.title == project);
-	}
 </script>
 
 <div style="--main-color: #ffc100">
@@ -26,7 +22,7 @@
 								{date}
 							</div>
 							<a
-								href="/projects/{getId(project)}"
+								href="/projects/{project}"
 								class="text-[var(--main-color)] py-2 w-full sm:ml-0 sm:w-auto text-center"
 							>
 								<span class="font-bold">{name}</span>

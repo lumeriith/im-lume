@@ -13,7 +13,7 @@
 
 	<div class="text-base sm:text-xl"><slot /></div>
 	{#if atUrl}
-		<a href={atUrl}>
+		<a href={atUrl} target="_blank">
 			<div class="text-sm sm:text-base text-[var(--main-color)] flex items-center gap-1">
 				@ {at}<Icon icon="ci:external-link" class="text-sm sm:text-base mt-0.5" />
 			</div>
