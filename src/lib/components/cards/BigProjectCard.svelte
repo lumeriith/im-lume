@@ -4,6 +4,7 @@
 	import MultiClamp from '../general/MultiClamp.svelte';
 
 	export let project = {
+		id: '',
 		title: '',
 		subtitle: '',
 		icon: '',
@@ -15,7 +16,6 @@
 		thumb: '',
 		photo: ''
 	};
-	export let id;
 	export let selected;
 </script>
 
@@ -25,7 +25,7 @@
 	on:mouseleave
 	class:selected
 	on:click
-	href="/projects/{id}"
+	href="/projects/{project.id}"
 	style="--main-color: {project.colors[0]};"
 >
 	<div class="flex-1 sm:mb-8 md:mb-12">
@@ -65,7 +65,7 @@
 		</div>
 	</div>
 	<div
-		class="aspect-video h-36 sm:h-32 md:h-48 lg:h-60	 -z-10 project-img"
+		class="aspect-video h-36 sm:h-32 md:h-48 lg:h-60 -z-10 project-img"
 		style="background: url({project.thumb}); background-size: cover; background-position: center center; box-shadow: 0 6px 36px #0006;"
 	/>
 </a>

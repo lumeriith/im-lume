@@ -8,7 +8,6 @@
 	import BigProjectCard from '../cards/BigProjectCard.svelte';
 
 	const featured = projects.filter((p) => p.featured);
-	featured.forEach((f) => (f.id = projects.findIndex((p) => p.title == f.title)));
 
 	const divs = [];
 	featured.forEach(() => divs.push(null));
@@ -57,7 +56,7 @@
 						}}
 						on:mouseleave={() => (isHovering = false)}
 					>
-						<BigProjectCard {project} id={project.id} large selected={selectedIndex == i} />
+						<BigProjectCard {project} large selected={selectedIndex == i} />
 					</div>
 				{/each}
 			</div>

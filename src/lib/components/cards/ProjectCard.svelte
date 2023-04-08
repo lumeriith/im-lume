@@ -4,6 +4,7 @@
 	import MultiClamp from '../general/MultiClamp.svelte';
 
 	export let project = {
+		id: '',
 		title: '',
 		subtitle: '',
 		icon: '',
@@ -15,13 +16,12 @@
 		thumb: '',
 		photo: ''
 	};
-	export let id;
 </script>
 
 <a
 	class="overflow-hidden relative project-card flex flex-col w-full h-12 sm:h-16 md:h-24 cursor-pointer font-monospace"
 	on:click
-	href="/projects/{id}"
+	href="/projects/{project.id}"
 	style="--main-color: {project.colors[0]}"
 >
 	<div class="text-desc flex h-full content-container">

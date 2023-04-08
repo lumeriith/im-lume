@@ -42,6 +42,7 @@ import tinads_1 from '$lib/assets/projects/tinads/tinads1.jpg';
 
 export default [
 	{
+		id: 'tinads',
 		title: 'This Is Not A Drum Set',
 		tags: ['Unity', 'VR', 'MIDI', '드럼'],
 		featured: true,
@@ -82,6 +83,7 @@ export default [
 		colors: ['#ffd73a', '#c6a771']
 	},
 	{
+		id: 'immoralfencing',
 		title: 'Immoral Fencing',
 		tags: ['Unity', '애니메이션', 'AI', '소켓통신'],
 		featured: true,
@@ -121,6 +123,7 @@ export default [
 		colors: ['#5c8fd8', '#63ceec']
 	},
 	{
+		id: 'runtimebakedphysics',
 		title: 'RuntimeBakedPhysics',
 		tags: ['UE5', 'PhysX', '테스트자동화'],
 		featured: true,
@@ -168,6 +171,7 @@ export default [
 		colors: ['#ff8d0e', '#ff9255']
 	},
 	{
+		id: 'trappedinmetaverse',
 		title: 'Trapped In Metaverse',
 		tags: ['Unity', 'SvelteKit', 'Firebase', '메타버스', '해커톤'],
 		type: '게임, 2022-1',
@@ -222,6 +226,7 @@ export default [
 		colors: ['#00a4f2', '#30ff11']
 	},
 	{
+		id: 'dew',
 		title: 'Dew',
 		featured: true,
 		tags: ['Unity', '멀티플레이어', 'Photon', 'SW페스티벌'],
@@ -262,6 +267,7 @@ export default [
 		colors: ['#89d8ff', '#70bfff']
 	},
 	{
+		id: 'copycat',
 		title: 'Copycat',
 		tags: ['Unity', '스토리', 'GIGDC', '2022'],
 		featured: false,
@@ -301,6 +307,7 @@ export default [
 		colors: ['#ffcd1f', '#8f7b33']
 	},
 	{
+		id: 'magicalkhu',
 		title: '하울의 움직이는 대학',
 		tags: ['Unity', '해커톤', '모험'],
 		type: '게임, 2019',
@@ -339,6 +346,7 @@ export default [
 		colors: ['#2dd151', '#ffd980']
 	},
 	{
+		id: 'goat5',
 		title: 'Goat5',
 		tags: ['Unity', '퍼즐', 'SW페스티벌'],
 		type: '게임, 2018',
@@ -391,6 +399,7 @@ export default [
 		colors: ['#9efa9f', '#5f8dcd']
 	},
 	{
+		id: 'thrownreport',
 		title: '나는 레포트를 날렸다',
 		tags: ['Unity', '해커톤'],
 		type: '게임, 2018',
@@ -432,6 +441,7 @@ export default [
 		colors: ['#d2f5ff', '#528aff']
 	},
 	{
+		id: 'cube5',
 		title: 'Cube5',
 		tags: ['Unity', '하이퍼캐주얼', 'SW페스티벌'],
 		type: '게임, 2018',
@@ -475,6 +485,7 @@ export default [
 		colors: ['#fe5ac7', '#e3518a']
 	},
 	{
+		id: 'cardkin',
 		title: 'Cardkin',
 		tags: ['Unity', '멀티플레이어', 'UNET', 'SW페스티벌'],
 		type: '게임, 2018',

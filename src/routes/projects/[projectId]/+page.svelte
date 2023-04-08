@@ -13,7 +13,7 @@
 
 	let project = {};
 
-	$: project = projects[$page.params.projectId];
+	$: project = projects.find((p) => p.id === $page.params.projectId);
 
 	let trimmedContent;
 	$: {
