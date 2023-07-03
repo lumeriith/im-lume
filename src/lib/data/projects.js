@@ -40,7 +40,51 @@ import tinads_cover from '$lib/assets/projects/tinads/tinads_cover.jpg';
 import tinads_0 from '$lib/assets/projects/tinads/tinads0.jpg';
 import tinads_1 from '$lib/assets/projects/tinads/tinads1.jpg';
 
+import shapeofdream_t from '$lib/assets/projects/shapeofdream/thumbnail.jpg';
+import shapeofdream_c from '$lib/assets/projects/shapeofdream/card.jpg';
+import shapeofdream_0 from '$lib/assets/projects/shapeofdream/pic1.jpg';
+import shapeofdream_1 from '$lib/assets/projects/shapeofdream/pic2.jpg';
+
 export default [
+	{
+		id: 'shapeofdream',
+		title: 'Shape of Dream',
+		tags: ['Unity', '로그라이크', '멀티플레이어'],
+		featured: true,
+		type: '게임, 2023',
+		icon: 'bi:steam',
+		subtitle: `꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 12월 출시 예정`,
+		stacks: ['unity', 'cs'],
+		role: '팀장 (LizardSmoothie팀 - 심은섭, 강기표)',
+		links: [
+			{
+				type: '데모 다운로드',
+				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23070322.zip'
+			},
+			{ type: 'Trailer', data: 'https://youtu.be/qSfOXJShZCc' },
+			{ type: 'Gameplay', data: 'https://youtu.be/9mRUcSobcSU' }
+		],
+		thumb: shapeofdream_c,
+		medias: [
+			{ type: 'youtube', data: 'qSfOXJShZCc' },
+			{ type: 'youtube', data: '9mRUcSobcSU' },
+			{ type: 'image', data: shapeofdream_0 },
+			{ type: 'image', data: shapeofdream_1 }
+		],
+		content: `
+    # Shape of Dream
+		스킬과 강화 보석의 조합으로 성장하며 꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 2023년 겨울 얼리액세스 공개 예정
+
+		Shape of Dream은 자신만의 영웅을 만들어나가는 멀티플레이 쿼터뷰 로그라이크입니다.
+
+		## 여울 속으로의 모험
+		플레이어는 꿈과 현실의 경계가 희미해져 꿈의 힘이 흘러나오기 시작한 세계에서 괴물들이 즐비한 중간계 “여울”로 들어가 모험하게 됩니다. 1인 ~ 4인이 온라인으로 플레이할 수 있으며, 여울 속에서 플레이어는 스킬을 습득하여 자신의 사용 기술을 변경할 수 있고, 스킬에 정수를 장착하여 해당 스킬을 강화할 수 있습니다. 30+개의 스킬들과 40+개의 정수들을 조합하여 무궁무진한 가짓수의 빌드를 만들 수 있습니다. 스킬과 정수, 정수와 정수의 상호작용과 연쇄 반응을 이용해 자신만의 빌드를 완성해보세요.
+		
+		## 도전과 스토리
+		또한 게임 내에서 도전 과제를 달성하면 습득할 수 있는 새로운 스킬, 정수나 플레이 가능한 영웅이 해금됩니다. 이렇게 해금한 항목들은 다음 게임부터 여울에 등장하며 새로운 빌드와 시너지를 연구할 수 있는 여지를 제공합니다. 또한 수집품에서 자신이 해금한 항목들을 확인할 수 있는데, 일부 스킬과 정수에 관련된 기억의 흔적이 쓰여 있습니다. 이들을 통해 Shape of Dream의 세계관과 캐릭터들의 스토리를 파헤쳐보세요.
+    `,
+		colors: ['#45b1fb', '#1ad0d6']
+	},
 	{
 		id: 'tinads',
 		title: 'This Is Not A Drum Set',
