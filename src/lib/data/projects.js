@@ -59,7 +59,7 @@ export default [
 		links: [
 			{
 				type: '데모 다운로드',
-				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23070322.zip'
+				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23072518.zip'
 			},
 			{ type: 'Trailer', data: 'https://youtu.be/qSfOXJShZCc' },
 			{ type: 'Gameplay', data: 'https://youtu.be/9mRUcSobcSU' }
