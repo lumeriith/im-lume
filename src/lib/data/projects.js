@@ -58,8 +58,8 @@ export default [
 		role: '팀장 (LizardSmoothie팀 - 심은섭, 강기표)',
 		links: [
 			{
-				type: '데모 다운로드',
-				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23070322.zip'
+				type: '8월 데모 다운로드',
+				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23081004.zip'
 			},
 			{ type: 'Trailer', data: 'https://youtu.be/qSfOXJShZCc' },
 			{ type: 'Gameplay', data: 'https://youtu.be/9mRUcSobcSU' }
