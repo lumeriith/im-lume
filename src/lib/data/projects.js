@@ -59,7 +59,7 @@ export default [
 		links: [
 			{
 				type: '8월 데모 다운로드 - Download August Demo',
-				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23081004.zip'
+				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23081119.zip'
 			},
 			{ type: 'Trailer', data: 'https://youtu.be/qSfOXJShZCc' },
 			{ type: 'Gameplay', data: 'https://youtu.be/9mRUcSobcSU' }
