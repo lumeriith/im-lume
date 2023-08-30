@@ -55,19 +55,21 @@ export default [
 		icon: 'bi:steam',
 		subtitle: `꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 12월 출시 예정`,
 		stacks: ['unity', 'cs'],
-		role: '팀장 (LizardSmoothie팀 - 심은섭, 강기표)',
 		links: [
 			{
-				type: '8월 데모 다운로드 - Download August Demo',
-				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-23081119.zip'
+				type: '9월 데모 다운로드 - Download September Demo',
+				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-September.zip',
+				display: 'big-button',
+				pos: 'right'
 			},
-			{ type: 'Trailer', data: 'https://youtu.be/qSfOXJShZCc' },
-			{ type: 'Gameplay', data: 'https://youtu.be/9mRUcSobcSU' }
+			{ type: '게임플레이 트레일러', data: 'https://youtu.be/6C5kXoEIIk0' },
+			{ type: '소개 영상', data: 'https://youtu.be/qSfOXJShZCc' }
 		],
 		thumb: shapeofdream_c,
+		awards: ['GIGDC2023 제작부문 대학부 금상'],
 		medias: [
+			{ type: 'youtube', data: '6C5kXoEIIk0' },
 			{ type: 'youtube', data: 'qSfOXJShZCc' },
-			{ type: 'youtube', data: '9mRUcSobcSU' },
 			{ type: 'image', data: shapeofdream_0 },
 			{ type: 'image', data: shapeofdream_1 }
 		],

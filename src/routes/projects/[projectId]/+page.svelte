@@ -34,7 +34,7 @@
 	<div class="absolute inset-0" style="background: linear-gradient(#0000, #000)" />
 </div>
 
-<div class="pt-36 relative overflow-hidden">
+<div class="pt-12 md:pt-36 relative overflow-hidden">
 	<Container class="font-monospace z-10 pb-4">
 		<header class="flex items-center mb-1 flex-wrap">
 			<div
@@ -57,8 +57,25 @@
 
 <Container class="font-monospace">
 	<section
-		class="flex flex-col items-start gap-2 sm:gap-3 font-bold text-sm sm:text-base justify-center mb-10"
+		class="flex flex-col items-start gap-2 sm:gap-3 font-bold text-sm sm:text-base justify-center mb-10 relative"
+		style={project.colors
+			? `--color-0: ${project.colors[0]}; --color-1: ${project.colors[1]};`
+			: ''}
 	>
+		<div
+			class="flex justify-end items-start w-full md:inset-0 md:absolute mb-3 pointer-events-none"
+		>
+			{#if project.links}
+				{#each project.links as { type, data, display, pos }}
+					{#if pos == 'right'}
+						<div class="pointer-events-auto">
+							<LinkItem {type} url={data} {display} />
+						</div>
+					{/if}
+				{/each}
+			{/if}
+		</div>
+
 		{#if project.awards}
 			{#each project.awards as award}
 				<div class="flex gap-2 items-center" style="color: {project.colors[0]};">
@@ -67,13 +84,17 @@
 				</div>
 			{/each}
 		{/if}
-		<div class="flex gap-2 items-center">
-			<Icon class="w-4" icon="carbon:user-avatar-filled" />
-			<div>{project.role}</div>
-		</div>
+		{#if project.role}
+			<div class="flex gap-2 items-center">
+				<Icon class="w-4" icon="carbon:user-avatar-filled" />
+				<div>{project.role}</div>
+			</div>
+		{/if}
 		{#if project.links}
-			{#each project.links as { type, data }}
-				<LinkItem {type} url={data} />
+			{#each project.links as { type, data, display, pos }}
+				{#if pos != 'right'}
+					<LinkItem {type} url={data} {display} />
+				{/if}
 			{/each}
 		{/if}
 	</section>
