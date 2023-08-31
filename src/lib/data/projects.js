@@ -57,10 +57,14 @@ export default [
 		stacks: ['unity', 'cs'],
 		links: [
 			{
-				type: '9월 데모 다운로드 - Download September Demo',
-				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-September-1.zip',
+				type: '소개 & 데모 다운로드 페이지 방문',
+				data: 'https://lizardsmoothie.itch.io/shape-of-dream',
 				display: 'big-button',
 				pos: 'right'
+			},
+			{
+				type: 'itch.io',
+				data: 'https://lizardsmoothie.itch.io/shape-of-dream'
 			},
 			{ type: '게임플레이 트레일러', data: 'https://youtu.be/6C5kXoEIIk0' },
 			{ type: '소개 영상', data: 'https://youtu.be/qSfOXJShZCc' }
