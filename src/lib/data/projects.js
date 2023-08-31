@@ -58,7 +58,7 @@ export default [
 		links: [
 			{
 				type: '9월 데모 다운로드 - Download September Demo',
-				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-September.zip',
+				data: 'https://lume-public.s3.ap-northeast-2.amazonaws.com/ShapeOfDream-Demo-September-1.zip',
 				display: 'big-button',
 				pos: 'right'
 			},
