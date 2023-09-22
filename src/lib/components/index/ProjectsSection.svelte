@@ -43,9 +43,9 @@
 	<PartHeading title="Projects" subtitle="대외활동 및 프로젝트" id="projects" />
 
 	<FullWidthSpace class="relative">
-		<Container class="mt-24">
+		<Container class="mt-12">
 			<div
-				class="flex flex-col gap-8 sm:gap-2 md:gap-8 xl:gap-16 items-stretch py-3 w-full select-none"
+				class="flex flex-col gap-6 sm:gap-2 md:gap-6 xl:gap-10 items-stretch py-3 w-full select-none"
 			>
 				{#each featured as project, i}
 					<div
@@ -69,7 +69,7 @@
 
 <style>
 	.show-more {
-		@apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold flex items-center underline;
+		@apply text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold flex items-center underline;
 	}
 
 	.show-more:hover {

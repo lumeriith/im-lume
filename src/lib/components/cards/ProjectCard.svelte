@@ -19,7 +19,7 @@
 </script>
 
 <a
-	class="overflow-hidden relative project-card flex flex-col w-full h-12 sm:h-16 md:h-24 cursor-pointer font-monospace"
+	class="overflow-hidden relative project-card flex flex-col w-full h-12 sm:h-16 md:h-20 cursor-pointer font-monospace"
 	on:click
 	href="/projects/{project.id}"
 	style="--main-color: {project.colors[0]}"
@@ -34,7 +34,7 @@
 			<header class="flex flex-wrap items-center gap-1.5">
 				<div class="flex gap-1.5 items-center flex-1">
 					<div
-						class="text-lg sm:text-xl md:text-2xl font-bold"
+						class="text-lg sm:text-xl md:text-xl font-bold"
 						style="text-shadow: 0 0 12px #000a;"
 					>
 						<MultiClamp clamp={1}>
@@ -46,7 +46,7 @@
 					{/if}
 				</div>
 				<div
-					class="text-xs sm:text-sm md:text-base lg:text-lg opacity-50 ml-auto"
+					class="text-xs sm:text-sm md:text-base lg:text-base opacity-50 ml-auto"
 					style="text-shadow: 0 0 12px #000a;"
 				>
 					{project.type || ''}
@@ -54,7 +54,7 @@
 			</header>
 			{#if project.tags}
 				<div
-					class="flex gap-2 text-xs sm:text-lg md:text-xl font-bold whitespace-nowrap tags -mt-1.5 sm:mt-0"
+					class="flex gap-2 text-xs sm:text-base md:text-base font-bold whitespace-nowrap tags -mt-1.5 sm:mt-0"
 				>
 					{#each project.tags as tag}
 						<div class="flex gap-0.5 items-center">

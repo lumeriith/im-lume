@@ -16,14 +16,14 @@
 <Background class="top-[100vh]" />
 <div class="w-full">
 	<MainTitle />
-	<div class="h-32" />
+	<div class="h-28" />
 	<ProjectsSection />
-	<div class="h-32" />
+	<div class="h-28" />
 	<AwardsSection />
-	<div class="h-32" />
+	<div class="h-28" />
 	<ExperiencesSection />
-	<div class="h-32" />
+	<div class="h-28" />
 	<CareerSection />
-	<div class="h-32" />
+	<div class="h-28" />
 	<AboutSection />
 </div>

@@ -15,17 +15,20 @@
 	});
 
 	let bgBrightness = 0.6;
-
+	let enableScrollFLavour = true;
 	function onScroll(e) {
+		if (!enableScrollFLavour) return;
 		const projects = document.getElementById('projects');
 		const rect = projects?.getBoundingClientRect();
 		console.log(rect.top);
 		if (e.deltaY > 0 && rect.top > 0) {
 			e.preventDefault();
 			projects.scrollIntoView({ behavior: 'smooth' });
+			enableScrollFLavour = false;
 		} else if (e.deltaY < 0 && rect.top - e.deltaY > window.innerHeight / 2) {
 			e.preventDefault();
 			window.scrollTo({ behavior: 'smooth', top: 0 });
+			enableScrollFLavour = false;
 		}
 	}
 </script>

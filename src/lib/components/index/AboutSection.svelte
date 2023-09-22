@@ -6,7 +6,7 @@
 	const icons = [
 		{
 			text: 'Eunseop Shim',
-			href: 'https://www.linkedin.com/in/eunseop-shim-5b5098172/',
+			href: 'https://kr.linkedin.com/in/lumeriith',
 			icon: 'akar-icons:linkedin-box-fill'
 		},
 		{

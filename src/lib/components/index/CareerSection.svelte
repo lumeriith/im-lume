@@ -10,8 +10,8 @@
 <div style="--main-color: #ccff36">
 	<PartHeading title="Career" subtitle="경력 및 프리랜서 활동" id="career" />
 	<FullWidthSpace>
-		<Container class="mt-16">
-			<div class="flex flex-wrap flex-col gap-6 items-center">
+		<Container class="mt-8">
+			<div class="flex flex-wrap flex-col gap-6 items-center" style="transform: scale(0.9)">
 				{#each career as { content, time, at, atUrl }, i}
 					<LineCard {time} {at} {atUrl}>
 						{content}

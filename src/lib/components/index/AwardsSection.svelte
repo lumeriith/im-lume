@@ -15,9 +15,9 @@
 	<FullWidthSpace>
 		<Container>
 			<div class="flex justify-center items-center py-8">
-				<div class="flex flex-wrap flex-col gap-6 items-stretch">
+				<div class="flex flex-wrap flex-col gap-5 items-stretch">
 					{#each awards as { date, issuer, name, project }, i}
-						<div class="text-base sm:text-lg lg:text-xl flex items-center flex-wrap">
+						<div class="text-base sm:text-lg lg:text-xl flex items-center flex-wrap" style="transform: scale(0.9)">
 							<div class="font-bold whitespace-nowrap w-full sm:w-20 text-center sm:text-left">
 								{date}
 							</div>

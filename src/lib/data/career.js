@@ -30,6 +30,7 @@ export default [
 		type: 'work',
 		time: '2023.1 ~ 현재',
 		content: '인디 협동 로그라이크 게임 개발 총괄',
-		at: 'Lizard Smoothie'
+		at: 'Lizard Smoothie',
+		atUrl: 'https://lizardsmoothie.itch.io/shape-of-dream'
 	}
 ];

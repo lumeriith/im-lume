@@ -11,7 +11,7 @@
 <NavBar />
 <Background />
 <div style="--main-color: #ff3832">
-	<div class="h-32" />
+	<div class="h-16" />
 	<Container>
 		<PartHeading title="All Projects" subtitle="프로젝트 더보기" />
 	</Container>
@@ -22,5 +22,5 @@
 			{/each}
 		</div>
 	</Container>
-	<div class="h-32" />
+	<div class="h-16" />
 </div>
