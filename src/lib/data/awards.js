@@ -40,5 +40,11 @@ export default [
 		date: '2022-2',
 		issuer: '경희대학교 실감미디어 혁신공유대학',
 		project: 'tinads'
+	},
+	{
+		name: 'GIGDC2023 제작부문 대학부 금상',
+		date: '2023-2',
+		issuer: '한국게임개발자협회',
+		project: 'shapeofdream'
 	}
 ];

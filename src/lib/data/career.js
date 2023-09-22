@@ -21,9 +21,15 @@ export default [
 	},
 	{
 		type: 'work',
-		time: '2022.3 ~ 현재',
+		time: '2022.3 ~ 2023.8',
 		content: '풀스택 SvelteKit/Firebase 개발자',
 		at: '(주)VERADI',
 		atUrl: 'http://veradi.co.kr/'
+	},
+	{
+		type: 'work',
+		time: '2023.1 ~ 현재',
+		content: '인디 협동 로그라이크 게임 개발 총괄',
+		at: 'Lizard Smoothie'
 	}
 ];
