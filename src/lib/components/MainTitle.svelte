@@ -5,6 +5,7 @@
 	import { onDestroy } from 'svelte';
 	import BigLizard from './BigLizard.svelte';
 	import Container from './general/Container.svelte';
+	import AboutButtons from './general/AboutButtons.svelte';
 
 	const backgroundHandle = setInterval(() => {
 		bgBrightness = Math.random() * 0.4 + 0.4;
@@ -67,7 +68,7 @@
 		Eunseop Shim.
 	</div>
 	<main
-		class="flex text-2xl sm:text-3xl md:text-4xl font-bold mb-8 self-end -mt-2 mr-1 sm:mr-6 text-[var(--main-color)] -z-10"
+		class="flex text-2xl sm:text-3xl md:text-4xl font-bold mb-2 self-end -mt-2 mr-1 sm:mr-6 text-[var(--main-color)] -z-10"
 		style="text-shadow: 0 0 24px #aaa1;"
 	>
 		Developer Portfolio
@@ -75,6 +76,7 @@
 	<section
 		class="font-bold text-sm sm:text-base content mb-5 flex flex-col items-end gap-2 mr-1 sm:mr-9"
 	>
+		<AboutButtons class="mb-6" />
 		<div>Kyunghee University Undergraduate</div>
 		<div>Enthusiastic Game Developer</div>
 		<div>Hobbyist Web Developer</div>

@@ -1,20 +1,7 @@
 <script>
-	import Icon from '@iconify/svelte';
 	import Container from '$lib/components/general/Container.svelte';
 	import FullWidthSpace from '$lib/components/general/FullWidthSpace.svelte';
-
-	const icons = [
-		{
-			text: 'Eunseop Shim',
-			href: 'https://kr.linkedin.com/in/lumeriith',
-			icon: 'akar-icons:linkedin-box-fill'
-		},
-		{
-			text: '@lumeriith',
-			href: 'https://github.com/lumeriith',
-			icon: 'akar-icons:github-fill'
-		}
-	];
+	import AboutButtons from '../general/AboutButtons.svelte';
 </script>
 
 <div id="about" />
@@ -28,19 +15,7 @@
 		<a class="text-xs opacity-60 mb-6 inline-block underline" href="mailto:lumeriith@gmail.com">
 			lumeriith@gmail.com
 		</a>
-		<div class="flex items-center gap-3 mb-7">
-			{#each icons as icon}
-				<a
-					class="h-10 flex justify-center items-center text-white font-bold icon gap-2 pr-2"
-					href={icon.href}
-					target="_blank"
-					rel="noreferrer"
-				>
-					<Icon class="text-xl" icon={icon.icon} />
-					<span class="text-base">{icon.text}</span>
-				</a>
-			{/each}
-		</div>
+		<AboutButtons class="mb-7" />
 		<div class="text-xs opacity-50 mb-2" style="line-height: 180%;">
 			<span>Made with ❤️ by Eunseop Shim</span>
 			<span>·</span>
@@ -63,17 +38,3 @@
 		</div>
 	</Container>
 </FullWidthSpace>
-
-<style>
-	.icon {
-		transition: transform 0.1s;
-	}
-
-	.icon:hover {
-		opacity: 0.8;
-	}
-
-	.icon:active {
-		opacity: 0.5;
-	}
-</style>
