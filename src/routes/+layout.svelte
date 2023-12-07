@@ -1,8 +1,10 @@
 <script>
+	import { inject } from '@vercel/analytics';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import 'ress/dist/ress.min.css';
 	import { onMount } from 'svelte';
 	import '../app.css';
+	import { dev } from '$app/environment';
 
 	let root;
 
@@ -18,6 +20,8 @@
 	afterNavigate(() => {
 		root?.classList.add('smoothscroll');
 	});
+
+	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
 <slot />
