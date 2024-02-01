@@ -53,14 +53,12 @@ export default [
 		featured: true,
 		type: '게임, 2023',
 		icon: 'bi:steam',
-		subtitle: `꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 12월 출시 예정`,
+		subtitle: `꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 개발 진행 중`,
 		stacks: ['unity', 'cs'],
 		links: [
 			{
-				type: '소개 & 데모 다운로드 페이지 방문',
-				data: 'https://lizardsmoothie.itch.io/shape-of-dream',
-				display: 'big-button',
-				pos: 'right'
+				type: '스토브 인디',
+				data: 'https://store.onstove.com/ko/games/2258'
 			},
 			{
 				type: 'itch.io',
@@ -70,7 +68,7 @@ export default [
 			{ type: '소개 영상', data: 'https://youtu.be/qSfOXJShZCc' }
 		],
 		thumb: shapeofdream_c,
-		awards: ['GIGDC2023 제작부문 대학부 금상'],
+		awards: ['2023 글로벌 인디 게임제작 경진대회 대학부 제작부문 금상'],
 		medias: [
 			{ type: 'youtube', data: '6C5kXoEIIk0' },
 			{ type: 'youtube', data: 'qSfOXJShZCc' },
