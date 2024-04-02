@@ -57,37 +57,29 @@ export default [
 		stacks: ['unity', 'cs'],
 		links: [
 			{
-				type: '소개 & 데모 다운로드 페이지 방문',
-				data: 'https://lizardsmoothie.itch.io/shape-of-dream',
+				type: '스팀 상점 페이지',
+				data: 'https://store.steampowered.com/app/2444750/Shape_of_Dream/',
 				display: 'big-button',
 				pos: 'right'
 			},
 			{
-				type: 'itch.io',
-				data: 'https://lizardsmoothie.itch.io/shape-of-dream'
+				type: 'STEAM',
+				data: 'https://store.steampowered.com/app/2444750/Shape_of_Dream/'
 			},
-			{ type: '게임플레이 트레일러', data: 'https://youtu.be/6C5kXoEIIk0' },
-			{ type: '소개 영상', data: 'https://youtu.be/qSfOXJShZCc' }
+			{ type: '게임플레이 트레일러', data: 'https://youtu.be/wJBeE_wjZQc' }
 		],
 		thumb: shapeofdream_c,
 		awards: ['GIGDC2023 제작부문 대학부 금상'],
 		medias: [
+			{ type: 'youtube', data: 'wJBeE_wjZQc' },
 			{ type: 'youtube', data: '6C5kXoEIIk0' },
-			{ type: 'youtube', data: 'qSfOXJShZCc' },
 			{ type: 'image', data: shapeofdream_0 },
 			{ type: 'image', data: shapeofdream_1 }
 		],
 		content: `
     # Shape of Dream
-		스킬과 강화 보석의 조합으로 성장하며 꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 2023년 겨울 얼리액세스 공개 예정
-
-		Shape of Dream은 자신만의 영웅을 만들어나가는 멀티플레이 쿼터뷰 로그라이크입니다.
-
-		## 여울 속으로의 모험
-		플레이어는 꿈과 현실의 경계가 희미해져 꿈의 힘이 흘러나오기 시작한 세계에서 괴물들이 즐비한 중간계 “여울”로 들어가 모험하게 됩니다. 1인 ~ 4인이 온라인으로 플레이할 수 있으며, 여울 속에서 플레이어는 스킬을 습득하여 자신의 사용 기술을 변경할 수 있고, 스킬에 정수를 장착하여 해당 스킬을 강화할 수 있습니다. 30+개의 스킬들과 40+개의 정수들을 조합하여 무궁무진한 가짓수의 빌드를 만들 수 있습니다. 스킬과 정수, 정수와 정수의 상호작용과 연쇄 반응을 이용해 자신만의 빌드를 완성해보세요.
-		
-		## 도전과 스토리
-		또한 게임 내에서 도전 과제를 달성하면 습득할 수 있는 새로운 스킬, 정수나 플레이 가능한 영웅이 해금됩니다. 이렇게 해금한 항목들은 다음 게임부터 여울에 등장하며 새로운 빌드와 시너지를 연구할 수 있는 여지를 제공합니다. 또한 수집품에서 자신이 해금한 항목들을 확인할 수 있는데, 일부 스킬과 정수에 관련된 기억의 흔적이 쓰여 있습니다. 이들을 통해 Shape of Dream의 세계관과 캐릭터들의 스토리를 파헤쳐보세요.
+		Shape of Dream은 액션 로그라이트에 독특한 MOBA 스타일의 요소가 가미된 게임입니다.
+		꿈의 세계로 모험을 떠나 자유롭게 스킬을 교체하며 내가 원하는 챔피언을 직접 만들어보세요. 혼자서 모든 역경에 맞서거나, 최대 4인 협동 게임에서 친구들과 함께 플레이하세요. 
     `,
 		colors: ['#45b1fb', '#1ad0d6']
 	},
