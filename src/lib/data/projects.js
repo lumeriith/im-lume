@@ -53,7 +53,7 @@ export default [
 		featured: true,
 		type: '게임, 2023',
 		icon: 'bi:steam',
-		subtitle: `꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 12월 출시 예정`,
+		subtitle: `꿈 속을 탐험하는 4인 협동 액션 로그라이크 게임, 개발 진행 중`,
 		stacks: ['unity', 'cs'],
 		links: [
 			{
@@ -66,10 +66,14 @@ export default [
 				type: 'STEAM',
 				data: 'https://store.steampowered.com/app/2444750/Shape_of_Dream/'
 			},
+			{
+				type: '스토브 인디',
+				data: 'https://store.onstove.com/ko/games/2258'
+			},
 			{ type: '게임플레이 트레일러', data: 'https://youtu.be/wJBeE_wjZQc' }
 		],
 		thumb: shapeofdream_c,
-		awards: ['GIGDC2023 제작부문 대학부 금상'],
+		awards: ['2023 글로벌 인디 게임제작 경진대회 대학부 제작부문 금상'],
 		medias: [
 			{ type: 'youtube', data: 'wJBeE_wjZQc' },
 			{ type: 'youtube', data: '6C5kXoEIIk0' },

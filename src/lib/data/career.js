@@ -28,7 +28,7 @@ export default [
 	{
 		type: 'work',
 		time: '2023.1 ~ 현재',
-		content: '인디 협동 로그라이크 게임 개발 총괄',
+		content: '인디 게임 개발 총괄',
 		at: 'Lizard Smoothie',
 		atUrl: 'https://store.steampowered.com/app/2444750/Shape_of_Dream/'
 	}
